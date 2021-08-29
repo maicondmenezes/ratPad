@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="pt-br" >
+    <head>
+        <title>Acessar | ratPad 0.1b</title>
+        <meta charset="utf-8" />
+        <meta name="robots" content="NONE,NOARCHIVE" />
+        <!-- STYLESHEETS -->        
+        <link href="/static/grappelli/stylesheets/screen.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="/static/grappelli/stylesheets/mueller/grid/output.css" rel="stylesheet" type="text/css" media="screen" />             
+    </head>
+    <body class="grp-login">
+        <article id="grp-content" class="">
+            <!-- CONTENT TITLE -->
+            <header id="grp-content-title">
+                <h1>Acessar</h1>                
+            </header>
+            <!-- CONTENT-CONTAINER -->
+            <div id="grp-content-container">                
+                <div class="g-d-c g-d-10 g-centered">
+                    <form method="post">
+                        <fieldset class="grp-module grp-module-login">
+                            <h1>
+                                <span class="grp-admin-title">ratPad 0.1b</span>
+                                <span class="grp-current-page">Acessar</span>
+                            </h1>
+                            <div class="module grp-module">                        
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                <br>                       
+                            </div>
+                        </fieldset>                   
+                        <div class="grp-module grp-submit-row">
+                            <ul>
+                                <li><button type="submit" class="grp-button">Acessar</button></li>
+                            </ul>
+                        </div>        
+                    </form>
+                </div>                
+            </div>
+        </article>
+    </body>
+</html>

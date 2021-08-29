@@ -1,0 +1,30 @@
+[
+    {
+        "model": "reports.tipodecomputador",
+        "pk": 1,
+        "fields": {
+            "descricao": "Desktop"
+        }
+    },
+    {
+        "model": "reports.tipodecomputador",
+        "pk": 2,
+        "fields": {
+            "descricao": "Notebook"
+        }
+    },
+    {
+        "model": "reports.tipodecomputador",
+        "pk": 3,
+        "fields": {
+            "descricao": "Mini-Desktop"
+        }
+    },
+    {
+        "model": "reports.tipodecomputador",
+        "pk": 4,
+        "fields": {
+            "descricao": "Netbook"
+        }
+    }
+]

@@ -1,0 +1,37 @@
+[
+    {
+        "model": "reports.tipodelaboratorio",
+        "pk": 1,
+        "fields": {
+            "descricao": "Comum"
+        }
+    },
+    {
+        "model": "reports.tipodelaboratorio",
+        "pk": 2,
+        "fields": {
+            "descricao": "Notebook"
+        }
+    },
+    {
+        "model": "reports.tipodelaboratorio",
+        "pk": 3,
+        "fields": {
+            "descricao": "Pro"
+        }
+    },
+    {
+        "model": "reports.tipodelaboratorio",
+        "pk": 4,
+        "fields": {
+            "descricao": "ProInfo Rural"
+        }
+    },
+    {
+        "model": "reports.tipodelaboratorio",
+        "pk": 5,
+        "fields": {
+            "descricao": "ProInfo Urbano"
+        }
+    }
+]

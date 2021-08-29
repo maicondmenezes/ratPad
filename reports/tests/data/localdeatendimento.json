@@ -1,0 +1,58 @@
+[
+    {
+        "model": "reports.localdeatendimento",
+        "pk": 1,
+        "fields": {
+            "descricao": "Secretaria2"
+        }
+    },
+    {
+        "model": "reports.localdeatendimento",
+        "pk": 2,
+        "fields": {
+            "descricao": "Coordena\u00e7\u00e3o"
+        }
+    },
+    {
+        "model": "reports.localdeatendimento",
+        "pk": 3,
+        "fields": {
+            "descricao": "Dep\u00f3sito"
+        }
+    },
+    {
+        "model": "reports.localdeatendimento",
+        "pk": 4,
+        "fields": {
+            "descricao": "Dire\u00e7\u00e3o"
+        }
+    },
+    {
+        "model": "reports.localdeatendimento",
+        "pk": 5,
+        "fields": {
+            "descricao": "Laborat\u00f3rio de Inform\u00e1tica"
+        }
+    },
+    {
+        "model": "reports.localdeatendimento",
+        "pk": 6,
+        "fields": {
+            "descricao": "Sala de Aula"
+        }
+    },
+    {
+        "model": "reports.localdeatendimento",
+        "pk": 7,
+        "fields": {
+            "descricao": "Sala de Leitura"
+        }
+    },
+    {
+        "model": "reports.localdeatendimento",
+        "pk": 8,
+        "fields": {
+            "descricao": "Sala dos Professores"
+        }
+    }
+]

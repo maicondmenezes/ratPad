@@ -1,0 +1,3071 @@
+[
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 1,
+        "fields": {
+            "escola": "10.19.001",
+            "fornecedor": "2",
+            "velocidade": "10",
+            "ip_circuito": "10.60.202.2",
+            "identificador": "RJO/IP/21686"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 2,
+        "fields": {
+            "escola": "10.19.002",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.62.60.X",
+            "identificador": "RJO/IP/23995"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 3,
+        "fields": {
+            "escola": "10.19.003",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.66.90.2",
+            "identificador": "RJO/IP/28593"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 4,
+        "fields": {
+            "escola": "10.19.004",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.85.2",
+            "identificador": "RJO/IP/24615"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 5,
+        "fields": {
+            "escola": "10.19.005",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.62.43.2",
+            "identificador": "RJO/IP/21902"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 6,
+        "fields": {
+            "escola": "10.19.006",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.46.2",
+            "identificador": "RJO/IP/24616"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 7,
+        "fields": {
+            "escola": "10.19.007",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.60.55.2",
+            "identificador": "RJO/IP/21685"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 8,
+        "fields": {
+            "escola": "10.19.008",
+            "fornecedor": "2",
+            "velocidade": "10",
+            "ip_circuito": "10.60.229.2",
+            "identificador": "RJO/IP/21419"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 9,
+        "fields": {
+            "escola": "10.19.009",
+            "fornecedor": "2",
+            "velocidade": "8",
+            "ip_circuito": "10.63.37.2",
+            "identificador": "RJO/IP/24490"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 10,
+        "fields": {
+            "escola": "10.19.010",
+            "fornecedor": "2",
+            "velocidade": "8",
+            "ip_circuito": "10.63.40.2",
+            "identificador": "RJO/IP/24491"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 11,
+        "fields": {
+            "escola": "10.19.011",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.61.87.2",
+            "identificador": "RJO/IP/21799"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 12,
+        "fields": {
+            "escola": "10.19.012",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.60.199.2",
+            "identificador": "RJO/IP/21413"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 13,
+        "fields": {
+            "escola": "10.19.013",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.60.201.2",
+            "identificador": "RJO/IP/21800"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 14,
+        "fields": {
+            "escola": "10.19.014",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.60.225.2",
+            "identificador": "RJO/IP/21800"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 15,
+        "fields": {
+            "escola": "10.19.015",
+            "fornecedor": "2",
+            "velocidade": "2",
+            "ip_circuito": "10.61.164.2",
+            "identificador": "RJO/IP/22553"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 16,
+        "fields": {
+            "escola": "10.19.016",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.62.40.2",
+            "identificador": "RJO/IP/21412"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 17,
+        "fields": {
+            "escola": "10.19.017",
+            "fornecedor": "2",
+            "velocidade": "10",
+            "ip_circuito": "10.63.55.2",
+            "identificador": "RJO/IP/24617"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 18,
+        "fields": {
+            "escola": "10.19.018",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.157.2",
+            "identificador": "RJO/IP/24618"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 19,
+        "fields": {
+            "escola": "10.19.019",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.61.163.2",
+            "identificador": "RJO/IP/22552"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 20,
+        "fields": {
+            "escola": "10.19.020",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.163.2",
+            "identificador": "RJO/IP/24620"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 21,
+        "fields": {
+            "escola": "10.19.021",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.62.41.2",
+            "identificador": "RJO/IP/21416"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 22,
+        "fields": {
+            "escola": "10.19.022",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.60.90.2",
+            "identificador": "RJO/IP/24621"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 23,
+        "fields": {
+            "escola": "10.19.023",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.31.2",
+            "identificador": "RJO/IP/24492"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 24,
+        "fields": {
+            "escola": "10.19.024",
+            "fornecedor": "2",
+            "velocidade": "10",
+            "ip_circuito": "10.63.80.2",
+            "identificador": "RJO/IP/24622"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 25,
+        "fields": {
+            "escola": "10.19.025",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/24623"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 26,
+        "fields": {
+            "escola": "10.19.026",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.84.2",
+            "identificador": "RJO/IP/24624"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 27,
+        "fields": {
+            "escola": "10.19.027",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/24625"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 28,
+        "fields": {
+            "escola": "10.19.028",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.32.2",
+            "identificador": "RJO/IP/24624"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 29,
+        "fields": {
+            "escola": "10.19.029",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.53.2",
+            "identificador": "RJO/IP/24494"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 30,
+        "fields": {
+            "escola": "10.19.030",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.70.x",
+            "identificador": "RJO/IP/24641"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 31,
+        "fields": {
+            "escola": "10.19.031",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/22012"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 32,
+        "fields": {
+            "escola": "10.19.032",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.114.2",
+            "identificador": "RJO/IP/24642"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 33,
+        "fields": {
+            "escola": "10.19.033",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/28564"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 34,
+        "fields": {
+            "escola": "10.19.034",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.65.21.2",
+            "identificador": "RJO/IP/27220"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 35,
+        "fields": {
+            "escola": "10.19.035",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.61.158.2",
+            "identificador": "RJO/IP/22551"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 36,
+        "fields": {
+            "escola": "10.19.036",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.62.63.2",
+            "identificador": "RJO/IP/21536"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 37,
+        "fields": {
+            "escola": "10.19.037",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/21894"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 38,
+        "fields": {
+            "escola": "10.19.038",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.66.172.2",
+            "identificador": "RJO/IP/29899"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 39,
+        "fields": {
+            "escola": "10.19.039",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.65.157.2",
+            "identificador": "RJO/IP/28189"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 40,
+        "fields": {
+            "escola": "10.19.040",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.97.2",
+            "identificador": "RJO/IP/22072"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 41,
+        "fields": {
+            "escola": "10.19.041",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.64.188.2",
+            "identificador": "RJO/IP/27186"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 42,
+        "fields": {
+            "escola": "10.19.043",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.64.141.2",
+            "identificador": "RJO/IP/27556"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 43,
+        "fields": {
+            "escola": "10.19.044",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.245.X",
+            "identificador": "RJO/IP/24495"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 44,
+        "fields": {
+            "escola": "10.19.045",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.164.2",
+            "identificador": "RJO/IP21803"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 45,
+        "fields": {
+            "escola": "10.19.046",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.38.X",
+            "identificador": "RJO/IP24650"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 46,
+        "fields": {
+            "escola": "10.19.047",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/21498"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 47,
+        "fields": {
+            "escola": "10.19.048",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/24644"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 48,
+        "fields": {
+            "escola": "10.19.049",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.54.2",
+            "identificador": "RJO/IP/24496"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 49,
+        "fields": {
+            "escola": "10.19.050",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.71.2",
+            "identificador": "RJO/IP24645"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 50,
+        "fields": {
+            "escola": "10.19.051",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/22609"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 51,
+        "fields": {
+            "escola": "10.19.052",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/21489"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 52,
+        "fields": {
+            "escola": "10.19.053",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.61.40.X",
+            "identificador": "RJO/IP/21884"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 53,
+        "fields": {
+            "escola": "10.19.054",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.62.235.X",
+            "identificador": "RJO/IP/21948"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 54,
+        "fields": {
+            "escola": "10.19.055",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.61.11.X",
+            "identificador": "RJO/IP/21427"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 55,
+        "fields": {
+            "escola": "10.19.056",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.121.2",
+            "identificador": "RJO/IP/24646"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 56,
+        "fields": {
+            "escola": "10.19.057",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/24497"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 57,
+        "fields": {
+            "escola": "10.19.058",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.216.2",
+            "identificador": "RJO/IP/21675"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 58,
+        "fields": {
+            "escola": "10.19.059",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/24647"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 59,
+        "fields": {
+            "escola": "10.19.060",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.62.51.2",
+            "identificador": "RJO/IP/22069"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 60,
+        "fields": {
+            "escola": "10.19.062",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "10.60.219.2",
+            "identificador": "RJO/IP/21424"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 61,
+        "fields": {
+            "escola": "10.19.065",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.104.2",
+            "identificador": "RJO/IP/22016"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 62,
+        "fields": {
+            "escola": "10.19.072",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.193.2",
+            "identificador": "RJO/IP/24498"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 63,
+        "fields": {
+            "escola": "10.19.073",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.62.128.X",
+            "identificador": "RJO/IP/22547"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 64,
+        "fields": {
+            "escola": "10.19.074",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/25169"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 65,
+        "fields": {
+            "escola": "10.19.076",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.66.153.2",
+            "identificador": "RJO/IP/24617"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 66,
+        "fields": {
+            "escola": "10.19.079",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.66.192.2",
+            "identificador": "RJO/IP/30650"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 67,
+        "fields": {
+            "escola": "10.19.081",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/30651"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 68,
+        "fields": {
+            "escola": "10.19.201",
+            "fornecedor": "2",
+            "velocidade": "2",
+            "ip_circuito": "10.63.48.2",
+            "identificador": "RJO/IP/21428"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 69,
+        "fields": {
+            "escola": "10.19.202",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/21420"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 70,
+        "fields": {
+            "escola": "10.19.205",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/21418"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 71,
+        "fields": {
+            "escola": "10.19.206",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.60.203.x",
+            "identificador": "RJO/IP/21960"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 72,
+        "fields": {
+            "escola": "10.19.207",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.65.2",
+            "identificador": "RJO/IP/24649"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 73,
+        "fields": {
+            "escola": "10.19.209",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.44.X",
+            "identificador": "RJO/IP/24650"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 74,
+        "fields": {
+            "escola": "10.19.210",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.66.82.2",
+            "identificador": "RJO/IP/28575"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 75,
+        "fields": {
+            "escola": "10.19.211",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.65.127.2",
+            "identificador": "RJO/IP/27221"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 76,
+        "fields": {
+            "escola": "10.19.501",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.175.X",
+            "identificador": "RJO/IP/24499"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 77,
+        "fields": {
+            "escola": "10.19.502",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/24651"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 78,
+        "fields": {
+            "escola": "10.19.503",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/24652"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 79,
+        "fields": {
+            "escola": "10.19.601",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/27222"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 80,
+        "fields": {
+            "escola": "10.19.602",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/26794"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 81,
+        "fields": {
+            "escola": "10.19.603",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/26783"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 82,
+        "fields": {
+            "escola": "10.19.604",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/27225"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 83,
+        "fields": {
+            "escola": "10.19.605",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/28895"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 84,
+        "fields": {
+            "escola": "10.19.606",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/27555"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 85,
+        "fields": {
+            "escola": "10.19.607",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/27381"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 86,
+        "fields": {
+            "escola": "10.19.608",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/27227"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 87,
+        "fields": {
+            "escola": "10.19.609",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/28566"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 88,
+        "fields": {
+            "escola": "10.19.610",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/27554"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 89,
+        "fields": {
+            "escola": "10.19.611",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/27553"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 90,
+        "fields": {
+            "escola": "10.19.612",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/27552"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 91,
+        "fields": {
+            "escola": "10.19.613",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/27551"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 92,
+        "fields": {
+            "escola": "10.19.614",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.64.149.21",
+            "identificador": "RJO/IP/27228"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 93,
+        "fields": {
+            "escola": "10.19.615",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/27787"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 94,
+        "fields": {
+            "escola": "10.19.616",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/27229"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 95,
+        "fields": {
+            "escola": "10.19.618",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/27550"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 96,
+        "fields": {
+            "escola": "10.19.619",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/27230"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 97,
+        "fields": {
+            "escola": "10.19.620",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/27232"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 98,
+        "fields": {
+            "escola": "10.19.621",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/27549"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 99,
+        "fields": {
+            "escola": "10.19.622",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/27233"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 100,
+        "fields": {
+            "escola": "10.19.623",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/27548"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 101,
+        "fields": {
+            "escola": "10.19.624",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/27788"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 102,
+        "fields": {
+            "escola": "10.19.625",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/28557"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 103,
+        "fields": {
+            "escola": "10.19.626",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.66.97.2",
+            "identificador": "RJO/IP/27547"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 104,
+        "fields": {
+            "escola": "10.19.627",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/27234"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 105,
+        "fields": {
+            "escola": "10.19.628",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/28565"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 106,
+        "fields": {
+            "escola": "10.19.630",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10..65.125.2",
+            "identificador": "RJO/IP/27546"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 107,
+        "fields": {
+            "escola": "10.19.631",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.64.80.2",
+            "identificador": "RJO/IP/27235"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 108,
+        "fields": {
+            "escola": "10.19.632",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.65.121.2",
+            "identificador": "RJO/IP/27236"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 109,
+        "fields": {
+            "escola": "10.19.633",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/28567"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 110,
+        "fields": {
+            "escola": "10.19.801",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.66.62.2",
+            "identificador": "RJO/IP/28568"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 111,
+        "fields": {
+            "escola": "10.19.802",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/27237"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 112,
+        "fields": {
+            "escola": "10.19.803",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/27238"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 113,
+        "fields": {
+            "escola": "10.19.804",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/26782"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 114,
+        "fields": {
+            "escola": "10.19.805",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/27239"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 115,
+        "fields": {
+            "escola": "10.19.807",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.66.77.2",
+            "identificador": "RJO/IP/28560"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 116,
+        "fields": {
+            "escola": "10.19.808",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.66.142.2",
+            "identificador": "RJO/IP/28859"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 117,
+        "fields": {
+            "escola": "10.19.809",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.61.223.2",
+            "identificador": "RJO/IP/27545"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 118,
+        "fields": {
+            "escola": "10.19.810",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.64.18.2",
+            "identificador": "RJO/IP/27240"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 119,
+        "fields": {
+            "escola": "10.19.811",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.66.187.2",
+            "identificador": "RJO/IP/30272"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 120,
+        "fields": {
+            "escola": "10.19.812",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.64.14.2",
+            "identificador": "RJO/IP/27241"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 121,
+        "fields": {
+            "escola": "10.19.815",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.64.161.2",
+            "identificador": "RJO/IP/26781"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 122,
+        "fields": {
+            "escola": "10.19.816",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/22608"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 123,
+        "fields": {
+            "escola": "10.19.817",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/28569"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 124,
+        "fields": {
+            "escola": "10.19.819",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/24648"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 125,
+        "fields": {
+            "escola": "10.26.001",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.61.184.2",
+            "identificador": "RJO/IP/21796"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 126,
+        "fields": {
+            "escola": "10.26.002",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.39.2",
+            "identificador": "RJO/IP/21891"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 127,
+        "fields": {
+            "escola": "10.26.003",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.103.2",
+            "identificador": "RJO/IP/24694"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 128,
+        "fields": {
+            "escola": "10.26.004",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.231.2",
+            "identificador": "RJO/IP/24695"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 129,
+        "fields": {
+            "escola": "10.26.005",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.25.2",
+            "identificador": "RJO/IP/21798"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 130,
+        "fields": {
+            "escola": "10.26.006",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.38.2",
+            "identificador": "RJO/IP/21541"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 131,
+        "fields": {
+            "escola": "10.26.007",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.62.201.2",
+            "identificador": "RJO/IP/21542"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 132,
+        "fields": {
+            "escola": "10.26.008",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.62.161.2",
+            "identificador": "RJO/IP/21543"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 133,
+        "fields": {
+            "escola": "10.26.009",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.62.159.2",
+            "identificador": "RJO/IP/21915"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 134,
+        "fields": {
+            "escola": "10.26.010",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.62.97.2",
+            "identificador": "RJO/IP/21931"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 135,
+        "fields": {
+            "escola": "10.26.011",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.66.85.x",
+            "identificador": "RJO/IP/28571"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 136,
+        "fields": {
+            "escola": "10.26.012",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.217.2",
+            "identificador": "RJO/IP/21533"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 137,
+        "fields": {
+            "escola": "10.26.013",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.65.217.2",
+            "identificador": "RJO/IP/27786"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 138,
+        "fields": {
+            "escola": "10.26.014",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.136.X",
+            "identificador": "RJO/IP/24653"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 139,
+        "fields": {
+            "escola": "10.26.015",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.105.2",
+            "identificador": "RJO/IP/24696"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 140,
+        "fields": {
+            "escola": "10.26.016",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.62.124.2",
+            "identificador": "RJO/IP/21881"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 141,
+        "fields": {
+            "escola": "10.26.017",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.61.138.2",
+            "identificador": "RJO/IP/22540"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 142,
+        "fields": {
+            "escola": "10.26.018",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.62.187.2",
+            "identificador": "RJO/IP/21958"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 143,
+        "fields": {
+            "escola": "10.26.019",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.110.2",
+            "identificador": "RJO/IP/24697"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 144,
+        "fields": {
+            "escola": "10.26.020",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.149.2",
+            "identificador": "RJO/IP/24698"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 145,
+        "fields": {
+            "escola": "10.26.021",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.62.162.2",
+            "identificador": "RJO/IP/21955"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 146,
+        "fields": {
+            "escola": "10.26.024",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/21909"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 147,
+        "fields": {
+            "escola": "10.26.025",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.60.177.2",
+            "identificador": "RJO/IP/27243"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 148,
+        "fields": {
+            "escola": "10.26.026",
+            "fornecedor": "2",
+            "velocidade": "10",
+            "ip_circuito": "10.63.192.X",
+            "identificador": "RJO/IP/24654"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 149,
+        "fields": {
+            "escola": "10.26.028",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.66.191.2",
+            "identificador": "RJO/IP/30654"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 150,
+        "fields": {
+            "escola": "10.26.201",
+            "fornecedor": "2",
+            "velocidade": "10",
+            "ip_circuito": "10.63.132.X",
+            "identificador": "RJO/IP/24655"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 151,
+        "fields": {
+            "escola": "10.26.202",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.63.118.2",
+            "identificador": "RJO/IP/24699"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 152,
+        "fields": {
+            "escola": "10.26.601",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/28576"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 153,
+        "fields": {
+            "escola": "10.26.602",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/27544"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 154,
+        "fields": {
+            "escola": "10.26.603",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/27244"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 155,
+        "fields": {
+            "escola": "10.26.604",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/27245"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 156,
+        "fields": {
+            "escola": "10.26.801",
+            "fornecedor": "2",
+            "velocidade": "4",
+            "ip_circuito": "10.65.203.X",
+            "identificador": "RJO/IP/28378"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 157,
+        "fields": {
+            "escola": "10.26.802",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/27246"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 158,
+        "fields": {
+            "escola": "10.26.803",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/27247"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 159,
+        "fields": {
+            "escola": "10.26.804",
+            "fornecedor": "2",
+            "velocidade": 0,
+            "ip_circuito": "",
+            "identificador": "RJO/IP/27248"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 160,
+        "fields": {
+            "escola": "10.19.001",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "189.80.177.94",
+            "identificador": "RJO6151866"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 161,
+        "fields": {
+            "escola": "10.19.002",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "189.80.176.178",
+            "identificador": "RJO6154789"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 162,
+        "fields": {
+            "escola": "10.19.003",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "187.12.198.210",
+            "identificador": "RJO6177316"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 163,
+        "fields": {
+            "escola": "10.19.004",
+            "fornecedor": "3",
+            "velocidade": "4",
+            "ip_circuito": "200.151.149.22",
+            "identificador": "RJO6254088"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 164,
+        "fields": {
+            "escola": "10.19.005",
+            "fornecedor": "3",
+            "velocidade": "4",
+            "ip_circuito": "187.12.171.66",
+            "identificador": "RJO6262968"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 165,
+        "fields": {
+            "escola": "10.19.006",
+            "fornecedor": "3",
+            "velocidade": "4",
+            "ip_circuito": "200.151.135.122",
+            "identificador": "RJO6244532"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 166,
+        "fields": {
+            "escola": "10.19.007",
+            "fornecedor": "3",
+            "velocidade": "5",
+            "ip_circuito": "189.80.81.237",
+            "identificador": "RJO6153873"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 167,
+        "fields": {
+            "escola": "10.19.008",
+            "fornecedor": "3",
+            "velocidade": "4",
+            "ip_circuito": "187.12.208.122",
+            "identificador": "RJO6191954"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 168,
+        "fields": {
+            "escola": "10.19.009",
+            "fornecedor": "3",
+            "velocidade": "5",
+            "ip_circuito": "189.80.176.158",
+            "identificador": "RJO6153849"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 169,
+        "fields": {
+            "escola": "10.19.010",
+            "fornecedor": "3",
+            "velocidade": "5",
+            "ip_circuito": "200.151.166.102",
+            "identificador": "RJO6254054"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 170,
+        "fields": {
+            "escola": "10.19.011",
+            "fornecedor": "3",
+            "velocidade": "4",
+            "ip_circuito": "200.151.149.42",
+            "identificador": "RJO6254073"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 171,
+        "fields": {
+            "escola": "10.19.012",
+            "fornecedor": "3",
+            "velocidade": "10",
+            "ip_circuito": "189.80.82.61",
+            "identificador": "RJO6154109"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 172,
+        "fields": {
+            "escola": "10.19.013",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "187.12.173.138",
+            "identificador": "RJO6236145"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 173,
+        "fields": {
+            "escola": "10.19.014",
+            "fornecedor": "3",
+            "velocidade": "4",
+            "ip_circuito": "200.151.149.62",
+            "identificador": "RJO6254056"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 174,
+        "fields": {
+            "escola": "10.19.015",
+            "fornecedor": "3",
+            "velocidade": "8",
+            "ip_circuito": "187.12.194.86",
+            "identificador": "RJO6160046"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 175,
+        "fields": {
+            "escola": "10.19.016",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "200.151.166.102",
+            "identificador": "RJO6254054"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 176,
+        "fields": {
+            "escola": "10.19.017",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "200.151.149.26",
+            "identificador": "RJO6254069"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 177,
+        "fields": {
+            "escola": "10.19.018",
+            "fornecedor": "3",
+            "velocidade": 0,
+            "ip_circuito": "200.222.46.78",
+            "identificador": "RJO6263550"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 178,
+        "fields": {
+            "escola": "10.19.019",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "189.80.177.178",
+            "identificador": "RJO6151859"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 179,
+        "fields": {
+            "escola": "10.19.020",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "187.12.210.162",
+            "identificador": "RJO6192828"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 180,
+        "fields": {
+            "escola": "10.19.021",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "187.12.187.142",
+            "identificador": "RJO6235915"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 181,
+        "fields": {
+            "escola": "10.19.022",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "200.151.166.2",
+            "identificador": "RJO6254062"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 182,
+        "fields": {
+            "escola": "10.19.023",
+            "fornecedor": "3",
+            "velocidade": "4",
+            "ip_circuito": "187.12.216.214",
+            "identificador": "RJO6204199"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 183,
+        "fields": {
+            "escola": "10.19.024",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "189.12.210.58",
+            "identificador": "RJO6163521"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 184,
+        "fields": {
+            "escola": "10.19.025",
+            "fornecedor": "3",
+            "velocidade": "8",
+            "ip_circuito": "189.80.81.150",
+            "identificador": "RJO6154101"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 185,
+        "fields": {
+            "escola": "10.19.026",
+            "fornecedor": "3",
+            "velocidade": "4",
+            "ip_circuito": "187.12.210.222",
+            "identificador": "RJO6192848"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 186,
+        "fields": {
+            "escola": "10.19.027",
+            "fornecedor": "3",
+            "velocidade": "8",
+            "ip_circuito": "187.76.213.89",
+            "identificador": "RJO6182229"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 187,
+        "fields": {
+            "escola": "10.19.028",
+            "fornecedor": "3",
+            "velocidade": "10",
+            "ip_circuito": "187.12.209.66",
+            "identificador": "RJO619277"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 188,
+        "fields": {
+            "escola": "10.19.029",
+            "fornecedor": "3",
+            "velocidade": "8",
+            "ip_circuito": "187.12.216.214",
+            "identificador": "RJO6204199"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 189,
+        "fields": {
+            "escola": "10.19.030",
+            "fornecedor": "3",
+            "velocidade": "10",
+            "ip_circuito": "187.12.172.30",
+            "identificador": "RJO6236974"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 190,
+        "fields": {
+            "escola": "10.19.031",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO6236974"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 191,
+        "fields": {
+            "escola": "10.19.032",
+            "fornecedor": "3",
+            "velocidade": "4",
+            "ip_circuito": "187.12.196.182",
+            "identificador": "RJO6177373"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 192,
+        "fields": {
+            "escola": "10.19.033",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO6177380"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 193,
+        "fields": {
+            "escola": "10.19.034",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "187.12.195.170",
+            "identificador": "RJO6183207"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 194,
+        "fields": {
+            "escola": "10.19.035",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "200.151.135.86",
+            "identificador": "RJO6253121"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 195,
+        "fields": {
+            "escola": "10.19.036",
+            "fornecedor": "3",
+            "velocidade": "8",
+            "ip_circuito": "187.12.234.94",
+            "identificador": "RJO6235910"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 196,
+        "fields": {
+            "escola": "10.19.037",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO6254058"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 197,
+        "fields": {
+            "escola": "10.19.038",
+            "fornecedor": "3",
+            "velocidade": "8",
+            "ip_circuito": "187.12.196.34",
+            "identificador": "RJO6183212"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 198,
+        "fields": {
+            "escola": "10.19.039",
+            "fornecedor": "3",
+            "velocidade": "10",
+            "ip_circuito": "200.151.135.93",
+            "identificador": "RJO6263512"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 199,
+        "fields": {
+            "escola": "10.19.040",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "200.165.165.98",
+            "identificador": "RJO6233467"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 200,
+        "fields": {
+            "escola": "10.19.041",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "187.76.145.238",
+            "identificador": "RJO6453638"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 201,
+        "fields": {
+            "escola": "10.19.042",
+            "fornecedor": "3",
+            "velocidade": "10",
+            "ip_circuito": "187.76.146.14",
+            "identificador": "RJO6236985"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 202,
+        "fields": {
+            "escola": "10.19.043",
+            "fornecedor": "3",
+            "velocidade": "4",
+            "ip_circuito": "187.12.172.198",
+            "identificador": "RJO6236147"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 203,
+        "fields": {
+            "escola": "10.19.044",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO6160071"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 204,
+        "fields": {
+            "escola": "10.19.045",
+            "fornecedor": "3",
+            "velocidade": "8",
+            "ip_circuito": "187.12..214.38",
+            "identificador": "RJO6238834"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 205,
+        "fields": {
+            "escola": "10.19.046",
+            "fornecedor": "3",
+            "velocidade": "4",
+            "ip_circuito": "187.12.175.162",
+            "identificador": "RJO6236141"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 206,
+        "fields": {
+            "escola": "10.19.047",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO6191933"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 207,
+        "fields": {
+            "escola": "10.19.048",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO6182215"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 208,
+        "fields": {
+            "escola": "10.19.049",
+            "fornecedor": "3",
+            "velocidade": "8",
+            "ip_circuito": "187.12.207.230",
+            "identificador": "RJO6191890"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 209,
+        "fields": {
+            "escola": "10.19.050",
+            "fornecedor": "3",
+            "velocidade": "4",
+            "ip_circuito": "189.80.91.162",
+            "identificador": "RJO6154776"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 210,
+        "fields": {
+            "escola": "10.19.051",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO6274379"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 211,
+        "fields": {
+            "escola": "10.19.052",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO6235884"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 212,
+        "fields": {
+            "escola": "10.19.053",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "189.80.81.90",
+            "identificador": "RJO6153870"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 213,
+        "fields": {
+            "escola": "10.19.054",
+            "fornecedor": "3",
+            "velocidade": "10",
+            "ip_circuito": "200.151.134.94",
+            "identificador": "RJO6236133"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 214,
+        "fields": {
+            "escola": "10.19.055",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "187.12.207.210",
+            "identificador": "RJO6191974"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 215,
+        "fields": {
+            "escola": "10.19.056",
+            "fornecedor": "3",
+            "velocidade": "8",
+            "ip_circuito": "187.12.198.22",
+            "identificador": "RJO6182155"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 216,
+        "fields": {
+            "escola": "10.19.057",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO6191973"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 217,
+        "fields": {
+            "escola": "10.19.058",
+            "fornecedor": "3",
+            "velocidade": "5",
+            "ip_circuito": "187.12.194.34",
+            "identificador": "RJO6177694"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 218,
+        "fields": {
+            "escola": "10.19.059",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO6177400"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 219,
+        "fields": {
+            "escola": "10.19.060",
+            "fornecedor": "3",
+            "velocidade": 0,
+            "ip_circuito": "187.12.171.118",
+            "identificador": "RJO6262997"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 220,
+        "fields": {
+            "escola": "10.19.062",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "189.80.175.222",
+            "identificador": "RJO6154764"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 221,
+        "fields": {
+            "escola": "10.19.064",
+            "fornecedor": "3",
+            "velocidade": "10",
+            "ip_circuito": "187.12.215.214",
+            "identificador": "RJO6192024"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 222,
+        "fields": {
+            "escola": "10.19.065",
+            "fornecedor": "3",
+            "velocidade": "8",
+            "ip_circuito": "200.141.73.66",
+            "identificador": "RJO6244547"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 223,
+        "fields": {
+            "escola": "10.19.072",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "187.12.209.250",
+            "identificador": "RJO6192852"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 224,
+        "fields": {
+            "escola": "10.19.073",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "200.165.139.182",
+            "identificador": "RJO7106484"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 225,
+        "fields": {
+            "escola": "10.19.074",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJ08811513"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 226,
+        "fields": {
+            "escola": "10.19.075",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "200.149.14.178",
+            "identificador": "RJO9005524"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 227,
+        "fields": {
+            "escola": "10.19.076",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "20015722822",
+            "identificador": "RJOxxxxxxx"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 228,
+        "fields": {
+            "escola": "10.19.078",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO4244206"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 229,
+        "fields": {
+            "escola": "10.19.080",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO4244185"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 230,
+        "fields": {
+            "escola": "10.19.081",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "200.217.8.105",
+            "identificador": "RJO4244157"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 231,
+        "fields": {
+            "escola": "10.19.082",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "200.149.224.197",
+            "identificador": "RJO4244193"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 232,
+        "fields": {
+            "escola": "10.19.092",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO4230360"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 233,
+        "fields": {
+            "escola": "10.19.201",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO6182222"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 234,
+        "fields": {
+            "escola": "10.19.202",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO6177454"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 235,
+        "fields": {
+            "escola": "10.19.205",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO6177385"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 236,
+        "fields": {
+            "escola": "10.19.206",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO6236137"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 237,
+        "fields": {
+            "escola": "10.19.207",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO6235908"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 238,
+        "fields": {
+            "escola": "10.19.209",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO6235886"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 239,
+        "fields": {
+            "escola": "10.19.210",
+            "fornecedor": "3",
+            "velocidade": "4",
+            "ip_circuito": "187.12.198.206",
+            "identificador": "RJO6182228"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 240,
+        "fields": {
+            "escola": "10.19.211",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "200.151.135.74",
+            "identificador": "RJO6253119"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 241,
+        "fields": {
+            "escola": "10.19.501",
+            "fornecedor": "3",
+            "velocidade": "8",
+            "ip_circuito": "189.80.83.50",
+            "identificador": "RJO6153854"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 242,
+        "fields": {
+            "escola": "10.19.502",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO6262965"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 243,
+        "fields": {
+            "escola": "10.19.503",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO6263505"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 244,
+        "fields": {
+            "escola": "10.19.811",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "200.151.135.94",
+            "identificador": "RJO6253126"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 245,
+        "fields": {
+            "escola": "10.19.812",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO6192710"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 246,
+        "fields": {
+            "escola": "10.19.813",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "187.12.196.26",
+            "identificador": "RJO6608488"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 247,
+        "fields": {
+            "escola": "10.19.814",
+            "fornecedor": "3",
+            "velocidade": "4",
+            "ip_circuito": "187.76.110.234",
+            "identificador": "RJO6443309"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 248,
+        "fields": {
+            "escola": "10.19.815",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "187.12.209.190",
+            "identificador": "RJO6192691"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 249,
+        "fields": {
+            "escola": "10.19.816",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO6443305"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 250,
+        "fields": {
+            "escola": "10.19.819",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO6443303"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 251,
+        "fields": {
+            "escola": "10.26.001",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "187.12.175.1",
+            "identificador": "RJO6235885"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 252,
+        "fields": {
+            "escola": "10.26.002",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "189.80.93.118",
+            "identificador": "RJO6264611"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 253,
+        "fields": {
+            "escola": "10.26.003",
+            "fornecedor": "3",
+            "velocidade": "10",
+            "ip_circuito": "189.80.240.98",
+            "identificador": "RJO6160060"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 254,
+        "fields": {
+            "escola": "10.26.004",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "189.80.176.193",
+            "identificador": "RJO6154794"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 255,
+        "fields": {
+            "escola": "10.26.005",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO6263541"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 256,
+        "fields": {
+            "escola": "10.26.006",
+            "fornecedor": "3",
+            "velocidade": "5",
+            "ip_circuito": "187.12.198.169",
+            "identificador": "RJO6182153"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 257,
+        "fields": {
+            "escola": "10.26.007",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "189.80.241.26",
+            "identificador": "RJO6160064"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 258,
+        "fields": {
+            "escola": "10.26.008",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "189.80.241.54",
+            "identificador": "RJO6160005"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 259,
+        "fields": {
+            "escola": "10.26.009",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO6182150"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 260,
+        "fields": {
+            "escola": "10.26.010",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "187.12.197.234",
+            "identificador": "RJO6177339"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 261,
+        "fields": {
+            "escola": "10.26.011",
+            "fornecedor": "3",
+            "velocidade": "10",
+            "ip_circuito": "200.151.166.121",
+            "identificador": "RJO6254046"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 262,
+        "fields": {
+            "escola": "10.26.012",
+            "fornecedor": "3",
+            "velocidade": "10",
+            "ip_circuito": "189.80.241.74",
+            "identificador": "RJO6160041"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 263,
+        "fields": {
+            "escola": "10.26.013",
+            "fornecedor": "3",
+            "velocidade": "10",
+            "ip_circuito": "189.802.412.26",
+            "identificador": "RJO6159995"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 264,
+        "fields": {
+            "escola": "10.26.014",
+            "fornecedor": "3",
+            "velocidade": "10",
+            "ip_circuito": "187.12.192.94",
+            "identificador": "RJO6177698"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 265,
+        "fields": {
+            "escola": "10.26.015",
+            "fornecedor": "3",
+            "velocidade": "8",
+            "ip_circuito": "187.12.194.178",
+            "identificador": "RJO6181282"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 266,
+        "fields": {
+            "escola": "10.26.016",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "189.80.90.58",
+            "identificador": "RJO6160039"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 267,
+        "fields": {
+            "escola": "10.26.017",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO6190912"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 268,
+        "fields": {
+            "escola": "10.26.018",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "200.151.149.6",
+            "identificador": "RJO6254138"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 269,
+        "fields": {
+            "escola": "10.26.019",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "189.80.91.129",
+            "identificador": "RJO6160084"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 270,
+        "fields": {
+            "escola": "10.26.020",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "187.12.208.202",
+            "identificador": "RJO6192638"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 271,
+        "fields": {
+            "escola": "10.26.021",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "187.12.208.77",
+            "identificador": "RJO6191970"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 272,
+        "fields": {
+            "escola": "10.26.024",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO6442478"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 273,
+        "fields": {
+            "escola": "10.26.025",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO863553"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 274,
+        "fields": {
+            "escola": "10.26.026",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "200.149.211.005",
+            "identificador": "RJO8613549"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 275,
+        "fields": {
+            "escola": "10.26.028",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "200.141.95.20",
+            "identificador": "RJO4244210"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 276,
+        "fields": {
+            "escola": "10.26.201",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO6244516"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 277,
+        "fields": {
+            "escola": "10.26.202",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "187.12.208.126",
+            "identificador": "RJO6191981"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 278,
+        "fields": {
+            "escola": "10.26.803",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "187.76.110.45",
+            "identificador": "RJO6443222"
+        }
+    },
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 279,
+        "fields": {
+            "escola": "10.26.804",
+            "fornecedor": "3",
+            "velocidade": "2",
+            "ip_circuito": "",
+            "identificador": "RJO6443227"
+        }
+    }
+]

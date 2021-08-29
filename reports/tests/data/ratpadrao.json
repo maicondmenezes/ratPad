@@ -1,0 +1,1117 @@
+[
+    {
+        "model": "reports.ratpadrao",
+        "pk": 67,
+        "fields": {
+            "escola": "10.11.006",
+            "chamados": "1664151",
+            "tecnico": 2,
+            "data_criacao": "2021-06-16T06:00:00Z",
+            "data_edicao": "2021-07-25T22:17:57.364Z",
+            "locais": [
+                1
+            ],
+            "descricao": "Configura\u00e7\u00e3o de Modem da Oi",
+            "solucao": "Ap\u00f3s visita t\u00e9cnica da operadora a diretoria da unidade solicittou verifica\u00e7\u00e3o do sinal de internet e configura\u00e7\u00e3o da rede interna com o link da Oi e da Embratel simultaneamente para dividir a banda de aceeso. Efetuado teste de velocidade pelo site speedtest ookla aferindo velociadade de download de 8,56 Mbps. O modem da Oi foi conecetado exclusivamente no AP do projeto escola conectada.",
+            "recomendacao": false,
+            "itens_recomendados": "None",
+            "problemas": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 68,
+        "fields": {
+            "escola": "10.19.015",
+            "chamados": "1665468",
+            "tecnico": 1,
+            "data_criacao": "2021-06-16T06:00:00Z",
+            "data_edicao": "2021-07-25T22:17:57.524Z",
+            "locais": [
+                5
+            ],
+            "descricao": "Rede sem fio da escola conectada n\u00e3o est\u00e1 funcionando, favor verificar.",
+            "solucao": "Verificada a instala\u00e7\u00e3o do Access Point Intelbras e o mesmo apresentou defeito, n\u00e3o aceitando configura\u00e7\u00f5es de IP local para acessar p\u00e1gina de Configura\u00e7\u00f5es de Rede Sem Fio. A rede do Access Point foi cabeada de forma inadequada, roteando dois do access points, a saber, um no fim do corredor no andar t\u00e9rreo e outro no corredor de salas de aula no primeiro piso para o link Embratel. O \u00fanico access point ligado ao link da Oi esta em frente ao laborat\u00f3rio de inform\u00e1tica, como ele paresentou defeito foi efetuada troca pelo A.P. no fim do corredor. Constatando a necessidade de efetuar compra de novo access point para substitui\u00e7\u00e3o. Al\u00e9m disso, a dire\u00e7\u00e3o da unidade foi orientada a reestruturar a rede de access points, transferindo todos para a sala de inform\u00e1tica afim de conect\u00e1-los ao modem do link da Oi e para tanto se faz necess\u00e1ria a aquisi\u00e7\u00e3o de um switch de 8 portas",
+            "recomendacao": true,
+            "itens_recomendados": "['Access Point Intelbras 310 ou 360', 'e um Switch POE de 8 portas']",
+            "problemas": [
+                2
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 69,
+        "fields": {
+            "escola": "10.19.019",
+            "chamados": "1664976",
+            "tecnico": 1,
+            "data_criacao": "2021-06-16T06:00:00Z",
+            "data_edicao": "2021-07-25T22:17:57.656Z",
+            "locais": [
+                4
+            ],
+            "descricao": "Instala\u00e7\u00e3o do site da merenda",
+            "solucao": "Ao chegar na unidade fui informado que o desktop havia sido formatado. Ap\u00f3s an\u00e1lise foi constatado que a vers\u00e3o do Windows 7 instalada n\u00e3o corresponde a licen\u00e7a OEM da m\u00e1quina e por este motivo n\u00e3o foi poss\u00edvel registrar o sistema operacional com as licen\u00e7as da SME. Realizada a instala\u00e7\u00e3o dos drivers de dispositivos do desktop, impressora Brother DCP 1610NW, Microsoft Office 2010, Java 7u80 e Mozilla Firefox 14.0. Instala\u00e7\u00e3o e configura\u00e7\u00f5es do Web Enabler executadas com sucesso em vers\u00e3o web e local. Realizado teste de velocidade do link da Oi pelo site speedtest ookla, constatando 1,84 Mbps de velocidade.",
+            "recomendacao": false,
+            "itens_recomendados": "None",
+            "problemas": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 70,
+        "fields": {
+            "escola": "10.19.007",
+            "chamados": "1657408",
+            "tecnico": 1,
+            "data_criacao": "2021-06-17T06:00:00Z",
+            "data_edicao": "2021-07-25T22:17:57.876Z",
+            "locais": [
+                5
+            ],
+            "descricao": "Verifica\u00e7\u00e3o dos micros do laborat\u00f3rio de inform\u00e1tica",
+            "solucao": "Realizada limpesa externa das m\u00e1quinas, organiza\u00e7\u00e3o dos cabos e disposi\u00e7\u00e3o dos gabinetes respeitando medidas de afastamento social. Um dois gabinetes apresentou defeito de sistema operacional e precisou de formata\u00e7\u00e3o. Existem cinco computadores funcionando e conectados a rede cabeada da Embratel. O Laborat\u00f3rio possui acesso a rede Wi-Fi do Projeto Escola conectada, por\u00e9m os computadores n\u00e3o possuem hardware de acesso a wi-fi. Havima nove computadores em estado de emprestabilidade, e o laudo consta no parecer t\u00e9cnico em anexo. A dire\u00e7\u00e3o foi orientada adiquirir 1(um) mouse para um dos micros. \n Foi solicitado a dire\u00e7\u00e3o o envio de 4 fontes de energia e 7 HD's para a AIT da 10\u00aa CRE aos cuidados de Isabel ou Isaac.",
+            "recomendacao": true,
+            "itens_recomendados": "Mouse USB",
+            "problemas": [
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 71,
+        "fields": {
+            "escola": "10.19.017",
+            "chamados": "['1662617', '1662616']",
+            "tecnico": 1,
+            "data_criacao": "2021-06-17T06:00:00Z",
+            "data_edicao": "2021-07-25T22:17:58.117Z",
+            "locais": [
+                3,
+                4,
+                8
+            ],
+            "descricao": "Analise de equipamentos entigos para descarte ou recupera\u00e7\u00e3o",
+            "solucao": "Realizada an\u00e1lise t\u00e9cnica de 14(quatorze) gabinetes, sendo 10(dez) equipamentos antigos que estavam armazenados no dep\u00f3sito e 4(quatro) na sala dos professores. Dos equipamentos antigos apenas 3(tr\u00eas) foram reapr\u00f3vietados e dos computadores na sala dos professores 3(tr\u1ebds) foram reaproveitados, os pentes de mem\u00f3ria dos equipamentos com defeito foram utilizados para manuten\u00e7\u00e3o e/ou upgrade dos computadores que estavam funcionando. Dois HD's de 80GB foram entregues a dire\u00e7\u00e3o. Os equipamentos em estado de imprestabilidade foram listados no PArecer T\u00e9cnico de efetuar baixas. \n A dire\u00e7\u00e3o da unidade foi orientada sobre a instala\u00e7\u00e3o de infraestrutura adequada para atender aos requisitos t\u00e9cnicos do Projeto Escola Conectada, visto que a estrutura do cabeamento para os AP et\u00e1 distante dos aparelhos da operadora de internet contratada, a saber, Estrelar Web com velocidade aferida de 46,46Mbps. Um AP j\u00e1 est\u00e1 instalado na area de conviv\u00eancia conectado a operadora Oi, os dois aparelhos restantes ainda n\u00e3o foram instalados por conta do incidente de cabeamento mencionado acima.",
+            "recomendacao": false,
+            "itens_recomendados": "None",
+            "problemas": [
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 72,
+        "fields": {
+            "escola": "10.19.072",
+            "chamados": "['1661537', '1665952']",
+            "tecnico": 1,
+            "data_criacao": "2021-06-18T06:00:00Z",
+            "data_edicao": "2021-07-25T22:17:58.301Z",
+            "locais": [
+                4
+            ],
+            "descricao": "Internet da Oi fora do ar",
+            "solucao": "Ao chegar \u00e0 unidade foi verificado que o link j\u00e1 foi reestabelecido pela operadora Oi e ap\u00f3s teste foi aferida a velocidade de 6,63Mbps. \n A dire\u00e7\u00e3o da unidade solicitou a instala\u00e7\u00e3o da impressora Epson 3150 no computador da diretora adjunt, o mesmo foi instalado e o presente relat\u00f3rio doi impresso com sucesso atestando a execu\u00e7\u00e3o da solicita\u00e7\u00e3o",
+            "recomendacao": false,
+            "itens_recomendados": "None",
+            "problemas": [
+                1,
+                3
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 73,
+        "fields": {
+            "escola": "10.19.053",
+            "chamados": "1665225",
+            "tecnico": 1,
+            "data_criacao": "2021-06-18T06:00:00Z",
+            "data_edicao": "2021-07-25T22:17:58.479Z",
+            "locais": [
+                4
+            ],
+            "descricao": "Bom dia, Estamos sem acesso a internet (Wi-fi).",
+            "solucao": "Ao chegar \u00e0 unidade foi verificado que o link j\u00e1 foi reestabelecido pela operadora Estrelar Web e ap\u00f3s teste foi aferida a velocidade de 12,1Mbps, de acordo com a a dire\u00e7\u00e3o da unidade o link contratado \u00e9 de 15Mbps",
+            "recomendacao": false,
+            "itens_recomendados": "None",
+            "problemas": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 74,
+        "fields": {
+            "escola": "10.19.033",
+            "chamados": "1664651",
+            "tecnico": 1,
+            "data_criacao": "2021-06-18T06:00:00Z",
+            "data_edicao": "2021-07-25T22:17:58.635Z",
+            "locais": [
+                4
+            ],
+            "descricao": "Configura\u00e7\u00e3o de link Embratel",
+            "solucao": "Ap\u00f3s instala\u00e7\u00e3o do link de internet da operadora Embratel, a dire\u00e7\u00e3o da escola solicitou instala\u00e7\u00e3o de rede local e divis\u00e3o da largura de banda da internet. instalado e confirgurado o roteador da marca: GTS Telecom, Modelo: GTS Super AP Power, N\u00ba de s\u00e9rie 78.0454ARB. A rede Wi-Fi foi configurada com sucesso. o computador da dire\u00e7\u00e3o foi conectado via rede cabeada ao mesmo reoteador para acessar o software da mernda sem a necessidade de de configurar rede VPN. Ap\u00f3s verifica\u00e7\u00e3o aferimos 9,2Mbps de velocidade de conex\u00e3o no link Embratel, 12.0Mbps no link Oi Conectada e 14.3 no link Oi MEC. \n SSID(nome da rede):secretaria_embratel \n Senha:$M3escol@s2019",
+            "recomendacao": false,
+            "itens_recomendados": "None",
+            "problemas": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 75,
+        "fields": {
+            "escola": "10.19.815",
+            "chamados": "1664184",
+            "tecnico": 1,
+            "data_criacao": "2021-06-18T06:00:00Z",
+            "data_edicao": "2021-07-25T22:17:58.804Z",
+            "locais": [
+                4
+            ],
+            "descricao": "Programa informar que est\u00e1 sem medidor",
+            "solucao": "Programa foi desinstalado pelo Painel de controle e reinstalado, visto que o aplicativo n\u00e3o foi instalado totalmente. Por ele ter sido reinstalado ent\u00e3o \u00e9 necess\u00e1rio aguardar 24 horas para que programa rode online e mostre que ele et\u00e1 mostrando ou n\u00e3o o medidor. Por se tratar de uma sexta feira e a Dire\u00e7\u00e3o n\u00e3o quiser deixar o micro ligado o final de semana inteiro at\u00e9 mesmo por quest\u00e3o de seguran\u00e7a de ter algum pico de luz durante o final de semana. Micro poder\u00e1 ser desligado no final do expediente e relig\u00e1-lo na segunda feira e deixar ligado p\u00f3r 24 horas s\u00f3 desligando ele na ter\u00e7a-feira",
+            "recomendacao": false,
+            "itens_recomendados": "None",
+            "problemas": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 76,
+        "fields": {
+            "escola": "10.19.034",
+            "chamados": "1661517",
+            "tecnico": 1,
+            "data_criacao": "2021-06-21T06:00:00Z",
+            "data_edicao": "2021-07-25T22:17:58.976Z",
+            "locais": [
+                4
+            ],
+            "descricao": "Sem Internet Oi MEC",
+            "solucao": "Ao chegar \u00e0 unidade foi constatada falha de acesso \u00e0 internet, ap\u00f3s detectou-se que as duas operadoras no local estavam inoperantes, a saber, Oi e Embratel. O modem da operadora Oi apresenta falha e mesmo depois de resetar ele n\u00e3o voltou a operar e o led de rede LAN fica aceso constantemente mesmo sem cabo conectado. Os chamados 208163486 - BA / 208255759 / 2021060063897 foram abertos para atender esta demanda e ainda n\u00e3o foram encerrados pela operadora. O link da Embratel apresenta instabilidade durante o atendimento ficou inoperante a maior parte do tempo e mesmo com teste de 'ping' e 'tracert' n\u00e3o foi poss\u00edvel acessar rede externa com sucesso, mesmo que no teste de rota tenha conseguido acessar alguns pontos de rota externa. No entanto no encerramento do chamado o link est\u00e1 funcionando satisfatoriamente. O chamado 307048 foi aberto para atender esta demanda.",
+            "recomendacao": false,
+            "itens_recomendados": "None",
+            "problemas": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 77,
+        "fields": {
+            "escola": "10.19.032",
+            "chamados": "1666085",
+            "tecnico": 1,
+            "data_criacao": "2021-06-21T06:00:00Z",
+            "data_edicao": "2021-07-25T22:17:59.142Z",
+            "locais": [
+                4
+            ],
+            "descricao": "Instala\u00e7\u00e3o de impressora",
+            "solucao": "Dire\u00e7\u00e3o solicitou instala\u00e7\u00e3o da impressora modelo Brother DCP 1602, ap\u00f3s retorno de manuten\u00e7\u00e3o externa. Ap\u00f3s instala\u00e7\u00e3o dos drivers USB na maquina de origem foi solicitada a instala\u00e7\u00e3o de compartilhamento nos computadores do assistente administrativo, coordena\u00e7\u00e3o pedag\u00f3gica e secretaria. Todos computadores imprimiram p\u00e1ginas de teste com sucesso",
+            "recomendacao": false,
+            "itens_recomendados": "None",
+            "problemas": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 78,
+        "fields": {
+            "escola": "10.26.024",
+            "chamados": "['1666565', '1666564', '1666563', '1666562', '1654555']",
+            "tecnico": 1,
+            "data_criacao": "2021-06-22T06:00:00Z",
+            "data_edicao": "2021-07-25T22:17:59.399Z",
+            "locais": [
+                1,
+                4,
+                5,
+                8
+            ],
+            "descricao": "Verifica\u00e7\u00e3o de notebooks e desktops da unidade",
+            "solucao": "Desktops em estado de imprestabilidade foram revisados constatando que todos apresentam componentes queimados ou ausentes na placa m\u00e3e, algumas pe\u00e7as sobressalentes foram retiradas e armazenadas no laborat\u00f3rio para eventual reparo de outros micros. O Parecer T\u00e9cnico de Baixa j\u00e1 foi documentado em atendimento anterior. Executada manuten\u00e7\u00e3o preventiva no desktop do diretor adjunto. Configurado WEB Enable e Impressora RICOH SP377 nos desktops da secretaria. Configurada Impressora RICOH SP377 no desktop da dire\u00e7\u00e3o Notebook LG configurado e Microsoft Office 2010 e impressora Brother MFC-9330CDW. Executado registro do sistema operacional, instala\u00e7\u00e3o da rede wi-fi e Manuten\u00e7\u00e3o preventiva nos micros da sala dos professores.",
+            "recomendacao": false,
+            "itens_recomendados": "None",
+            "problemas": [
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 79,
+        "fields": {
+            "escola": "10.26.017",
+            "chamados": "1666328",
+            "tecnico": 1,
+            "data_criacao": "2021-06-22T06:00:00Z",
+            "data_edicao": "2021-07-25T22:17:59.579Z",
+            "locais": [
+                4
+            ],
+            "descricao": "O COMPUTADOR DA DIRE\u00c7\u00c3O N\u00c3O ESTA CONECTADO NA REDE WI FI",
+            "solucao": "A rede wi-fi do projeto Escola Conectada estava configurada com IP fixo no adaptador de rede wi-fi do micro da diretora adjunta, ap\u00f3s configurar o DHCP a rede voltou a funcionar normalmente. A diretora adjunta solicitou instala\u00e7\u00e3o do Medidor Educa\u00e7\u00e3o Conectada, ap\u00f3s teste de velocidade aferimos 3,82Mbps.",
+            "recomendacao": false,
+            "itens_recomendados": "None",
+            "problemas": [
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 80,
+        "fields": {
+            "escola": "10.19.005",
+            "chamados": "1666287",
+            "tecnico": 1,
+            "data_criacao": "2021-06-23T06:00:00Z",
+            "data_edicao": "2021-07-25T22:17:59.741Z",
+            "locais": [
+                4
+            ],
+            "descricao": "O computador da Diretora est\u00e1 com problemas",
+            "solucao": "A conta de usu\u00e1rio do Windows 7 apresentava instabilidade e estava com mais de 20GB de arquivos na \u00e1rea de trabalho, ap\u00f3s a analise foi realizado backup dos arquivos, a conta foi deletada e os arquivos e configura\u00e7\u00f5es restaurados em uma nova conta. Todas as contas extras foram exclu\u00eddas. A usu\u00e1ria verificou o backup e testou a nova conta atestando a resolu\u00e7\u00e3o do problema.",
+            "recomendacao": false,
+            "itens_recomendados": "None",
+            "problemas": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 81,
+        "fields": {
+            "escola": "10.19.074",
+            "chamados": "1656345",
+            "tecnico": 1,
+            "data_criacao": "2021-06-24T06:00:00Z",
+            "data_edicao": "2021-07-25T22:17:59.916Z",
+            "locais": [
+                4
+            ],
+            "descricao": "Unidade sem acesso a internet da OI.",
+            "solucao": "Ap\u00f3s an\u00e1lise foi verificado que o AP Intelbras 310 n\u00e3o fornecia endere\u00e7o de IPv4 e por este motivo a maioria dos links de internet n\u00e3o estavam funcionando. Utilizando o modem Oi conectado diretamente em um computador o mesmo problema foi observado, em contato com a operadora Oi verificamos que o link estava operando normalmente e ap\u00f3s teste de configura\u00e7\u00e3o do modem foi poss\u00edvel conectar-se a internet utilizando um endere\u00e7o IPv4, por\u00e9m ao conectar o modem ao AP problema ainda persistia. O AP foi resetado sem sucesso, a antena do AP foi retirada do local de origem e restada tamb\u00e9m, o modo de opera\u00e7\u00e3o foi configurado para roteador e o link voltou a funcionar normalmente.",
+            "recomendacao": false,
+            "itens_recomendados": "None",
+            "problemas": [
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 82,
+        "fields": {
+            "escola": "10.19.807",
+            "chamados": "1666334",
+            "tecnico": 1,
+            "data_criacao": "2021-06-24T06:00:00Z",
+            "data_edicao": "2021-07-25T22:18:00.085Z",
+            "locais": [
+                4
+            ],
+            "descricao": "Unidade sem acesso a internet da OI.",
+            "solucao": "O roteador wi-fi da rede da operadora Embratel estava inoperante, ap\u00f3s analise a rede foi removida e recadastrada no wi-fi do notebook que n\u00e3o estava acessando e o roteador foi reiniciado reestabelecendo a conex\u00e3o. A dire\u00e7\u00e3o solicitou a instala\u00e7\u00e3o da impressora da biblioteca no notebook dos professores, a impressora foi instalada com sucesso.",
+            "recomendacao": false,
+            "itens_recomendados": "None",
+            "problemas": [
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 83,
+        "fields": {
+            "escola": "10.19.038",
+            "chamados": "1666289",
+            "tecnico": 1,
+            "data_criacao": "2021-06-25T06:00:00Z",
+            "data_edicao": "2021-07-25T22:18:00.294Z",
+            "locais": [
+                4,
+                7
+            ],
+            "descricao": "O T\u00c9CNICO DA OI J\u00c1 REALIZOU O SERVI\u00c7O DE INSTALA\u00c7\u00c3O DA FIBRA DO VPN, AGUARDANDO AGORA O T\u00c9CNICO DA CRE PARA A INSTALA\u00c7\u00c3O NOS COMPUTADORES DA SECRETARIA.",
+            "solucao": "Ao chegar \u00e0 unidade foi constatado que a operadora Oi instalou o link novo da sala de leitura e p\u00f4s o rack em cima da mesa sem fixa-lo na parede. Constatamos tamb\u00e9m que o antigo link da Oi MEC foi removido e substitu\u00eddo pelo link novo. Ap\u00f3s teste constatamos que o link esta funcionando corretamente e como n\u00e3o existe estrutura de cabo de rede da sala de leitura para a dire\u00e7\u00e3o o link foi configurado em um AP com a SSID: INTERNET CONECTADA. A dire\u00e7\u00e3o solicitou instala\u00e7\u00e3o do rack na sala da Dire\u00e7\u00e3o, orientamos que este servi\u00e7o deve ser solicitado junto \u00e0 operadora Oi. Foi reaberto o chamado sobre o link antigo da Oi MEC, para verificar inoper\u00e2ncia e reestabelecimento do link. O protocolo do chamado aberto foi 208318288.",
+            "recomendacao": false,
+            "itens_recomendados": "None",
+            "problemas": [
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 84,
+        "fields": {
+            "escola": "10.19.815",
+            "chamados": "1667516",
+            "tecnico": 1,
+            "data_criacao": "2021-06-25T06:00:00Z",
+            "data_edicao": "2021-07-25T22:18:00.458Z",
+            "locais": [
+                4
+            ],
+            "descricao": "BOA TARDE, SOLICITAMOS CONFIGURA\u00c7\u00c3O DE 2 COMPUTADORES.",
+            "solucao": "O compartilhamento do computador E1019815-001 n\u00e3o estavam funcionando porque o micro estava conectada em outra rede wi-fi, a saber \u2018SMERJESCOLA\u2019, todos computadores foram conectados na mesma rede e o grupo de trabalho de todas foi definido como \u2018SMERJ_DOM\u2019 e os compartilhamentos voltaram a funcionar normalmente. A dire\u00e7\u00e3o foi orientada sobre a import\u00e2ncia de manter todos computadores conectados a mesma rede para que o compartilhamento continue funcionando. A impressora estava funcionando normalmente para imprimir arquivos com mais de 1 folha, provavelmente outra funcion\u00e1ria configurou os padr\u00f5es de impress\u00e3o corretamente ontem. A dire\u00e7\u00e3o foi orientada sobre as configura\u00e7\u00f5es de impress\u00e3o para o incidente n\u00e3o ocorrer novamente.",
+            "recomendacao": false,
+            "itens_recomendados": "None",
+            "problemas": [
+                2,
+                3
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 85,
+        "fields": {
+            "escola": "10.19.043",
+            "chamados": "1666978",
+            "tecnico": 1,
+            "data_criacao": "2021-06-25T06:00:00Z",
+            "data_edicao": "2021-07-25T22:18:00.642Z",
+            "locais": [
+                4
+            ],
+            "descricao": "Solicito visita t\u00e9cnica para manuten\u00e7\u00e3o de notebook e impressora que n\u00e3o est\u00e1 funcionando.",
+            "solucao": "A impressora esta compartilhada com os outros computadores atrav\u00e9s do micro da coordena\u00e7\u00e3o, ap\u00f3s an\u00e1lise foi constatado que a impressora estava off-line e ap\u00f3s remover e reconectar o cabo USB a mesma voltou a imprimir normalmente nos tr\u00eas computadores. P\u00e1ginas de teste foram enviadas atestando a solu\u00e7\u00e3o do problema. O notebook DATEN n\u00e3o estava iniciando, pois a tela de login estava em modo de continua\u00e7\u00e3o do Windows. Ap\u00f3s reiniciar o Windows cancelando a continua\u00e7\u00e3o o sistema voltou a funcionar novamente. O aplicativo do Banco do Brasil foi reinstalado e o driver do wi-fi foi atualizado e a conex\u00e3o foi reestabelecida com sucesso.",
+            "recomendacao": false,
+            "itens_recomendados": "None",
+            "problemas": [
+                2,
+                3
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 86,
+        "fields": {
+            "escola": "10.19.005",
+            "chamados": "1667824",
+            "tecnico": 1,
+            "data_criacao": "2021-06-28T20:22:10.171Z",
+            "data_edicao": "2021-07-25T22:18:00.843Z",
+            "locais": [
+                4,
+                5
+            ],
+            "descricao": "O LABORAT\u00d3RIO DE INFORM\u00c1TICA , N\u00c3O EST\u00c1 ACESSANDO",
+            "solucao": "Ap\u00f3s analise verificou-se que o cabo de dados que fornece conex\u00e3o com o laborat\u00f3rio atrav\u00e9s do link da operadora Oi do projeto Escola Conetada est\u00e1 com defeito, foi utilizado o cabeamento da sala de leitura para restabelecer a conex\u00e3o com a internet atrav\u00e9s do link da operadora Embratel, e a dire\u00e7\u00e3o da escola foi orientada a providenciar conectores RJ45 novos para manuten\u00e7\u00e3o do cabo. \r\nO modem Oi MEC est\u00e1 com o link inoperante, foi aberto o chamado 218160670616 pelo atendente Eduardo junto a operadora Oi para verificar o incidente. A previs\u00e3o de atendimento \u00e9 de 24h a partir da abertura do chamado.",
+            "recomendacao": false,
+            "itens_recomendados": "",
+            "problemas": [
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 87,
+        "fields": {
+            "escola": "10.19.001",
+            "chamados": "165542",
+            "tecnico": 1,
+            "data_criacao": "2021-06-28T20:48:52.834Z",
+            "data_edicao": "2021-07-25T22:18:01.007Z",
+            "locais": [
+                1
+            ],
+            "descricao": "Sem internet",
+            "solucao": "Reset modem",
+            "recomendacao": false,
+            "itens_recomendados": "",
+            "problemas": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 88,
+        "fields": {
+            "escola": "10.19.828",
+            "chamados": "1668399",
+            "tecnico": 1,
+            "data_criacao": "2021-06-29T18:32:51.786Z",
+            "data_edicao": "2021-07-25T22:18:01.188Z",
+            "locais": [
+                4
+            ],
+            "descricao": "Usu\u00e1ria informa que n\u00e3o consegue acessar o VPN",
+            "solucao": "Ap\u00f3s an\u00e1lise verificou-se a necessidade de instalar atualiza\u00e7\u00e3o KB3033929 de criptografia SHA-2 do windows 7 e reinstala\u00e7\u00e3o do checkpoint para vers\u00e3o atualizada. A diretora da unidade fez logon com sucesso restabelecendo a conex\u00e3o VPN e o sistema do IPLAN voltou a funcionar.",
+            "recomendacao": false,
+            "itens_recomendados": "",
+            "problemas": [
+                2
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 89,
+        "fields": {
+            "escola": "10.19.084",
+            "chamados": "1668402",
+            "tecnico": 1,
+            "data_criacao": "2021-06-29T21:01:33.819Z",
+            "data_edicao": "2021-07-25T22:18:01.436Z",
+            "locais": [
+                1,
+                4
+            ],
+            "descricao": "UM DOS NOTEBOOKS DATEN APRESENTANDO TELA MANCHADA",
+            "solucao": "Ap\u00f3s an\u00e1lise verificou-se que o defeito \u00e9 f\u00edsico, provavelmente algu\u00e9m pressionou a tela danificando o LCD. A dire\u00e7\u00e3o foi orientada sobre como utilizar um monitor externo para conseguir acessar o notebook. Foi instalado e configurado o software de merenda em 2 notebooks.O computador da dire\u00e7\u00e3o apresentava instabilidade na conex\u00e3o de internet wi-fi, foi realizada manuten\u00e7\u00e3o preventiva e reinstala\u00e7\u00e3o do driver de rede, o equipamento ficar\u00e1 sobre observa\u00e7\u00e3o e caso necess\u00e1rio a dire\u00e7\u00e3o foi orientada abrir um novo chamado para verifica\u00e7\u00e3o.",
+            "recomendacao": false,
+            "itens_recomendados": "",
+            "problemas": [
+                1,
+                2,
+                5
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 90,
+        "fields": {
+            "escola": "10.19.021",
+            "chamados": "000000",
+            "tecnico": 1,
+            "data_criacao": "2021-06-30T00:27:44.372Z",
+            "data_edicao": "2021-07-25T22:18:01.660Z",
+            "locais": [
+                5
+            ],
+            "descricao": "Verifica\u00e7\u00e3o de Laborat\u00f3rio",
+            "solucao": "A sala do laborat\u00f3rio foi usada para guardar os instrumentos da sala de m\u00fasica. Encontramos 6 micros no local sendo 1 montado (projeto Proinfo Rural) e 5 desktops DATEN modelo: DT02 - CV01 dos quais apenas 4 est\u00e3o funcionando. O micro montado n\u00e3o est\u00e1 funcionando e n\u00e3o foi poss\u00edvel realizar testes pois est\u00e1 trancado e a escola n\u00e3o possui a chave. A dire\u00e7\u00e3o da unidade foi informada sobre a necessidade de reorganizar a sala para  arruma\u00e7\u00e3o dos computadores respeitando o distanciamento adequado. A rede local n\u00e3o est\u00e1 funcionando, mas n\u00e3o foi poss\u00edvel verificar o motivo da falha devido a situa\u00e7\u00e3o citada acima.",
+            "recomendacao": false,
+            "itens_recomendados": "",
+            "problemas": [
+                1,
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 91,
+        "fields": {
+            "escola": "10.19.018",
+            "chamados": "1668401",
+            "tecnico": 1,
+            "data_criacao": "2021-06-30T01:11:43.009Z",
+            "data_edicao": "2021-07-25T22:18:01.848Z",
+            "locais": [
+                4,
+                5
+            ],
+            "descricao": "Fazer o cabeamento para o funcionamento de interne",
+            "solucao": "Os cabeamentos dos computadores do laborat\u00f3rio foram refeitos e a conex\u00e3o foi restabelecida. A dire\u00e7\u00e3o da unidade solicitou refazer cabeamento de mais 2 pontos na sala da dire\u00e7\u00e3o.",
+            "recomendacao": false,
+            "itens_recomendados": "",
+            "problemas": [
+                2
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 92,
+        "fields": {
+            "escola": "10.19.075",
+            "chamados": "00000000",
+            "tecnico": 1,
+            "data_criacao": "2021-06-30T18:23:05.924Z",
+            "data_edicao": "2021-07-25T22:18:02.013Z",
+            "locais": [
+                4
+            ],
+            "descricao": "Verifica\u00e7\u00e3o do Laborat\u00f3rio de Inform\u00e1tica",
+            "solucao": "Fomos informados pelo diretor adjunto da unidade que os computadores do laborat\u00f3rio foram doados e j\u00e1 n\u00e3o constam no invent\u00e1rio da escola. Foi apresentado laudo de baixa e termo de doa\u00e7\u00e3o comprovando o fato informado.",
+            "recomendacao": false,
+            "itens_recomendados": "",
+            "problemas": [
+                5
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 93,
+        "fields": {
+            "escola": "10.19.075",
+            "chamados": "1670559",
+            "tecnico": 1,
+            "data_criacao": "2021-06-30T18:24:37.098Z",
+            "data_edicao": "2021-07-25T22:18:02.172Z",
+            "locais": [
+                4
+            ],
+            "descricao": "Verifica\u00e7\u00e3o do Laborat\u00f3rio de Inform\u00e1tica",
+            "solucao": "Fomos informados pelo diretor adjunto da unidade que os computadores do laborat\u00f3rio foram doados e j\u00e1 n\u00e3o constam no invent\u00e1rio da escola. Foi apresentado laudo de baixa e termo de doa\u00e7\u00e3o comprovando o fato informado.",
+            "recomendacao": false,
+            "itens_recomendados": "",
+            "problemas": [
+                5
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 94,
+        "fields": {
+            "escola": "10.19.045",
+            "chamados": "1668336",
+            "tecnico": 1,
+            "data_criacao": "2021-07-01T00:33:39.898Z",
+            "data_edicao": "2021-07-25T22:18:02.328Z",
+            "locais": [
+                4
+            ],
+            "descricao": "Boa tarde. Solicito avalia\u00e7\u00e3o de 6 notebooks para",
+            "solucao": "Ao chegar na unidade recebi 6 notebooks para verifica\u00e7\u00e3o, todos estavam funcionando e receberam manuten\u00e7\u00e3o preventiva. Ap\u00f3s o t\u00e9rmino da tarefa a diretora chegou a unidade e apresentou os notebooks que estavam com defeito foram revisados mais 8 notebooks dois quais apenas 1 apresentou falha na tela n\u00e3o exibindo imagem e a dire\u00e7\u00e3o foi orientada a utilizar um monitor externo, 1 apresentou defeito de hd e outros 2 estavam em estado de imprestabilidade com a tela rachada e sem componentes internos. os equipamentos com defeito foram listados no parecer t\u00e9cnico anexo para baixa.",
+            "recomendacao": false,
+            "itens_recomendados": "",
+            "problemas": [
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 95,
+        "fields": {
+            "escola": "10.19.057",
+            "chamados": "1669336",
+            "tecnico": 1,
+            "data_criacao": "2021-07-02T19:36:29.677Z",
+            "data_edicao": "2021-07-25T22:18:02.545Z",
+            "locais": [
+                1,
+                4
+            ],
+            "descricao": "Configurar impressora.",
+            "solucao": "O modem Oi n\u00e3o estava funcionando e o micro que compartilha a impressora estava desconectado. O novo modem ADSL D-Link  fornecido pela dire\u00e7\u00e3o foi instalado e configurado e ap\u00f3s restabelecer a conex\u00e3o com a internet e reconfigurar a rede wi-fi da secretaria todos os computadores imprimiram com sucesso. O Google Chrome do micro estava com defeito e foi reinstalado.",
+            "recomendacao": false,
+            "itens_recomendados": "",
+            "problemas": [
+                1,
+                2,
+                3
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 96,
+        "fields": {
+            "escola": "10.19.209",
+            "chamados": "1667877",
+            "tecnico": 1,
+            "data_criacao": "2021-07-02T20:25:03.902Z",
+            "data_edicao": "2021-07-25T22:18:02.722Z",
+            "locais": [
+                1
+            ],
+            "descricao": "Problemas para acessar internet",
+            "solucao": "Ao chegar na unidade a secret\u00e1ria informou que t\u00e9cnico da Claro em visita religou algum equipamento e a internet voltou a funcionar. O modem da Oi est\u00e1 travado ao conecta-lo em um micro e acessar a p\u00e1gina de configura\u00e7\u00f5es o mesmo voltou a funcionar. A secret\u00e1ria foi informada sobre diagn\u00f3stico dos leds e procedimento de reinicializa\u00e7\u00e3o do modem, caso o incidente ocorra novamente",
+            "recomendacao": false,
+            "itens_recomendados": "",
+            "problemas": [
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 97,
+        "fields": {
+            "escola": "10.19.030",
+            "chamados": "1669209",
+            "tecnico": 1,
+            "data_criacao": "2021-07-02T22:09:41.390Z",
+            "data_edicao": "2021-07-25T22:18:02.890Z",
+            "locais": [
+                5
+            ],
+            "descricao": "Unidade Escolar solicita verifica\u00e7\u00e3o de computador",
+            "solucao": "Foram avaliados 4(quatro) computadores a pedido da dire\u00e7\u00e3o da unidade, um deles tem o hardware obsoleto para utilizar os sistemas atualizados, os outros 3(tr\u00eas) apresentaram falha f\u00edsica na placa m\u00e3e e/ou fonte de alimenta\u00e7\u00e3o, sendo que um deles n\u00e3o possui nem HD nem mem\u00f3ria RAM. Segue anexo este documento o parecer t\u00e9cnico de baixa detalhado.",
+            "recomendacao": false,
+            "itens_recomendados": "",
+            "problemas": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 98,
+        "fields": {
+            "escola": "10.19.014",
+            "chamados": "1668669",
+            "tecnico": 1,
+            "data_criacao": "2021-07-03T01:35:16.751Z",
+            "data_edicao": "2021-07-25T22:18:03.069Z",
+            "locais": [
+                7
+            ],
+            "descricao": "Micros da Sala de leitura n\u00e3o est\u00e3o conectando",
+            "solucao": "As redes wi-fi da escolas est\u00e3o todas conectadas no link da operadora Embratel pois a Oi est\u00e1 inativa.Os computadores da sala de leitura est\u00e3o acessando a internet, por\u00e9m o sinal \u00e9 fraco devido a estrutura do pr\u00e9dio e a dist\u00e2ncia das antenas. A dire\u00e7\u00e3o foi orientada a reposicionar os computadores mais pr\u00f3ximos da porta e se poss\u00edvel comprar um adaptador wi-fi USB para o micro do canto esquerdo conectado a impressora, pois est\u00e1 com alta intermit\u00eancia do sinal. Foi aberto o chamado 218160709559 na Oi dia 29/06 e a operadora informou que segunda dia 05/07 haver\u00e1 manuten\u00e7\u00e3o externa na estrutura de cabeamento e prov\u00e1vel restabelecimento do link.",
+            "recomendacao": true,
+            "itens_recomendados": "Adaptador Wi-Fi USB",
+            "problemas": [
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 99,
+        "fields": {
+            "escola": "10.26.006",
+            "chamados": "1668763",
+            "tecnico": 1,
+            "data_criacao": "2021-07-06T01:10:43.498Z",
+            "data_edicao": "2021-07-25T22:18:03.252Z",
+            "locais": [
+                4
+            ],
+            "descricao": "OS NOTEBOOKS DA ESCOLA TEM APRESENTADO EXTREMA",
+            "solucao": "Foram revisados 6 notebooks Daten e 4 notebooks LG, todos receberam manuten\u00e7\u00e3o preventiva. Notebook do 4\u00ba ano est\u00e1 com a placa de \u00e1udio em curto e foi recomendada a aquisi\u00e7\u00e3o de uma placa de \u00e1udio USB. Notebook 3\u00ba ano n\u00e3o exibe imagem, mas funciona em monitor externo. 1 notebook LG foi formatado com sistema operacional windows 10.",
+            "recomendacao": true,
+            "itens_recomendados": "Placa de \u00c1udio USB",
+            "problemas": [
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 100,
+        "fields": {
+            "escola": "10.26.017",
+            "chamados": "1668583",
+            "tecnico": 1,
+            "data_criacao": "2021-07-06T02:03:50.399Z",
+            "data_edicao": "2021-07-25T22:18:03.449Z",
+            "locais": [
+                1,
+                2,
+                4
+            ],
+            "descricao": "OS 2 COMPUTADORES DA SECRETARIA N\u00c3O IMPRIMEM",
+            "solucao": "A rede do notebook da dire\u00e7\u00e3o estava desabilitada, ap\u00f3s remover a rede e reinserir a impressora continuou a funcionar. Os computadores da secretaria, coordena\u00e7\u00e3o e n\u00facleo tamb\u00e9m n\u00e3o estava imprimindo. Ap\u00f3s remover e reinstalar o driver todos voltaram a imprimir.",
+            "recomendacao": true,
+            "itens_recomendados": "",
+            "problemas": [
+                2,
+                3
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 101,
+        "fields": {
+            "escola": "10.19.047",
+            "chamados": "1670124",
+            "tecnico": 1,
+            "data_criacao": "2021-07-06T19:11:10.542Z",
+            "data_edicao": "2021-07-25T22:18:03.632Z",
+            "locais": [
+                1,
+                4
+            ],
+            "descricao": "Solicito internet e office em um computador",
+            "solucao": "O Microsoft Office 2010 foi atualizado. O Software para Merenda foi instalado e a impressora em rede Xerox Workcentre 3225 foi instalada com sucesso. O notebook precisa estar na rede cabeada para usar a impressora e o sistema de merenda. Os 2 pontos de rede da secretaria est\u00e3o inoperantes. A dire\u00e7\u00e3o da unidade foi orientada a adquirir 4 conectores RJ-45 para manuten\u00e7\u00e3o dos cabos. Um cabo de rede extra foi adicionado ao switch para utiliza\u00e7\u00e3o enquanto o problema da secretaria n\u00e3o for solucionado.",
+            "recomendacao": true,
+            "itens_recomendados": "Conectores RJ-45",
+            "problemas": [
+                2,
+                3
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 102,
+        "fields": {
+            "escola": "10.19.039",
+            "chamados": "1669025",
+            "tecnico": 1,
+            "data_criacao": "2021-07-06T22:09:58.095Z",
+            "data_edicao": "2021-07-25T22:18:03.852Z",
+            "locais": [
+                1,
+                4
+            ],
+            "descricao": "COLOCAR EM REDE A IMPRESSORA BROTHER WI-FI",
+            "solucao": "Foi necess\u00e1ria a instala\u00e7\u00e3o da impressora somente na coordena\u00e7\u00e3o. Foi solicitada a verifica\u00e7\u00e3o de 2 micros 1 da secretaria apresentava instabilidade do sistema operacional e foi formatado. A operadora Line Inject estava inoperante, foi aberto um chamado e o link da Oi foi redirecionado para arede SMERJESCOLA_EMB",
+            "recomendacao": false,
+            "itens_recomendados": "",
+            "problemas": [
+                1,
+                2,
+                3
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 103,
+        "fields": {
+            "escola": "10.26.021",
+            "chamados": "1670408",
+            "tecnico": 1,
+            "data_criacao": "2021-07-07T23:07:07.854Z",
+            "data_edicao": "2021-07-25T22:18:04.059Z",
+            "locais": [
+                1,
+                4
+            ],
+            "descricao": "Solicito a instala\u00e7\u00e3o de 2 SSD de 480 GB",
+            "solucao": "Foram instalados os SSD's nos 2 micros e os aplicativos e arquivos pessoais recuperados com sucesso",
+            "recomendacao": false,
+            "itens_recomendados": "",
+            "problemas": [
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 104,
+        "fields": {
+            "escola": "10.26.016",
+            "chamados": "1670428",
+            "tecnico": 1,
+            "data_criacao": "2021-07-07T23:46:36.753Z",
+            "data_edicao": "2021-07-25T22:18:04.198Z",
+            "locais": [
+                4
+            ],
+            "descricao": "Computador da dire\u00e7\u00e3o sem acesso \u00e0 internet.",
+            "solucao": "O driver de rede wi-fi foi atualizado restabelecendo a conex\u00e3o com sucesso. No entanto foi verificado que o sinal de rede na sala \u00e9 muito baixo devido a estrutura do pr\u00e9dio e a dist\u00e2ncia da antena, ocasionando lentid\u00e3o na conex\u00e3o. A dire\u00e7\u00e3o foi orientada a providenciar um AP mais pr\u00f3ximo da sala. Foi realizada manuten\u00e7\u00e3o preventiva no windows afim de melhorar um pouco o desempenho",
+            "recomendacao": true,
+            "itens_recomendados": "roteador wi-fi ou repetidor",
+            "problemas": [
+                2
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 105,
+        "fields": {
+            "escola": "10.19.092",
+            "chamados": "1670366",
+            "tecnico": 1,
+            "data_criacao": "2021-07-08T20:45:09.373Z",
+            "data_edicao": "2021-07-25T22:18:04.401Z",
+            "locais": [
+                1,
+                4
+            ],
+            "descricao": "Solicito instala\u00e7\u00e3o do Aplicativo de merenda",
+            "solucao": "O software foi instalado com sucesso nos 3 computadores solicitados pela dire\u00e7\u00e3o. A diretora testou com sucesso.",
+            "recomendacao": false,
+            "itens_recomendados": "",
+            "problemas": [
+                2,
+                3
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 106,
+        "fields": {
+            "escola": "10.19.041",
+            "chamados": "1662028",
+            "tecnico": 1,
+            "data_criacao": "2021-07-08T22:18:48.345Z",
+            "data_edicao": "2021-07-25T22:18:04.544Z",
+            "locais": [
+                4
+            ],
+            "descricao": "Informo que estamos sem internet da OI.",
+            "solucao": "Ap\u00f3s analise foi constatado que o modem da Oi n\u00e3o tem sinal DSL e Internet. Foi aberto o chamado 218161001473 com o t\u00e9cnico Mateus na operadora e o prazo de contato inicial  \u00e9 de 24h.",
+            "recomendacao": false,
+            "itens_recomendados": "",
+            "problemas": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 107,
+        "fields": {
+            "escola": "10.19.073",
+            "chamados": "1671378",
+            "tecnico": 1,
+            "data_criacao": "2021-07-09T20:42:24.603Z",
+            "data_edicao": "2021-07-25T22:18:04.720Z",
+            "locais": [
+                5
+            ],
+            "descricao": "Manuten\u00e7\u00e3o dos computadores do laborat\u00f3rio",
+            "solucao": "O laborat\u00f3rio possui 9 desktops sendo 8 Positivo Modelo Series F e 1 Modelo Series Q. Um desktop series F apresnetou defeito no HD e a mem\u00f3ria RAM foi reaproveitada em outro micro. A dire\u00e7\u00e3o foi informada que a lentid\u00e3o no computadores \u00e9 devido ao hardware com baixa capacidade (CPU: Celeron e 1 GB de RAM ). O relat\u00f3rio detalalhado no laborat\u00f3rio segue em anexo.",
+            "recomendacao": false,
+            "itens_recomendados": "",
+            "problemas": [
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 108,
+        "fields": {
+            "escola": "10.19.802",
+            "chamados": "1671082",
+            "tecnico": 1,
+            "data_criacao": "2021-07-09T23:04:55.010Z",
+            "data_edicao": "2021-07-25T22:18:04.907Z",
+            "locais": [
+                4
+            ],
+            "descricao": "Escola sem internet",
+            "solucao": "Ao chegar na unidade fomos informados que a internet esta funcionando normalmente e a solicita\u00e7\u00e3o seria para instala\u00e7\u00e3o do software da Merenda e impressora de rede em um notebook e manuten\u00e7\u00e3o preventiva em um desktop que apresentava lentid\u00e3o. As tarefas foram executadas e a dire\u00e7\u00e3o testou com sucesso.",
+            "recomendacao": false,
+            "itens_recomendados": "",
+            "problemas": [
+                2,
+                3
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 109,
+        "fields": {
+            "escola": "10.19.606",
+            "chamados": "1671234",
+            "tecnico": 1,
+            "data_criacao": "2021-07-10T00:26:35.768Z",
+            "data_edicao": "2021-07-25T22:18:05.071Z",
+            "locais": [
+                4
+            ],
+            "descricao": "Micro n\u00e3o esta acessando a internet.",
+            "solucao": "Ao chegar na unidade fomos informados que a internet no desktop a diretora adjunta est\u00e1 funcionando normalmente. A dire\u00e7\u00e3o foi orientada sobre testes de conex\u00e3o com outros navegadores quando o incidente ocorrer novamente. Conforme solicitado pela dire\u00e7\u00e3o o VPN foi instalado em todos micros para que em eventual falha do link Embratel o software de merenda continue funcionando.  A dire\u00e7\u00e3o foi orientada a adquirir adaptadores Wi-Fi USB para os desktops que ainda n\u00e3o possuem acesso a rede sem fio.",
+            "recomendacao": true,
+            "itens_recomendados": "2x Adaptadores Wi-Fi USB",
+            "problemas": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 110,
+        "fields": {
+            "escola": "10.19.034",
+            "chamados": "1671632; 1671630; 1671626",
+            "tecnico": 1,
+            "data_criacao": "2021-07-13T20:47:46.849Z",
+            "data_edicao": "2021-07-25T22:18:05.292Z",
+            "locais": [
+                1,
+                4,
+                5
+            ],
+            "descricao": "Aparece acesso a internet por\u00e9m n\u00e3o funciona",
+            "solucao": "O link de internet da Embratel estava ligado em um AP que n\u00e3o estava ativo. Ap\u00f3s reconectar o link ao switch dos AP's corretos a conex\u00e3o foi restabelecida. O software da merenda voltou a funcionar normalmente. A dire\u00e7\u00e3o foi orientada utilizar apenas a rede wi-fi para conex\u00e3o alternando entre as redes dispon\u00edves quando for necess\u00e1rio utilizar a intranet da SME. Em visita ao rack de rede no laborat\u00f3rio de inform\u00e1tica foi verificado que o cabo de telefonia do modem OI MEC est\u00e1 rompido, como a dire\u00e7\u00e3o informou que o incidente ocorreu ap\u00f3s a instala\u00e7\u00e3o da nova fornecedora, orientamos que entrem em contato com a mesma solicitando nova visita para reparar o cabo para que ent\u00e3o seja poss\u00edvel abrir um chamado na OI para verificar o sinal. O link novo instalado \u00e9 da operadora More Speed Inform\u00e1tica e Telecom com a velocidade aferida em 102,39 Mbps",
+            "recomendacao": false,
+            "itens_recomendados": "",
+            "problemas": [
+                1,
+                2,
+                3
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 111,
+        "fields": {
+            "escola": "10.19.603",
+            "chamados": "1672145; 1672144; 1672160; 1672115",
+            "tecnico": 1,
+            "data_criacao": "2021-07-14T00:38:23.040Z",
+            "data_edicao": "2021-07-25T22:18:05.524Z",
+            "locais": [
+                1,
+                4
+            ],
+            "descricao": "Verifica\u00e7\u00e3o de 3 Micros e Internet Embratel",
+            "solucao": "Ao chegar na unidade fui informado que o link da Embratel j\u00e1 est\u00e1 funcionando. O micro da secretaria que n\u00e3o estava ligando foi analisado e constatou-se um defeito irrevers\u00edvel na placa m\u00e3e o parecer t\u00e9cnico de baixa do equipamento segue anexo ao relat\u00f3rio. O segundo micro da coordena\u00e7\u00e3o est\u00e1 com a bateria descarregada e n\u00e3o est\u00e1 salvando as configura\u00e7\u00f5es a bateria foi retirada e a dire\u00e7\u00e3o da escola foi orientada a adquirir bateria nova para substitui\u00e7\u00e3o, a dire\u00e7\u00e3o foi orientada sobre a necessidade de atualizar o hor\u00e1rio sempre que o computador for desligado ou deix\u00e1-lo em modo de suspens\u00e3o. O micro da dire\u00e7\u00e3o n\u00e3o estava acessando a internet pois o adaptador Wi-Fi USB estava danificado, como a dire\u00e7\u00e3o disponibilizou outro adaptador o mesmo foi instalado e a conex\u00e3o foi restabelecida. Todos os micros foram conectados a impressora da secretaria pela rede. O software de merenda foi instalado e configurado nos dois computadores ativos na secretaria a pedido da dire\u00e7\u00e3o.",
+            "recomendacao": true,
+            "itens_recomendados": "bateria para placa m\u00e3e",
+            "problemas": [
+                1,
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 112,
+        "fields": {
+            "escola": "10.19.060",
+            "chamados": "1671961",
+            "tecnico": 1,
+            "data_criacao": "2021-07-14T02:08:10.615Z",
+            "data_edicao": "2021-07-25T22:18:05.669Z",
+            "locais": [
+                1
+            ],
+            "descricao": "Reinstalar os drives de teclado e mouse do desktop",
+            "solucao": "Ap\u00f3s conectar outro teclado e outro mouse e restaurar configura\u00e7\u00f5es de f\u00e1brica no setup do equipamento o teclado e mouse antigos voltaram a funcionar. Os drivers do micro foram atualizados a impressora HP instalada e software de merenda configurado a pedido da dire\u00e7\u00e3o.",
+            "recomendacao": false,
+            "itens_recomendados": "",
+            "problemas": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 113,
+        "fields": {
+            "escola": "10.19.039",
+            "chamados": "1671449",
+            "tecnico": 1,
+            "data_criacao": "2021-07-15T21:27:41.527Z",
+            "data_edicao": "2021-07-25T22:18:05.921Z",
+            "locais": [
+                4,
+                6
+            ],
+            "descricao": "Verificar cabo do DataShow da Sala de aula",
+            "solucao": "Foi verificado que apesar de antigo e oxidado o cabo ainda funciona, os pinos est\u00e3o um pouco amassados, mas com cuidado \u00e9 poss\u00edvel usar. A dire\u00e7\u00e3o foi orientada a solicitar servi\u00e7o de manuten\u00e7\u00e3o predial para efetuar a troca visto que a professora j\u00e1 possu\u00ed um cabo novo. Foi realizada orienta\u00e7\u00e3o sobre utiliza\u00e7\u00e3o do scanner para a t\u00e9cnica administrativa da unidade. O link de internet do AP da dire\u00e7\u00e3o foi trocado da Oi para a operadora local, pois esta voltou a funcionar normalmente.",
+            "recomendacao": false,
+            "itens_recomendados": "",
+            "problemas": [
+                2,
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 114,
+        "fields": {
+            "escola": "10.19.806",
+            "chamados": "1672299",
+            "tecnico": 1,
+            "data_criacao": "2021-07-16T00:16:07.221Z",
+            "data_edicao": "2021-07-25T22:18:06.074Z",
+            "locais": [
+                4
+            ],
+            "descricao": "Micro n\u00e3o est\u00e1 abrindo o excel",
+            "solucao": "O windows estava desconfigurado para reconhecer extens\u00e3o .xls de planilhas do excel, ap\u00f3s configura\u00e7\u00e3o as planilhas voltaram a abrir normalmente. Instalado software de merenda nos dois computadores da dire\u00e7\u00e3o conforme solicitado.",
+            "recomendacao": false,
+            "itens_recomendados": "",
+            "problemas": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "reports.ratpadrao",
+        "pk": 115,
+        "fields": {
+            "escola": "10.19.211",
+            "chamados": "1672669",
+            "tecnico": 1,
+            "data_criacao": "2021-07-16T01:48:09.352Z",
+            "data_edicao": "2021-07-25T22:18:06.271Z",
+            "locais": [
+                1
+            ],
+            "descricao": "SEM ACESSO A INTERNET. Estava funcionando perfeita",
+            "solucao": "A placa de rede wi-fi do desktop estava com o fio da antena rompido internamente. Como a unidade dispunha de placa de rede .sobressalente efetuamos a troca e a conex\u00e3o foi restabelecida",
+            "recomendacao": false,
+            "itens_recomendados": "",
+            "problemas": [
+                2,
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 118,
+        "fields": {
+            "escola": "10.19.037",
+            "chamados": "1665897",
+            "tecnico": 1,
+            "data_criacao": "2021-07-25T22:50:25.999Z",
+            "data_edicao": "2021-07-25T22:50:25.999Z",
+            "locais": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 119,
+        "fields": {
+            "escola": "10.19.211",
+            "chamados": "1665897",
+            "tecnico": 1,
+            "data_criacao": "2021-07-25T22:52:22.020Z",
+            "data_edicao": "2021-07-25T22:52:22.020Z",
+            "locais": [
+                3
+            ]
+        }
+    }
+]

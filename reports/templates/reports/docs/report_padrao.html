@@ -1,0 +1,103 @@
+{% extends 'report_base.html' %}
+{% load static %}
+
+{% block breadcrumbs %}
+    {{ block.super }}
+    <li><a href="/admin/reports/ratpadrao">Relatórios de Atendimento Técnico</a></li>    
+    <li><a href= "/admin/reports/ratpadrao/{{ rat.id }}">{{ rat }}</a></li>
+    <li>Relatório</li>
+{% endblock breadcrumbs %}
+{% block escola %}
+    {{ rat.escola }}
+{% endblock escola %}
+
+{% block titulo %}
+    RAT Padrão - {{ block.super}}
+{% endblock titulo %}
+
+
+{% block title %}
+    RAT Padrão - {{ block.super}}
+{% endblock title %}
+    
+{% block local %}
+    {% for local in rat.locais.all %}
+        {{ local }}; &nbsp; 
+    {% endfor %}
+{% endblock local %}
+    
+
+{% block chamados %}
+    {{ rat.chamados }}    
+{% endblock chamados %}
+
+{% block conteudo %}
+<p class="c1 c2">
+    <span class="c8">Tipo de Problema</span>
+</p>
+<p class="c1 c2">
+    <span class="c7"></span>
+</p>
+<p class="c1">
+    {% for problema in rat.problemas.all %}
+    <span class="c2 c7"> 
+        {{ problema }};
+    </span>
+    {% endfor %}
+</p>
+<p class="c1 c2">
+    <span class="c7"></span>
+</p>
+<p class="c1 c2">
+    <span class="c7"></span>
+</p>
+<p class="c1">
+    <span class="c8">Descrição do Problema</span>
+</p>
+<p class="c1 c2">
+    <span class="c7"></span>
+</p>    
+<p class="c1">
+    <span class="c2 c7"> {{ rat.descricao }} </span>
+</p>
+<p class="c1 c2">
+    <span class="c20"></span>
+</p>
+<p class="c1 c2">
+    <span class="c7"></span>
+</p>
+<p class="c1">
+    <span class="c8">Solução do problema</span>
+</p>
+<p class="c3 c2">
+    <span class="c23"></span>
+</p>
+<p class="c3">
+    <span class="c23"> {{ rat.solucao }} </span>
+</p>
+<p class="c13 c2">
+    <span class="c4"></span>
+</p>
+<p class="c13">
+    <span class="c23">Recomendação de Equipamento: {{ rat.recomendacao }} </span>
+</p>
+<p class="c2 c13">
+    <span class="c4"></span>
+</p>
+<p class="c3 c2">
+    <span class="c23"> {{ rat.itens_recomendados }} </span>
+</p>
+<p class="c3 c2">
+    <span class="c4"></span>
+</p>  
+{% endblock conteudo %}
+    
+
+{% block tecnico %}
+    {{ block.super }} {{ rat.tecnico.get_full_name }}    
+{% endblock tecnico %}
+
+{% block data %}
+    {{ block.super }} {{ rat.data_criacao }}    
+{% endblock data %}
+    

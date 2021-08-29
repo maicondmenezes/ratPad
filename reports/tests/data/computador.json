@@ -1,0 +1,179 @@
+[
+    {
+        "model": "reports.computador",
+        "pk": "123123eew",
+        "fields": {
+            "numero_serie": "123123ewX",
+            "escola": "10.11.006",
+            "local": 1,
+            "tipo": 1,
+            "marca": "Daten",
+            "modelo": "DC1",
+            "numero_inventario": "s3354676tf",
+            "sistema_operacional": "windowws 7",
+            "processador": "3",
+            "ram": "8",
+            "hostname": "asd33",
+            "ip": "127.0.0.1",
+            "mac_address": "sadfasd32345",
+            "ativo": true,
+            "funcionando": true,
+            "data_criacao": "2021-08-12T01:45:06.079Z",
+            "data_edicao": "2021-08-12T01:45:06.190Z"
+        }
+    },
+    {
+        "model": "reports.computador",
+        "pk": "123123eeX",
+        "fields": {
+            "escola": "10.26.024",
+            "local": 1,
+            "tipo": 2,
+            "marca": "Daten",
+            "modelo": "DC1",
+            "numero_inventario": "as3354676tG",
+            "sistema_operacional": "Linux 5.10.52-v7l+",
+            "processador": "armv7l",
+            "ram": "4 GB",
+            "hostname": "raspiMai",
+            "ip": "127.0.1.1",
+            "mac_address": "8d:9d:02:97:9b:b2",
+            "ativo": true,
+            "funcionando": true,
+            "data_criacao": "2021-08-12T01:45:06.079Z",
+            "data_edicao": "2021-08-12T01:45:06.190Z"
+        }
+    },
+    {
+        "model": "reports.computador",
+        "pk": "23416682",
+        "fields": {
+            "escola": "10.19.037",
+            "local": 2,
+            "tipo": 1,
+            "marca": "Positivo",
+            "modelo": "Series F",
+            "numero_inventario": "02548899",
+            "sistema_operacional": "Windows 7",
+            "processador": "0.0GHz",
+            "ram": "0GB",
+            "hostname": "hostname",
+            "ip": "127.0.0.1",
+            "mac_address": "mac-address",
+            "ativo": true,
+            "funcionando": true,
+            "data_criacao": "2021-08-12T01:45:06.079Z",
+            "data_edicao": "2021-08-12T01:45:06.190Z"
+        }
+    },
+    {
+        "model": "reports.computador",
+        "pk": "23416689",
+        "fields": {
+            "escola": "10.19.037",
+            "local": 4,
+            "tipo": 2,
+            "marca": "Daten",
+            "modelo": "DT-02",
+            "numero_inventario": "02548899554",
+            "sistema_operacional": "Linux 5.10.17-v7l+",
+            "processador": "armv7l",
+            "ram": "4 GB",
+            "hostname": "raspiMai",
+            "ip": "127.0.1.1",
+            "mac_address": "dc:a6:32:9c:c7:04",
+            "ativo": true,
+            "funcionando": true,
+            "data_criacao": "2021-08-12T01:45:06.079Z",
+            "data_edicao": "2021-08-12T01:45:06.190Z"
+        }
+    },
+    {
+        "model": "reports.computador",
+        "pk": "2341668947",
+        "fields": {
+            "escola": "10.26.021",
+            "local": 1,
+            "tipo": 2,
+            "marca": "Positivo",
+            "modelo": "DT-02",
+            "numero_inventario": "0254889922",
+            "sistema_operacional": "Linux 5.10.17-v7l+",
+            "processador": "armv7l",
+            "ram": "4 GB",
+            "hostname": "raspiMai",
+            "ip": "127.0.1.1",
+            "mac_address": "dc:a6:32:9c:c7:04",
+            "ativo": true,
+            "funcionando": true,
+            "data_criacao": "2021-08-12T01:45:06.079Z",
+            "data_edicao": "2021-08-12T01:45:06.190Z"
+        }
+    },
+    {
+        "model": "reports.computador",
+        "pk": "2516685",
+        "fields": {
+            "escola": "10.19.211",
+            "local": 2,
+            "tipo": 2,
+            "marca": "Daten",
+            "modelo": "DT-02",
+            "numero_inventario": "0254889955",
+            "sistema_operacional": "Windows 7",
+            "processador": "0.0GHz",
+            "ram": "0GB",
+            "hostname": "hostname",
+            "ip": "127.0.0.1",
+            "mac_address": "mac-address",
+            "ativo": true,
+            "funcionando": true,
+            "data_criacao": "2021-08-12T01:45:06.079Z",
+            "data_edicao": "2021-08-12T01:45:06.190Z"
+        }
+    },
+    {
+        "model": "reports.computador",
+        "pk": "2516689",
+        "fields": {
+            "escola": "10.19.037",
+            "local": 1,
+            "tipo": 1,
+            "marca": "Positivo",
+            "modelo": "Series F",
+            "numero_inventario": "5402548899",
+            "sistema_operacional": "Windows 7",
+            "processador": "0.0GHz",
+            "ram": "0GB",
+            "hostname": "hostname",
+            "ip": "127.0.0.1",
+            "mac_address": "mac-address",
+            "ativo": true,
+            "funcionando": true,
+            "data_criacao": "2021-08-12T01:45:06.079Z",
+            "data_edicao": "2021-08-12T01:45:06.190Z"
+        }
+    },
+    {
+        "model": "reports.computador",
+        "pk": "qwe4432",
+        "fields": {
+            "escola": "10.19.001",
+            "local": 2,
+            "tipo": 1,
+            "marca": "HP",
+            "modelo": "HP-123ed",
+            "numero_inventario": "q22314q",
+            "sistema_operacional": "windows",
+            "processador": "3",
+            "ram": "8",
+            "hostname": "adf",
+            "ip": "127.0.0.1",
+            "mac_address": "asd1qwe",
+            "ativo": true,
+            "funcionando": true,
+            "data_criacao": "2021-08-12T01:45:06.079Z",
+            "data_edicao": "2021-08-12T01:45:06.190Z"
+        }
+    }
+]

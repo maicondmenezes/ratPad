@@ -1,0 +1,48 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_urls static admin_modify %}
+{% load static %}
+
+{% block extrahead %}{{ block.super }}
+<script src="{% url 'admin:jsi18n' %}"></script>
+<script type="text/javascript" src="/static/admin/js/admin/RelatedObjectLookups.js"></script>
+{% block meta %}            
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Language" content="pt-br"/>
+    <meta name="keywords" content="SME-RJ, Secretaria de Educação do Rio de Janeiro, Relatório de Atendimento Técnico, 10ª CRE" />
+    <meta name="description" content="Este é um documento padrão de relatórios técnicos de atendimento de suporte em informática nas unidades escolares da 10ª Coordenadoria Regional de Educação da Secretaria Municipal de Educação do Estado do Rio de Janeiro" />
+{% endblock meta %}
+{{ media }}
+{% endblock %}
+
+{% block extrastyle %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static "admin/css/forms.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'rat/styles/reports.css' %}"/>
+{% endblock %}
+
+
+{% block breadcrumbs %}
+
+<div id="grp-context-navigation">
+    <nav id="grp-breadcrumbs" class="">
+        <header style="display:none"><h1>Breadcrumbs</h1></header>
+        <ul>
+            <li><a href="/admin/">Início</a></li>
+            <li><a href="/admin/reports/">Reports</a></li>
+            {% endblock breadcrumbs %}
+        </ul>
+    </nav>    
+</div>
+
+{% block title %}
+    Informações do Sistema {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+<div id="download_systemInfo" class="c27">
+    <h1>Sistema de Monitoramento de Ativos ratPAd</h1>
+    <h2>Faça download desse app e execute na maquina para captura de informações e monitoramento do sistema</h2>
+    <a href="/admin/reports" > <input type="submit" value="Menu Principal"></a>
+</div>
+        
+{% endblock content %}

@@ -1,0 +1,750 @@
+[
+    {
+        "model": "reports.relatorio",
+        "pk": 67,
+        "fields": {
+            "escola": "10.11.006",
+            "chamados": "1664151",
+            "tecnico": 2,
+            "data_criacao": "2021-06-16T06:00:00Z",
+            "data_edicao": "2021-07-25T22:17:57.364Z",
+            "locais": [
+                1
+            ],
+            "tipo":1,            
+            "links": [
+                1
+            ],
+            "computadores": [
+                "123123ewX"
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 68,
+        "fields": {
+            "escola": "10.19.015",
+            "chamados": "1665468",
+            "tecnico": 1,
+            "data_criacao": "2021-06-16T06:00:00Z",
+            "data_edicao": "2021-07-25T22:17:57.524Z",
+            "locais": [
+                5
+            ],
+            "tipo":1,            
+            "links": [
+                1
+            ],
+            "computadores": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 69,
+        "fields": {
+            "escola": "10.19.019",
+            "chamados": "1664976",
+            "tecnico": 1,
+            "data_criacao": "2021-06-16T06:00:00Z",
+            "data_edicao": "2021-07-25T22:17:57.656Z",
+            "locais": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 70,
+        "fields": {
+            "escola": "10.19.007",
+            "chamados": "1657408",
+            "tecnico": 1,
+            "data_criacao": "2021-06-17T06:00:00Z",
+            "data_edicao": "2021-07-25T22:17:57.876Z",
+            "locais": [
+                5
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 71,
+        "fields": {
+            "escola": "10.19.017",
+            "chamados": "['1662617', '1662616']",
+            "tecnico": 1,
+            "data_criacao": "2021-06-17T06:00:00Z",
+            "data_edicao": "2021-07-25T22:17:58.117Z",
+            "locais": [
+                3,
+                4,
+                8
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 72,
+        "fields": {
+            "escola": "10.19.072",
+            "chamados": "['1661537', '1665952']",
+            "tecnico": 1,
+            "data_criacao": "2021-06-18T06:00:00Z",
+            "data_edicao": "2021-07-25T22:17:58.301Z",
+            "locais": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 73,
+        "fields": {
+            "escola": "10.19.053",
+            "chamados": "1665225",
+            "tecnico": 1,
+            "data_criacao": "2021-06-18T06:00:00Z",
+            "data_edicao": "2021-07-25T22:17:58.479Z",
+            "locais": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 74,
+        "fields": {
+            "escola": "10.19.033",
+            "chamados": "1664651",
+            "tecnico": 1,
+            "data_criacao": "2021-06-18T06:00:00Z",
+            "data_edicao": "2021-07-25T22:17:58.635Z",
+            "locais": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 75,
+        "fields": {
+            "escola": "10.19.815",
+            "chamados": "1664184",
+            "tecnico": 1,
+            "data_criacao": "2021-06-18T06:00:00Z",
+            "data_edicao": "2021-07-25T22:17:58.804Z",
+            "locais": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 76,
+        "fields": {
+            "escola": "10.19.034",
+            "chamados": "1661517",
+            "tecnico": 1,
+            "data_criacao": "2021-06-21T06:00:00Z",
+            "data_edicao": "2021-07-25T22:17:58.976Z",
+            "locais": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 77,
+        "fields": {
+            "escola": "10.19.032",
+            "chamados": "1666085",
+            "tecnico": 1,
+            "data_criacao": "2021-06-21T06:00:00Z",
+            "data_edicao": "2021-07-25T22:17:59.142Z",
+            "locais": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 78,
+        "fields": {
+            "escola": "10.26.024",
+            "chamados": "['1666565', '1666564', '1666563', '1666562', '1654555']",
+            "tecnico": 1,
+            "data_criacao": "2021-06-22T06:00:00Z",
+            "data_edicao": "2021-07-25T22:17:59.399Z",
+            "locais": [
+                1,
+                4,
+                5,
+                8
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 79,
+        "fields": {
+            "escola": "10.26.017",
+            "chamados": "1666328",
+            "tecnico": 1,
+            "data_criacao": "2021-06-22T06:00:00Z",
+            "data_edicao": "2021-07-25T22:17:59.579Z",
+            "locais": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 80,
+        "fields": {
+            "escola": "10.19.005",
+            "chamados": "1666287",
+            "tecnico": 1,
+            "data_criacao": "2021-06-23T06:00:00Z",
+            "data_edicao": "2021-07-25T22:17:59.741Z",
+            "locais": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 81,
+        "fields": {
+            "escola": "10.19.074",
+            "chamados": "1656345",
+            "tecnico": 1,
+            "data_criacao": "2021-06-24T06:00:00Z",
+            "data_edicao": "2021-07-25T22:17:59.916Z",
+            "locais": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 82,
+        "fields": {
+            "escola": "10.19.807",
+            "chamados": "1666334",
+            "tecnico": 1,
+            "data_criacao": "2021-06-24T06:00:00Z",
+            "data_edicao": "2021-07-25T22:18:00.085Z",
+            "locais": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 83,
+        "fields": {
+            "escola": "10.19.038",
+            "chamados": "1666289",
+            "tecnico": 1,
+            "data_criacao": "2021-06-25T06:00:00Z",
+            "data_edicao": "2021-07-25T22:18:00.294Z",
+            "locais": [
+                4,
+                7
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 84,
+        "fields": {
+            "escola": "10.19.815",
+            "chamados": "1667516",
+            "tecnico": 1,
+            "data_criacao": "2021-06-25T06:00:00Z",
+            "data_edicao": "2021-07-25T22:18:00.458Z",
+            "locais": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 85,
+        "fields": {
+            "escola": "10.19.043",
+            "chamados": "1666978",
+            "tecnico": 1,
+            "data_criacao": "2021-06-25T06:00:00Z",
+            "data_edicao": "2021-07-25T22:18:00.642Z",
+            "locais": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 86,
+        "fields": {
+            "escola": "10.19.005",
+            "chamados": "1667824",
+            "tecnico": 1,
+            "data_criacao": "2021-06-28T20:22:10.171Z",
+            "data_edicao": "2021-07-25T22:18:00.843Z",
+            "locais": [
+                4,
+                5
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 87,
+        "fields": {
+            "escola": "10.19.001",
+            "chamados": "165542",
+            "tecnico": 1,
+            "data_criacao": "2021-06-28T20:48:52.834Z",
+            "data_edicao": "2021-07-25T22:18:01.007Z",
+            "locais": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 88,
+        "fields": {
+            "escola": "10.19.828",
+            "chamados": "1668399",
+            "tecnico": 1,
+            "data_criacao": "2021-06-29T18:32:51.786Z",
+            "data_edicao": "2021-07-25T22:18:01.188Z",
+            "locais": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 89,
+        "fields": {
+            "escola": "10.19.084",
+            "chamados": "1668402",
+            "tecnico": 1,
+            "data_criacao": "2021-06-29T21:01:33.819Z",
+            "data_edicao": "2021-07-25T22:18:01.436Z",
+            "locais": [
+                1,
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 90,
+        "fields": {
+            "escola": "10.19.021",
+            "chamados": "000000",
+            "tecnico": 1,
+            "data_criacao": "2021-06-30T00:27:44.372Z",
+            "data_edicao": "2021-07-25T22:18:01.660Z",
+            "locais": [
+                5
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 91,
+        "fields": {
+            "escola": "10.19.018",
+            "chamados": "1668401",
+            "tecnico": 1,
+            "data_criacao": "2021-06-30T01:11:43.009Z",
+            "data_edicao": "2021-07-25T22:18:01.848Z",
+            "locais": [
+                4,
+                5
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 92,
+        "fields": {
+            "escola": "10.19.075",
+            "chamados": "00000000",
+            "tecnico": 1,
+            "data_criacao": "2021-06-30T18:23:05.924Z",
+            "data_edicao": "2021-07-25T22:18:02.013Z",
+            "locais": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 93,
+        "fields": {
+            "escola": "10.19.075",
+            "chamados": "1670559",
+            "tecnico": 1,
+            "data_criacao": "2021-06-30T18:24:37.098Z",
+            "data_edicao": "2021-07-25T22:18:02.172Z",
+            "locais": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 94,
+        "fields": {
+            "escola": "10.19.045",
+            "chamados": "1668336",
+            "tecnico": 1,
+            "data_criacao": "2021-07-01T00:33:39.898Z",
+            "data_edicao": "2021-07-25T22:18:02.328Z",
+            "locais": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 95,
+        "fields": {
+            "escola": "10.19.057",
+            "chamados": "1669336",
+            "tecnico": 1,
+            "data_criacao": "2021-07-02T19:36:29.677Z",
+            "data_edicao": "2021-07-25T22:18:02.545Z",
+            "locais": [
+                1,
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 96,
+        "fields": {
+            "escola": "10.19.209",
+            "chamados": "1667877",
+            "tecnico": 1,
+            "data_criacao": "2021-07-02T20:25:03.902Z",
+            "data_edicao": "2021-07-25T22:18:02.722Z",
+            "locais": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 97,
+        "fields": {
+            "escola": "10.19.030",
+            "chamados": "1669209",
+            "tecnico": 1,
+            "data_criacao": "2021-07-02T22:09:41.390Z",
+            "data_edicao": "2021-07-25T22:18:02.890Z",
+            "locais": [
+                5
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 98,
+        "fields": {
+            "escola": "10.19.014",
+            "chamados": "1668669",
+            "tecnico": 1,
+            "data_criacao": "2021-07-03T01:35:16.751Z",
+            "data_edicao": "2021-07-25T22:18:03.069Z",
+            "locais": [
+                7
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 99,
+        "fields": {
+            "escola": "10.26.006",
+            "chamados": "1668763",
+            "tecnico": 1,
+            "data_criacao": "2021-07-06T01:10:43.498Z",
+            "data_edicao": "2021-07-25T22:18:03.252Z",
+            "locais": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 100,
+        "fields": {
+            "escola": "10.26.017",
+            "chamados": "1668583",
+            "tecnico": 1,
+            "data_criacao": "2021-07-06T02:03:50.399Z",
+            "data_edicao": "2021-07-25T22:18:03.449Z",
+            "locais": [
+                1,
+                2,
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 101,
+        "fields": {
+            "escola": "10.19.047",
+            "chamados": "1670124",
+            "tecnico": 1,
+            "data_criacao": "2021-07-06T19:11:10.542Z",
+            "data_edicao": "2021-07-25T22:18:03.632Z",
+            "locais": [
+                1,
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 102,
+        "fields": {
+            "escola": "10.19.039",
+            "chamados": "1669025",
+            "tecnico": 1,
+            "data_criacao": "2021-07-06T22:09:58.095Z",
+            "data_edicao": "2021-07-25T22:18:03.852Z",
+            "locais": [
+                1,
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 103,
+        "fields": {
+            "escola": "10.26.021",
+            "chamados": "1670408",
+            "tecnico": 1,
+            "data_criacao": "2021-07-07T23:07:07.854Z",
+            "data_edicao": "2021-07-25T22:18:04.059Z",
+            "locais": [
+                1,
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 104,
+        "fields": {
+            "escola": "10.26.016",
+            "chamados": "1670428",
+            "tecnico": 1,
+            "data_criacao": "2021-07-07T23:46:36.753Z",
+            "data_edicao": "2021-07-25T22:18:04.198Z",
+            "locais": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 105,
+        "fields": {
+            "escola": "10.19.092",
+            "chamados": "1670366",
+            "tecnico": 1,
+            "data_criacao": "2021-07-08T20:45:09.373Z",
+            "data_edicao": "2021-07-25T22:18:04.401Z",
+            "locais": [
+                1,
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 106,
+        "fields": {
+            "escola": "10.19.041",
+            "chamados": "1662028",
+            "tecnico": 1,
+            "data_criacao": "2021-07-08T22:18:48.345Z",
+            "data_edicao": "2021-07-25T22:18:04.544Z",
+            "locais": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 107,
+        "fields": {
+            "escola": "10.19.073",
+            "chamados": "1671378",
+            "tecnico": 1,
+            "data_criacao": "2021-07-09T20:42:24.603Z",
+            "data_edicao": "2021-07-25T22:18:04.720Z",
+            "locais": [
+                5
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 108,
+        "fields": {
+            "escola": "10.19.802",
+            "chamados": "1671082",
+            "tecnico": 1,
+            "data_criacao": "2021-07-09T23:04:55.010Z",
+            "data_edicao": "2021-07-25T22:18:04.907Z",
+            "locais": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 109,
+        "fields": {
+            "escola": "10.19.606",
+            "chamados": "1671234",
+            "tecnico": 1,
+            "data_criacao": "2021-07-10T00:26:35.768Z",
+            "data_edicao": "2021-07-25T22:18:05.071Z",
+            "locais": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 110,
+        "fields": {
+            "escola": "10.19.034",
+            "chamados": "1671632; 1671630; 1671626",
+            "tecnico": 1,
+            "data_criacao": "2021-07-13T20:47:46.849Z",
+            "data_edicao": "2021-07-25T22:18:05.292Z",
+            "locais": [
+                1,
+                4,
+                5
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 111,
+        "fields": {
+            "escola": "10.19.603",
+            "chamados": "1672145; 1672144; 1672160; 1672115",
+            "tecnico": 1,
+            "data_criacao": "2021-07-14T00:38:23.040Z",
+            "data_edicao": "2021-07-25T22:18:05.524Z",
+            "locais": [
+                1,
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 112,
+        "fields": {
+            "escola": "10.19.060",
+            "chamados": "1671961",
+            "tecnico": 1,
+            "data_criacao": "2021-07-14T02:08:10.615Z",
+            "data_edicao": "2021-07-25T22:18:05.669Z",
+            "locais": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 113,
+        "fields": {
+            "escola": "10.19.039",
+            "chamados": "1671449",
+            "tecnico": 1,
+            "data_criacao": "2021-07-15T21:27:41.527Z",
+            "data_edicao": "2021-07-25T22:18:05.921Z",
+            "locais": [
+                4,
+                6
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 114,
+        "fields": {
+            "escola": "10.19.806",
+            "chamados": "1672299",
+            "tecnico": 1,
+            "data_criacao": "2021-07-16T00:16:07.221Z",
+            "data_edicao": "2021-07-25T22:18:06.074Z",
+            "locais": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 115,
+        "fields": {
+            "escola": "10.19.211",
+            "chamados": "1672669",
+            "tecnico": 1,
+            "data_criacao": "2021-07-16T01:48:09.352Z",
+            "data_edicao": "2021-07-25T22:18:06.271Z",
+            "locais": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 118,
+        "fields": {
+            "escola": "10.19.037",
+            "chamados": "1665897",
+            "tecnico": 1,
+            "data_criacao": "2021-07-25T22:50:25.999Z",
+            "data_edicao": "2021-07-25T22:50:25.999Z",
+            "locais": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "reports.relatorio",
+        "pk": 119,
+        "fields": {
+            "escola": "10.19.211",
+            "chamados": "1665897",
+            "tecnico": 1,
+            "data_criacao": "2021-07-25T22:52:22.020Z",
+            "data_edicao": "2021-07-25T22:52:22.020Z",
+            "locais": [
+                3
+            ]
+        }
+    }
+]

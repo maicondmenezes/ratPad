@@ -1,0 +1,12 @@
+[
+    {
+        "logradouro": "Rua A, 123",
+        "numero": "120",
+        "complemento": "Lt 10",
+        "bairro": "Cruzeiro",
+        "cidade": "Santa Cruz",
+        "uf": "rj",
+        "cep": "23078*-160",
+        "geolocalizacao": "lt:44lg:14"
+    }
+]

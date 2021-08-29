@@ -1,0 +1,38 @@
+[
+    {
+        "model": "reports.fornecedordeinternet",
+        "pk": 1,
+        "fields": {
+            "nome": "Oi",
+            "telefone": "0800",
+            "link_chamado": "http://www.oi.com.br/chamado",
+            "ativo": true,
+            "data_criacao": "2021-08-12T01:45:06.601Z",
+            "data_edicao": "2021-08-12T01:45:06.631Z"
+        }
+    },
+    {
+        "model": "reports.fornecedordeinternet",
+        "pk": 2,
+        "fields": {
+            "nome": "Embratel",
+            "telefone": "0800",
+            "link_chamado": "www",
+            "ativo": true,
+            "data_criacao": "2021-08-12T01:45:06.601Z",
+            "data_edicao": "2021-08-12T01:45:06.631Z"
+        }
+    },
+    {
+        "model": "reports.fornecedordeinternet",
+        "pk": 3,
+        "fields": {
+            "nome": "Oi MEC",
+            "telefone": "0800",
+            "link_chamado": "www",
+            "ativo": true,
+            "data_criacao": "2021-08-12T01:45:06.601Z",
+            "data_edicao": "2021-08-12T01:45:06.631Z"
+        }
+    }
+]

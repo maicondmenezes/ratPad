@@ -1,0 +1,12 @@
+[
+    {
+        "model": "reports.statusdebaixa",
+        "pk": 1,
+        "fields": {
+            "parecer": 1,
+            "computador": "123123ewX",
+            "motivo": "obsolesc\u00eancia",
+            "descricao": "N\u00e3o liga"
+        }
+    }
+]

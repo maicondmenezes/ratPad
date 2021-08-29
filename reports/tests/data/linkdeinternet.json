@@ -1,0 +1,14 @@
+[
+    {
+        "model": "reports.linkdeinternet",
+        "pk": 1,
+        "fields": {
+            "escola":"10.11.006",
+            "fornecedor":1,
+            "velocidade":10,
+            "ip_circuito":"189.0.0.2",
+            "identificador":"RJO/IP/2000",
+            "local":1            
+        }
+    }
+]

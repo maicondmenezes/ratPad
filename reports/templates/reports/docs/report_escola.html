@@ -1,0 +1,242 @@
+{% extends 'report_base.html' %}
+{% load static %}
+
+{% block title %}
+    Relatório Geral de Unidade Escolar | {{ block.super}}
+{% endblock title %}
+
+{% block escola %}
+   ( {{escola.designacao}} ) {{ escola.nome }}    
+{% endblock escola %}
+
+{% block breadcrumbs %}
+    {{ block.super }}
+    <li><a href="/admin/reports/escola">Escolas</a></li>    
+    <li><a href= "/admin/reports/escola/{{ escola }}">{{ escola }}</a></li>
+    <li>Relatório</li>
+{% endblock breadcrumbs %}
+
+{% block local %}
+    
+    {% for local in escola.locais.all %}
+        {{local}}; &nbsp;
+    {% endfor %}        
+    
+{% endblock local %}
+    
+
+{% block chamados %}
+    XX Chamados Atendidos Localmente na Unidade Este Ano
+{% endblock chamados %}
+    
+
+
+{% block conteudo %}
+    <p class="c1 c2">
+        <span class="c8">Links de Internet</span>
+    </p>
+    <p class="c1 c2">
+        <span class="c7"></span>
+    </p>
+    <p class="c1">
+        <table class="c16">
+            <tbody>
+                <tr class="c28">
+                    <td class="c17" colspan="1" rowspan="1">
+                        <p class="c3">
+                            <span class="c21">Operadora</span>
+                        </p>
+                    </td>
+                    <td class="c17" colspan="1" rowspan="1">
+                        <p class="c3">
+                            <span class="c21">Velocidade (Mbps)</span>
+                        </p>
+                    </td>
+                    <td class="c17" colspan="1" rowspan="1">
+                        <p class="c3">
+                            <span class="c21">I.P. do Circuito</span>
+                        </p>
+                    </td>
+                    <td class="c17" colspan="1" rowspan="1">
+                        <p class="c3">
+                            <span class="c21">Identificador</span>
+                        </p>
+                    </td>
+                    <td class="c17" colspan="1" rowspan="1">
+                        <p class="c3">
+                            <span class="c21">Local</span>
+                        </p>
+                    </td> 
+                    <td class="c17" colspan="1" rowspan="1">
+                        <p class="c3">
+                            <span class="c21">Wi-Fi ?</span>
+                        </p>
+                    </td>
+                    <td class="c17" colspan="1" rowspan="1">
+                        <p class="c3">
+                            <span class="c21">Cabo ?</span>
+                        </p>
+                    </td>
+                    <td class="c17" colspan="1" rowspan="1">
+                        <p class="c3">
+                            <span class="c21">Funcionando ?</span>
+                        </p>
+                    </td>                     
+                </tr>
+                {% for link in escola.linkdeinternet_set.all %}
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c3">
+                        <span class="c23">{{link.fornecedor}}</span>
+                        </p>
+                    </td>
+                    <td class="c17" colspan="1" rowspan="1">
+                        <p class="c3">
+                            <span class="c23">{{link.velocidade}}</span>
+                        </p>
+                    </td>
+                    <td class="c17" colspan="1" rowspan="1">
+                        <p class="c3">
+                            <span class="c23">{{link.ip_circuito}}</span>
+                        </p>
+                    </td>
+                    <td class="c17" colspan="1" rowspan="1">
+                        <p class="c3">
+                            <span class="c23">{{link.identificador}}</span>
+                        </p>
+                    </td>
+                    <td class="c17" colspan="1" rowspan="1">
+                        <p class="c3">
+                            <span class="c23">{{link.local}}</span>
+                        </p>
+                    </td>
+                    <td class="c17" colspan="1" rowspan="1">
+                        <p class="c3">
+                            <span class="c23">{{link.wifi}}</span>
+                        </p>
+                    </td>
+                    <td class="c17" colspan="1" rowspan="1">
+                        <p class="c3">
+                            <span class="c23">{{link.cabo}}</span>
+                        </p>
+                    </td>   
+                    <td class="c17" colspan="1" rowspan="1">
+                        <p class="c3">
+                            <span class="c23">{{link.Funcionando}}</span>
+                        </p>
+                    </td>                    
+                </tr>                
+                {% endfor %}               
+            </tbody>
+        </table>
+    </p>
+    <p class="c1 c2">
+        <span class="c7"></span>
+    </p>
+    
+    <p class="c1">
+        <span class="c8">Computadores</span>
+    </p>
+    <p class="c1 c2">
+        <span class="c7"></span>
+    </p>
+
+    <a id="t.521cb25f33595bdadc013ee6443a1738ebdce14c"></a>
+    <a id="t.1"></a>
+    <table class="c16">
+        <tbody>
+            <tr class="c28">
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c3">
+                        <span class="c21">Tipo</span>
+                    </p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c3">
+                        <span class="c21">Marca/Modelo</span>
+                    </p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c3">
+                        <span class="c21">Nº de Série</span>
+                    </p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c3">
+                        <span class="c21">Nº do Inventário</span>
+                    </p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c3">
+                        <span class="c21">CPU</span>
+                    </p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c3">
+                        <span class="c21">Memória</span>
+                    </p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c3">
+                        <span class="c21">Sistema Operacional</span>
+                    </p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c3">
+                        <span class="c21">Local</span>
+                    </p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c3">
+                        <span class="c21">Funcionando?</span>
+                    </p>
+                </td>
+            </tr>
+            {% for computador in escola.computador_set.all %}
+            <td class="c17" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c23">{{computador.tipo}}</span>
+                    </p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c3">
+                        <span class="c23">{{computador.marca}} / {{computador.modelo}}</span>
+                    </p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c3">
+                        <span class="c23">{{computador.numero_serie}}</span>
+                    </p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c3">
+                        <span class="c23">{{computador.numero_inventario}}</span>
+                    </p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c3">
+                        <span class="c23">{{computador.processador}}GHz</span>
+                    </p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c3">
+                        <span class="c23">{{computador.ram}}GB</span>
+                    </p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c3">
+                        <span class="c23">{{computador.sitema_operacional}}</span>
+                    </p>
+                </td>
+                <td class="c17" colspan="1" rowspan="1">
+                    <p class="c3">
+                        <span class="c23">{{computador.funciona}}</span>
+                    </p>
+                </td>              
+            </tr>                
+            {% endfor %}               
+        </tbody>
+    </table>
+
+{% endblock conteudo %} 
+{% block tecnico %}{% endblock tecnico %}
+{% block data %}{% endblock data %}

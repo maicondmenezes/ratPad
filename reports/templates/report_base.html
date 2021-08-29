@@ -1,0 +1,179 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_urls static admin_modify %}
+{% load static %}
+
+{% block extrahead %}{{ block.super }}
+<script src="{% url 'admin:jsi18n' %}"></script>
+<script type = "text/javascript">
+    function printReport(){
+        var prtContent = document.getElementById("report_doc");
+        var WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
+        WinPrint.document.write(prtContent.innerHTML);
+        WinPrint.document.close();
+        WinPrint.focus();
+        
+        
+    }
+    
+</script>
+{% block meta %}            
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Language" content="pt-br"/>
+    <meta name="keywords" content="SME-RJ, Secretaria de Educação do Rio de Janeiro, Relatório de Atendimento Técnico, 10ª CRE" />
+    <meta name="description" content="Este é um documento padrão de relatórios técnicos de atendimento de suporte em informática nas unidades escolares da 10ª Coordenadoria Regional de Educação da Secretaria Municipal de Educação do Estado do Rio de Janeiro" />
+{% endblock meta %}
+{{ media }}
+{% endblock %}
+
+{% block extrastyle %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static "admin/css/forms.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'rat/styles/reports.css' %}"/>    
+    <link rel="stylesheet" type="text/css" href="{% static 'rat/styles/print_report.css' %}"  media="print"/>  
+{% endblock %}
+
+
+{% block breadcrumbs %}
+
+<div id="grp-context-navigation">
+    <nav id="grp-breadcrumbs" class="">
+        <header style="display:none"><h1>Breadcrumbs</h1></header>
+        <ul>
+            <li><a href="/admin/">Início</a></li>
+            <li><a href="/admin/reports/">Reports</a></li>
+            {% endblock breadcrumbs %}
+        </ul>
+    </nav>    
+</div>
+
+{% block title %}
+    Relatórios {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+
+<div id="report_doc" class="c27">
+    <p class="c3 c2">
+        <span class="c9"></span>
+    </p>
+
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    <img class="smeLogo" alt="" src= "{% static 'rat/images/smeLogo.png' %}" title="">
+                </td>
+                <td>
+                    <span class="smeInfo0">
+                        <p>PREFEITURA DA CIDADE DO RIO DE JANEIRO</p>
+                        <p>E/10ª COORDENADORIA REGIONAL DE EDUCAÇÃO</p>
+                    </span>                        
+                    <span class="smeInfo1">
+                        <p>Acessoria de Informática e Tecnologia</p>
+                    </span>                        
+                    <span class="smeInfo2">
+                        <p>Av. Padre Guilherme Decaminada, 71, Santa Cruz - Rio de Janeiro</p>
+                        <p>RJ - CEP.: 23575-000</p>
+                        <p>Telefones: (21) 3157-0660 / 3158-1939</p>
+                        <p>Correio Eletrônico: aitcre10@rioeduca.net</p>                                
+                    </span>                 
+                </td>
+            </tr>
+        </tbody>
+    </table>        
+    <p class="c3">
+        <span class="c0">
+            &nbsp;
+        </span>
+    </p>   
+    <p class="c3 c2">
+        <span class="c9"></span>
+    </p>  
+    <p class="c1">
+        <span class="c30">Relatório de Atendimento Técnico</span>
+    </p>
+    <p class="c1 c2">
+        <span class="c4"></span>
+    </p>
+    <a id="t.f3a4806c23b61523e4c286b2e671a59ef01022fa"></a>
+    <a id="t.0"></a>
+    <table class="c16">
+        <tbody>
+            <tr class="c33">
+                <td class="c10" colspan="1" rowspan="1">                    
+                    <span class="c21">E/SUBE/CRE </span>                                        
+                </td>
+                <td class="c2 c17" colspan="1" rowspan="1">
+                    <span class="c24"> {% block escola %} {% endblock escola %} </span>                                      
+                </td>
+            </tr>
+            <tr class="c33">
+                <td class="c10" colspan="1" rowspan="1">
+                    <span class="c21">Local do Atendimento</span>                    
+                </td>
+                <td class="c2 c17" colspan="1" rowspan="1">
+                    <span class="c24"> 
+                        {% block local %} {% endblock local %}
+                    </span>                    
+                </td>
+            </tr>
+            <tr class="c33">
+                <td class="c10" colspan="1" rowspan="1">
+                    <span class="c21">Chamado(s)</span>                    
+                </td>
+                <td class="c2 c17" colspan="1" rowspan="1">
+                    <span class="c24"> 
+                        {% block chamados %} {% endblock chamados %}
+                    </span>                    
+                </td>                
+            </tr>
+        </tbody>
+    </table>
+    <p class="c3">
+        <span class="c4">&nbsp;</span>
+    </p>
+    
+    {% block conteudo %} {% endblock conteudo %}       
+    
+    <p class="c18">        
+        <span class="c23">
+            {% block data %}
+                Rio de Janeiro,        
+            {% endblock data %}
+        </span>
+    </p>
+    <p class="c3 c2">
+        <span class="c7"></span>
+    </p>
+    <p class="c3">
+        <span class="c23">
+            {% block tecnico %}
+            Técnico :
+            {% endblock tecnico %}
+        </span>    
+    </p>
+    
+    <p class="c3">
+        <span class="c4"></span>
+    </p>
+    <p class="c3 c2">
+        <span class="c4"></span>
+    </p>
+    <p class="c1 c15">
+        <span class="c4">
+            ___________________________________________________________________
+        </span>
+    </p>
+    <p class="c1 c15">
+        <span class="c7">Responsável pela Unidade Escolar</span>
+    </p>
+    <br>
+    
+ 
+</div>
+{{ block.super }}
+<div id=btn-print>
+    <input type="button" value="imprimir" onClick="window.print()"/> 
+</div>
+
+{% endblock content %}
