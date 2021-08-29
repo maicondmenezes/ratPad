@@ -4,6 +4,7 @@ django-object-actions
 django-autoslug
 django-debug-toolbar
 django-model-utils
+django-rest-framework
 factory-boy
 ipython
 psycopg2
