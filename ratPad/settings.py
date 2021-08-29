@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'rest_framework',
     # My apps
     'accounts.apps.AccountsConfig',
+    'pages.apps.PagesConfig',
     #Django
     'django.contrib.admin',
     'django.contrib.auth',

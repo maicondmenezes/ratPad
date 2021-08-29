@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extrastyle %}
+    {{ block.super }}
+    <link href="{% static 'rat/styles/reports.css' %}" rel="stylesheet"> 
+{% endblock %}
+{% block page_content %}
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">ratPad 0.2.0</h1>        
+    </div>        
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h3 class="h6 mb-1 text-gray-800">
+            Esté uma ferramenta de apoio aos técnicos de campo da 10ª CRE.<br>
+            Desenvolvida a partir das necessidades identificadas no dia-a-dia de atendimento.
+        </h3>
+    </div>
+</div>
+<!-- /.container-fluid -->       
+{% endblock page_content %}
