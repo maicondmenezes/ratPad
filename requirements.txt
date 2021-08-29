@@ -1,0 +1,13 @@
+Django
+django-grappelli
+django-object-actions
+django-autoslug
+django-debug-toolbar
+django-model-utils
+factory-boy
+ipython
+psycopg2
+pytest
+pytest-cov
+pytest-django
+Pillow
