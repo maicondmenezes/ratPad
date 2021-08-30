@@ -1,7 +1,8 @@
-# ratPad 0.1.3.5b
+# ratPad admin 0.1.4.5b
 _Gerenciador de relatórios de atendimentos técnicos da 10ª CRE - RJ_
 
 Updates:
+- _0.1.4.5b_ = front-end aplicado, a partir deste ponto o projeto se divide entre ratPad admin e ratPad para usuários 
 - _0.1.3.6b_ = implementar tecman para planilha de custos de deslocamento e gestão de rotas
 - _0.1.3.5b_ = cadastro automatizado de computadores via app local
 - _0.1.3.4b_ = versão estavél dos 3 relatórios principais (RAT Padrão, PArecer Técnico de Baixas e RAT de Laboratórios); cadastro de não automatizado de computadores; sistema _ainda não possui tratamento de erros_

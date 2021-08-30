@@ -8,7 +8,7 @@ app_name = 'reports'
 
 urlpatterns = [    
     path('rat/',  RatPadraoListView.as_view() , name='rat_list'),
-     re_path(r'^rat/([0-9]{2}\.[0-9]{2}\.[0-9]{3})?$', RatPadraoListView.as_view(), name='rat_list_por_escola'),
+    re_path(r'^rat/([0-9]{2}\.[0-9]{2}\.[0-9]{3})?$', RatPadraoListView.as_view(), name='rat_list_por_escola'),
     path('rat/<int:ratpadrao_id>', report, name='report_padrao'),
         
     path('rat-lab/', RatLaboratorioListView.as_view(), name='rat_lab_list'),    

@@ -1,81 +1,163 @@
-from django.contrib.auth.models import User
-from django.test import TestCase
-from django.urls import reverse, resolve
-from populate import *
-from reports.models import *
-from reports.views import *
-from reports.serializers import *
+import pytest
+from django.urls import resolve, reverse
 
-'''
-Este módulo define testes automatizados do sistema
-'''
+from accounts.models import User
+from reports.tests.factories import EscolaFactory, RatPadraoFactory, RatLaboratorioFactory, ParecerTecnicoFactory
 
-class ReportsViewsTests(TestCase):
-    def test_rever_resolve(self):
-        response = self.client.get(reverse('reports:rat_list'))
-        response = self.client.get(resolve('reports:rat_list'))
+pytestmark = pytest.mark.django_db
+
+class RatPadraoViewsTests:
+    def test_reverse_resolve(self, client):
+        username = "user1"
+        password = "bar"
+        user = User.objects.create_user(username=username, password=password)
+        client.force_login(user)
         
-        response = self.client.get(reverse('reports:rat_list_por_escola'))
-        response = self.client.get(resolve('reports:rat_list_por_escola'))
+        assert reverse('reports:rat_list') == '/rat/'
+        assert resolve('/rat/').view_name ==  'reports:rat_list'
         
-        response = self.client.get(reverse('reports:report_padrao'))
-        response = self.client.get(resolve('reports:report_padrao'))
+        url = reverse('reports:rat_lista_por_escola', kwargs={"designacao": "00.00.000"})
+        assert url == '/rat/escola/00.00.000'
         
-        response = self.client.get(reverse('reports:rat_lab_list'))
-        response = self.client.get(resolve('reports:rat_lab_list'))
+        view_name = resolve('/rat/escola/00.00.000').view_name
+        assert view_name == 'reports:rat_lista_por_escola'
+    
+        url = reverse('reports:report_padrao', kwargs={"id": 1})
+        assert url == '/rat/1/'
         
-        response = self.client.get(reverse('reports:rat_lab_list_por_escola'))
-        response = self.client.get(resolve('reports:rat_lab_list_por_escola'))
+        view_name = resolve('/rat/1/').view_name
+        assert view_name == 'reports:report_padrao'
+    
+    def test_status_code(self, client, escola):
+        username = "user1"
+        password = "bar"
+        user = User.objects.create_user(username=username, password=password)
+        client.force_login(user)
+
+        response = client.get(reverse('reports:rat_list'))
+        assert response.status_code == 200
+
+        response = client.get(
+            reverse('reports:rat_lista_por_escola', kwargs={"designacao": escola.id})
+        )
+        assert response.status_code == 200
         
-        response = self.client.get(reverse('reports:report_lab'))
-        response = self.client.get(resolve('reports:report_lab'))
+        ratpadrao = RatPadraoFactory()
+        url = reverse('reports:report_padrao', kwargs={"id": ratpadrao.id})
+        response = client.get(url)
+        assert response.status_code == 200
+
+class RatLaboratorioViewsTests:
+
+    def test_reverse_resolve(self, client):
+        username = "user1"
+        password = "bar"
+        user = User.objects.create_user(username=username, password=password)
+        client.force_login(user)
+
+        assert reverse('reports:rat_lab_list') ==  '/rat-lab/'
+        assert resolve('/rat-lab/').view_name ==  'reports:rat_lab_list'
         
-        response = self.client.get(reverse('reports:parecer_list'))
-        response = self.client.get(resolve('reports:parecer_list'))
+        url = reverse('reports:rat_lab_lista_por_escola', kwargs={"designacao": "00.00.000"})
+        assert url == '/rat-lab/escola/00.00.000'
         
-        response = self.client.get(reverse('reports:parecer_list_por_escola'))
-        response = self.client.get(resolve('reports:parecer_list_por_escola'))
+        view_name = resolve('/rat-lab/escola/00.00.000').view_name
+        assert view_name == 'reports:rat_lab_lista_por_escola'
+    
+        url = reverse('reports:report_lab', kwargs={"id": 1})
+        assert url == '/rat/1/'
         
-        response = self.client.get(reverse('reports:report_parecer'))
-        response = self.client.get(resolve('reports:report_parecer'))
+        view_name = resolve('/rat/1/').view_name
+        assert view_name == 'reports:report_lab'       
+
+    def test_status_code(self, client, escola):
+        username = "user1"
+        password = "bar"
+        user = User.objects.create_user(username=username, password=password)
+        client.force_login(user)
+
+        response = client.get(reverse('reports:rat_lab_list'))
+        assert response.status_code == 200
+
+        response = client.get(
+            reverse('reports:rat_lab_lista_por_escola', kwargs={"designacao": escola.id})
+        )
+        assert response.status_code == 200
         
-        response = self.client.get(reverse('reports:escola_list'))
-        response = self.client.get(resolve('reports:escola_list'))
+        ratlaboratorio = RatLaboratorioFactory()
+        url = reverse('reports:report_padrao', kwargs={"id": ratlaboratorio.id})
+        response = client.get(url)
+        assert response.status_code == 200
+
+class ParecerTecnicoViewsTests:
+
+    def test_reverse_resolve(self, client):
+        username = "user1"
+        password = "bar"
+        user = User.objects.create_user(username=username, password=password)
+        client.force_login(user)
+
+        assert reverse('reports:parecer_list') ==  '/parecer/'
+        assert resolve('/parecer/').view_name ==  'reports:parecer_list'
+
+        url = reverse('reports:parecer_lista_por_escola', kwargs={"designacao": "00.00.000"})
+        assert url == '/parecer/escola/00.00.000'
         
-        response = self.client.get(reverse('reports:report_escola'))
-        response = self.client.get(resolve('reports:report_escola'))
+        view_name = resolve('/rat-lab/escola/00.00.000').view_name
+        assert view_name == 'reports:parecer_lista_por_escola'
+    
+        url = reverse('reports:report_lab', kwargs={"id": 1})
+        assert url == '/parecer/1/'
         
-    def test_templates(self):
-        response = self.client.get(reverse('reports:rat_list'))
-        self.assertTemplateUsed(response,'ratpadrao_list.html')
+        view_name = resolve('/parecer/1/').view_name
+        assert view_name == 'reports:report_parecer'
+    
+    def test_status_code(self, client, escola):
+        username = "user1"
+        password = "bar"
+        user = User.objects.create_user(username=username, password=password)
+        client.force_login(user)
+
+        response = client.get(reverse('reports:parecer_list'))
+        assert response.status_code == 200
+
+        response = client.get(
+            reverse('reports:parecer_lista_por_escola', kwargs={"designacao": escola.id})
+        )
+        assert response.status_code == 200
+    
+        parecertecnico = ParecerTecnicoFactory()
+        url = reverse('reports:report_parecer', kwargs={"id": parecertecnico.id})
+        response = client.get(url)
+        assert response.status_code == 200
+
+class EscolaViewsTests:
+
+    def test_reverse_resolve(self, client):   
+        username = "user1"
+        password = "bar"
+        user = User.objects.create_user(username=username, password=password)
+        client.force_login(user)
+
+        assert reverse('reports:escola_list') == '/escola/' 
+        assert resolve('/escola/').view_name ==  'reports:escola_list'
+
+        url = reverse('reports:report_escola', kwargs={"id": "00.00.000"})
+        assert url == '/escola/00.00.000/'
         
-        response = self.client.get(reverse('reports:rat_list_por_escola'))
-        self.assertTemplateUsed(response,'ratpadrao_list.html')
-        
-        response = self.client.get(reverse('reports:report_padrao'))
-        self.assertTemplateUsed(response,'report_padrao.html')
-        
-        response = self.client.get(reverse('reports:rat_lab_list'))
-        self.assertTemplateUsed(response,'ratlaboratorio_list.html')
-        
-        response = self.client.get(reverse('reports:rat_lab_list_por_escola'))
-        self.assertTemplateUsed(response,'ratlaboratorio_list.html')
-        
-        response = self.client.get(reverse('reports:report_lab'))
-        self.assertTemplateUsed(response,'report_lab.html')
-        
-        response = self.client.get(reverse('reports:parecer_list'))
-        self.assertTemplateUsed(response,'parecertecnico_list.html')
-        
-        response = self.client.get(reverse('reports:parecer_list_por_escola'))
-        self.assertTemplateUsed(response,'parecertecnico_list.html')
-        
-        response = self.client.get(reverse('reports:report_parecer'))
-        self.assertTemplateUsed(response,'report_parecer.html')
-        
-        response = self.client.get(reverse('reports:escola_list'))
-        self.assertTemplateUsed(response,'escola_list.html')
-        
-        response = self.client.get(reverse('reports:report_escola'))
-        self.assertTemplateUsed(response,'report_escola.html')   
-        
+        view_name = resolve('/escola/00.00.000/').view_name
+        assert view_name == 'reports:report_escola'
+
+    def test_status_code(self, client):
+        username = "user1"
+        password = "bar"
+        user = User.objects.create_user(username=username, password=password)
+        client.force_login(user)
+
+        response = client.get(reverse('reports:escola_list'))
+        assert response.status_code == 200
+    
+        escola = EscolaFactory()
+        url = reverse('reports:report_parecer', kwargs={"id": escola.designacao})
+        response = client.get(url)
+        assert response.status_code == 200      
