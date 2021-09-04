@@ -1,10 +1,10 @@
 from datetime import timedelta
 from django.db import models
-from django.db.models.fields import CharField
+from django.urls import reverse
 from django.utils import timezone
 from django.contrib import admin
 from accounts.models import User
-from django.urls import reverse
+
 from . import choices
 ''' Este módulo define as regras de negócio do sistema.
     
@@ -371,7 +371,7 @@ class RatPadrao(Relatorio):
         return self.descricao
     
     def get_absolute_url(self):
-        return reverse('reports:report_padrao', kwargs={'id': self.id})
+        return reverse('reports:rat_detail', kwargs={'pk': self.id})
 
 class ParecerTecnico(Relatorio):
     '''

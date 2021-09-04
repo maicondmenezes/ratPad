@@ -329,7 +329,7 @@ class RatPadraoAdmin(DjangoObjectActions, admin.ModelAdmin):
 
     fieldsets = [
         (None, {'fields': ['escola', 'locais', 'chamados']}),
-        ('Descrção do Problema', {'fields': ['problemas', 'descricao']}),
+        ('Descrição do Problema', {'fields': ['problemas', 'descricao']}),
         ('Solução do Problema', {'fields': ['solucao', 'recomendacao', 'itens_recomendados']}),        
     ]
 

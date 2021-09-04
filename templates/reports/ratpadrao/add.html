@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    {% if escola %}
+        Relatórios de Atendimento Técnico - {{ escola.nome }} | {{ block.super }}
+    {% else %}
+        Relatórios de Atendimento Técnico | {{ block.super }}
+    {% endif %}
+{% endblock title %}
+
+{% block page_content %}
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <form action="" method="POST">
+            <div 
+                class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                <h6 class="m-0 font-weight-bold text-primary">Adicionar Relatório de Atendimento Técnico</h6>
+                <input type="submit" value="+" class="btn btn-success btn-circle" />
+            </div>
+            <div class="card-body">                            
+                    {% csrf_token %}
+                    {{form.as_p}}                        
+            </div>
+            </form>
+        </div>
+
+    </div>
+    <!-- /.container-fluid -->
+{% endblock page_content %}
+
+</body>
+
+</html>

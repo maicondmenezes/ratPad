@@ -5,11 +5,16 @@
 
 <head>
     {% block extrahead %}
-    <meta charset="utf-8">
+    
+    {% block meta %}    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Language" content="pt-br"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="keywords" content="SME-RJ, Secretaria de Educação do Rio de Janeiro, Relatório de Atendimento Técnico, 10ª CRE" />
+    <meta name="description" content="Este é um documento padrão de relatórios técnicos de atendimento de suporte em informática nas unidades escolares da 10ª Coordenadoria Regional de Educação da Secretaria Municipal de Educação do Estado do Rio de Janeiro" />    
+    <meta name="author" content="Maicon de Menezes Oliveira">
+    {% endblock meta %}
 
     <title>{% block title %}ratPad 0.2.0 {% endblock title %}</title>
 

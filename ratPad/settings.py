@@ -89,14 +89,14 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'ratpad_data',
-        'USER': 'ratpaddb_man',
+        'USER': 'ratpaddb_man', 
         'PASSWORD': 'Pisck123',
         'HOST': 'localhost',
         'PORT': '5432'
     }
 }
 
-LOGIN_REDIRECT_URL = '/admin/reports/'
+LOGIN_REDIRECT_URL = '/'
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
@@ -145,3 +145,6 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#Crispy
+CRISPY_TEMPLATE_PACK = 'bootstrap4' 

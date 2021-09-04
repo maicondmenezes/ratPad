@@ -1,6 +1,6 @@
 from django.urls import path, re_path
-from .views import RatPadraoListView, RatLaboratorioListView, ParecerTecnicoListView, EscolaListView
-from .views import report, reportLab, reportParecer, reportEscola, systemInfo
+from reports.views import RatPadraoDetailView, RatPadraoListView, RatLaboratorioListView, ParecerTecnicoListView, EscolaListView, RatPadraoCreateView
+from reports.views import report, reportLab, reportParecer, reportEscola, systemInfo
 
 '''Módulo responságel por gerenciar os padrões de URLS disponíveis no sistema'''
 
@@ -8,8 +8,12 @@ app_name = 'reports'
 
 urlpatterns = [    
     path('rat/',  RatPadraoListView.as_view() , name='rat_list'),
-    re_path(r'^rat/([0-9]{2}\.[0-9]{2}\.[0-9]{3})?$', RatPadraoListView.as_view(), name='rat_list_por_escola'),
-    path('rat/<int:ratpadrao_id>', report, name='report_padrao'),
+    path('rat/<int:pk>', RatPadraoDetailView.as_view(), name='rat_detail'),
+    path('rat/add/',  RatPadraoCreateView.as_view() , name='rat_add'),
+    path('rat/edit/<int:pk>',  RatPadraoCreateView.as_view() , name='rat_edit'),
+    path('rat/delete/<int:pk>',  RatPadraoCreateView.as_view() , name='rat_del'),
+    re_path(r'^rat/([0-9]{2}\.[0-9]{2}\.[0-9]{3})?$', RatPadraoListView.as_view(), name='rat_list_por_escola'),    
+    
         
     path('rat-lab/', RatLaboratorioListView.as_view(), name='rat_lab_list'),    
     re_path(r'^rat-lab/([0-9]{2}\.[0-9]{2}\.[0-9]{3})?$', RatLaboratorioListView.as_view(), name='rat_lab_list_por_escola'),

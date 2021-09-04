@@ -1,0 +1,106 @@
+{% extends 'reports/reports_base.html' %}
+{% load static %}
+
+{% block escola %}
+    {{ rat.escola }}
+{% endblock escola %}
+
+{% block title %}
+    RAT Padrão - {{ block.super}}
+{% endblock title %}
+    
+{% block local %}
+    {% for local in rat.locais.all %}
+        {{ local }}; &nbsp; 
+    {% endfor %}
+{% endblock local %}
+    
+{% block chamados %}
+    {{ rat.chamados }}    
+{% endblock chamados %}
+
+{% block conteudo %}
+<div class="container mx-auto align-items-center mb-2">
+    <div class="row mb-1">
+        <div class="col">
+            <h5 style="font-family: Calibri;" class="font-weight-bold text-center"><u>
+                Tipo de Problema
+            </u></h5>
+        </div>
+    </div>
+        
+    <div class="row mb-2">
+        <div class="col">
+            <h6 style="font-family: Calibri;" class="font-weight-light text-center">
+                {% for problema in rat.problemas.all %}
+                {{ problema }}; &nbsp; 
+                {% endfor %}
+            </h6>
+        </div>
+    </div>
+
+    <div class="row mb-1">
+        <div class="col">
+            <h5 style="font-family: Calibri;" class="font-weight-bold text-center"><u>
+                Descrição do Problema
+            </u></h5>
+        </div>
+    </div>
+        
+    <div class="row mb-2">
+        <div class="col">
+            <h6 style="font-family: Calibri;" class="font-weight-light text-center">
+                {{ rat.descricao }}
+            </h6>
+        </div>
+    </div>
+
+    <div class="row mb-1">
+        <div class="col">
+            <h5 style="font-family: Calibri;" class="font-weight-bold text-center"><u>
+                Solução do Problema
+            </u></h5>
+        </div>
+    </div>
+        
+    <div class="row mb-2">
+        <div class="col">
+            <h6 style="font-family: Calibri;" class="font-weight-light text-center">
+                {{ rat.solucao }}
+            </h6>
+        </div>
+    </div>
+    
+    <div class="row mb-2">
+        <div class="col">
+            <h6 class="font-weight-bold">
+                Recomendação de Equipamento/Serviço: 
+                {% if rat.recomendacao %} 
+                <i class="fas fa-check"></i>
+                {% else %}
+                <i class="fas fa-times"></i>
+                {% endif %}
+            </h6>
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <div class="col">
+            <h6 style="font-family: Calibri;" class="font-weight-light text-center">
+                {{ rat.equipamentos }}
+            </h6>
+        </div>
+    </div>
+
+</div>
+    
+
+{% endblock conteudo %}    
+
+{% block tecnico %}
+    {{ block.super }} {{ rat.tecnico.get_full_name }}    
+{% endblock tecnico %}
+
+{% block data %}
+    {{ block.super }} {{ rat.data_criacao }}    
+{% endblock data %}

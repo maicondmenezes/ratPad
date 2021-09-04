@@ -1,19 +1,40 @@
+from django.urls import reverse
+from django.http import Http404, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
-from django.http import Http404, request
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.decorators import login_required
+
+from rest_framework import viewsets
+
 from reports.models import ParecerTecnico, RatPadrao, RatLaboratorio, Escola, Computador
 from reports.serializers import ComputadorSerializer
-from rest_framework import viewsets
-from django.views.generic import ListView, DetailView
+
 
 
 '''
 Este módulo define as seleções de dados para vizualização dos usuários.
 Em geral os dados obtidos são enviados via função render(), para um template HTML, junto com o(s) objeto(s) recuperado e a requisição HTTP'''
 
+class RatPadraoCreateView(CreateView):
+    model = RatPadrao
+    template_name = 'reports/ratpadrao/add.html'    
+    fields = '__all__'
+
+class RatPadraoUpdateView(UpdateView):
+    model = RatPadrao
+    template_name = 'reports/ratpadrao/edit.html'
+    context_object_name = 'rat'
+    fields = '__all__'
+class RatPadraoDetailView(DetailView):
+    model = RatPadrao
+    template_name = 'reports/ratpadrao/detail.html'
+    context_object_name = 'rat'    
+
 class RatPadraoListView(ListView):
-    escola = None
-    paginate_by = 20
+    model = RatPadrao
+    context_object_name = 'rats'
+    template_name = 'reports/ratpadrao/list.html'
+    escola = None        
         
     def get_queryset(self):                
         queryset = RatPadrao.objects.all()
@@ -30,6 +51,12 @@ class RatPadraoListView(ListView):
         context['escola'] = self.escola
         context['escolas']= Escola.ativos.all()
         return context
+
+class RatPadraoDeleteView(DeleteView):
+    model = RatPadrao
+    template_name = 'reports/ratpadrao/delete.html'
+    context_object_name = 'rat'
+    fields = '__all__'
 
 class RatLaboratorioListView(ListView):
     escola = None
