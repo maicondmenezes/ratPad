@@ -1,7 +1,7 @@
-from django.urls import reverse
-from django.http import Http404, HttpResponseRedirect
+from django.http import Http404 
 from django.shortcuts import get_object_or_404, render
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 
 from rest_framework import viewsets
@@ -15,22 +15,26 @@ from reports.serializers import ComputadorSerializer
 Este módulo define as seleções de dados para vizualização dos usuários.
 Em geral os dados obtidos são enviados via função render(), para um template HTML, junto com o(s) objeto(s) recuperado e a requisição HTTP'''
 
-class RatPadraoCreateView(CreateView):
+class RatPadraoCreateView(LoginRequiredMixin, CreateView):
+    login_url = '/accounts/login'
     model = RatPadrao
     template_name = 'reports/ratpadrao/add.html'    
     fields = '__all__'
 
-class RatPadraoUpdateView(UpdateView):
+class RatPadraoUpdateView(LoginRequiredMixin, UpdateView):
+    login_url = '/accounts/login'
     model = RatPadrao
     template_name = 'reports/ratpadrao/edit.html'
     context_object_name = 'rat'
     fields = '__all__'
-class RatPadraoDetailView(DetailView):
+class RatPadraoDetailView(LoginRequiredMixin, DetailView):
+    login_url = '/accounts/login'
     model = RatPadrao
     template_name = 'reports/ratpadrao/detail.html'
     context_object_name = 'rat'    
 
-class RatPadraoListView(ListView):
+class RatPadraoListView(LoginRequiredMixin, ListView):
+    login_url = '/accounts/login'
     model = RatPadrao
     context_object_name = 'rats'
     template_name = 'reports/ratpadrao/list.html'
