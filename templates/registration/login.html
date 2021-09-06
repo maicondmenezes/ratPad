@@ -47,7 +47,7 @@
                                     <form method="POST" class="user">
                                         {% csrf_token %}
                                         <hr>    
-                                        <p class="text-error">{{ form.non_field_errors }}</p>                                
+                                        <p class="text-danger">{{ form.non_field_errors }}</p>                                
                                         <div class="form-group">                                            
                                             <input 
                                                 id="{{ form.username.id_for_label }}"                                                 
@@ -55,9 +55,9 @@
                                                 name="{{ form.username.html_name }}"
                                                 class="form-control form-control-user"                                                
                                                 placeholder="digite seu username"
-                                                aria-describedby="{{ form.username.help_tert }}"
+                                                aria-describedby="{{ form.username.help_text }}"
                                             > 
-                                            <p class="text-warning">{{ form.username.errors }}</p>
+                                            <p class="text-danger">{{ form.username.errors }}</p>
                                         </div>
                                         <div class="form-group">
                                             <input
@@ -66,9 +66,9 @@
                                                 name="{{ form.password.html_name }}"                                            
                                                 class="form-control form-control-user"                                                
                                                 placeholder="senha"
-                                                aria-describedby="{{ form.password.help_tert }}"
+                                                aria-describedby="{{ form.password.help_text }}"
                                             >
-                                            <p class="text-warning">{{ form.password.errors }}</p>
+                                            <p class="text-info">{{ form.password.errors }}</p>
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
@@ -87,11 +87,8 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
     </div>
 
     <!-- Bootstrap core JavaScript-->

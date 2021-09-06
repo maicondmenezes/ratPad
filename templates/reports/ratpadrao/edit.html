@@ -14,23 +14,123 @@
     <div class="container-fluid">
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
-            <form action="" method="POST">
-            <div 
-                class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">Adicionar Relatório de Atendimento Técnico</h6>
-                <input type="submit" value="+" class="btn btn-success btn-circle" />
-            </div>
-            <div class="card-body">                            
-                    {% csrf_token %}
-                    {{form.as_p}}                        
-            </div>
-            </form>
+            <form method="POST">
+                {% csrf_token %}
+                <div 
+                    class="card-header d-flex flex-row align-items-center justify-content-between">
+                    
+                    <h6 class="m-0 font-weight-bold text-primary">Editar Relatório de Atendimento Técnico</h6>
+                    <p class="text-error">{{ form.non_field_errors }}</p>                 
+                    <nav class="navbar navbar-expand mb-0">
+                    
+                        <ul class="navbar-nav "> 
+                            <li class="nav-item no-arrow mx-1" >
+                                <button 
+                                    type="submit"
+                                    name="print"
+                                    class="btn btn-info btn-circle btn-sm"
+                                    data-toggle="tooltip" 
+                                    data-placement="top" 
+                                    title="Salvar e Continuar Editando" >
+                                    <i class="fas fa-receipt"></i>
+                                </button>
+                            </li>
+                            <li class="nav-item no-arrow mx-1" >
+                                <button 
+                                    type="submit"
+                                    name="delete"
+                                    class="btn btn-danger btn-circle btn-sm"
+                                    data-toggle="tooltip" 
+                                    data-placement="top" 
+                                    title="Salvar e Continuar Editando" >
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </li>
+                            <li class="nav-item no-arrow mx-1" >
+                                <button     
+                                    type="submit"
+                                    name="save_add"
+                                    class="btn btn-success btn-circle btn-sm"
+                                    data-toggle="tooltip" 
+                                    data-placement="top" 
+                                    title="Salvar e Adicionar Outro" >
+                                    <i class="fas fa-check-double"></i>
+                                </button>
+                            </li>
+                            <li class="nav-item no-arrow mx-1" >
+                                <button     
+                                    type="submit"
+                                    class="btn btn-success btn-circle btn-sm"
+                                    data-toggle="tooltip" 
+                                    data-placement="top" 
+                                    title="Salvar e Sair" >
+                                    <i class="fas fa-check"></i>
+                                </button> 
+                            </li>                     
+                        </ul>
+                    </nav>               
+                </div>
+                <div class="card-body">
+                    {% for field in form %}
+                    <div class="form-group"> 
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="{{ field.id_for_label }}">{{field.html_name}}</label>
+                            </div> 
+                            {{ field }}                               
+                        </div>
+                        <p class="text-danger">{{ field.errors }}</p>
+                    </div>                        
+                    {% endfor %}
+                </div>
+                <div 
+                    class="card-footer d-flex flex-row align-items-center justify-content-between">
+                    
+                    <h6 class="m-0 font-weight-bold text-primary">Adicionar Relatório de Atendimento Técnico</h6>
+                    <p class="text-error">{{ form.non_field_errors }}</p>                 
+                    <nav class="navbar navbar-expand mb-0">
+                    
+                        <ul class="navbar-nav "> 
+                            <li class="nav-item no-arrow mx-1" >
+                                <button 
+                                    type="submit"
+                                    name="save_edit"
+                                    class="btn btn-info btn-circle btn-sm"
+                                    data-toggle="tooltip" 
+                                    data-placement="top" 
+                                    title="Salvar e Continuar Editando" >
+                                    <i class="fas fa-pencil-alt"></i>
+                                </button>
+                            </li>
+                            <li class="nav-item no-arrow mx-1" >
+                                <button     
+                                    type="submit"
+                                    name="save_add"
+                                    class="btn btn-success btn-circle btn-sm"
+                                    data-toggle="tooltip" 
+                                    data-placement="top" 
+                                    title="Salvar e Adicionar Outro" >
+                                    <i class="fas fa-check-double"></i>
+                                </button>
+                            </li>
+                            <li class="nav-item no-arrow mx-1" >
+                                <button     
+                                    type="submit"
+                                    class="btn btn-success btn-circle btn-sm"
+                                    data-toggle="tooltip" 
+                                    data-placement="top" 
+                                    title="Salvar e Sair" >
+                                    <i class="fas fa-check"></i>
+                                </button> 
+                            </li>                     
+                        </ul>
+                    </nav>               
+                </div>           
+           </form>
         </div>
-
     </div>
     <!-- /.container-fluid -->
 {% endblock page_content %}
-
 </body>
 
 </html>

@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'django_object_actions',
     'grappelli',            
     'rest_framework',
+    'crispy_forms',
     # My apps
     'accounts.apps.AccountsConfig',
     'reports.apps.ReportsConfig', 

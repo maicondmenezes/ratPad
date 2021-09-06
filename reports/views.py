@@ -1,4 +1,5 @@
 from django.http import Http404 
+from django.urls import reverse_lazy
 from django.shortcuts import get_object_or_404, render
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -6,7 +7,8 @@ from django.contrib.auth.decorators import login_required
 
 from rest_framework import viewsets
 
-from reports.models import ParecerTecnico, RatPadrao, RatLaboratorio, Escola, Computador
+from reports.models import *
+from reports.forms import RatPadraoCreateForm
 from reports.serializers import ComputadorSerializer
 
 
@@ -18,8 +20,24 @@ Em geral os dados obtidos são enviados via função render(), para um template 
 class RatPadraoCreateView(LoginRequiredMixin, CreateView):
     login_url = '/accounts/login'
     model = RatPadrao
-    template_name = 'reports/ratpadrao/add.html'    
-    fields = '__all__'
+    template_name = 'reports/ratpadrao/add.html'        
+    form_class = RatPadraoCreateForm 
+
+    def form_valid(self, form):
+        obj = form.save(commit=False)
+        obj.tecnico = self.request.user
+        obj.save()
+
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        if 'save_edit' in self.request.POST:
+            return reverse_lazy('reports:rat_edit', kwargs={'pk': self.object.pk})
+        elif 'save_add' in self.request.POST:
+            return reverse_lazy('reports:rat_add')
+        else:
+            return reverse_lazy('reports:rat_list')
+
 
 class RatPadraoUpdateView(LoginRequiredMixin, UpdateView):
     login_url = '/accounts/login'
@@ -27,6 +45,7 @@ class RatPadraoUpdateView(LoginRequiredMixin, UpdateView):
     template_name = 'reports/ratpadrao/edit.html'
     context_object_name = 'rat'
     fields = '__all__'
+
 class RatPadraoDetailView(LoginRequiredMixin, DetailView):
     login_url = '/accounts/login'
     model = RatPadrao
@@ -101,6 +120,59 @@ class ParecerTecnicoListView(ListView):
         context['escola'] = self.escola
         context['escolas']= Escola.ativos.all()
         return context
+
+class EnderecoModalView(CreateView):
+    model = Endereco
+    template_name = 'reports/modal.html'
+    fields = '__all__'
+
+class TelefoneModalView(CreateView):
+    model = Telefone
+    template_name = 'reports/modal.html'
+    fields = '__all__'
+
+class LocalDeAtendimentoModalView(CreateView):
+    model = LocalDeAtendimento
+    template_name = 'reports/modal.html'
+    success_url = '/reports/rat/add/'
+    fields = '__all__'
+
+class TipoDeProblemaModalView(LoginRequiredMixin, CreateView):
+    login_url = '/accounts/login'
+    model = TipoDeProblema
+    template_name = 'reports/modal.html'
+    success_url = '/reports/rat/add/'
+    fields = '__all__'
+
+class TipoDeComputadorModalView(CreateView):
+    model = TipoDeComputador
+    template_name = 'reports/modal.html'
+    fields = '__all__'
+
+class TipoDeLaboratorioModalView(CreateView):
+    model = TipoDeLaboratorio
+    template_name = 'reports/modal.html'
+    fields = '__all__'
+
+class EscolaModalView(CreateView):
+    model = Escola
+    template_name = 'reports/modal.html'
+    fields = '__all__'
+
+class FornecedorDeInternetModalView(CreateView):
+    model = FornecedorDeInternet
+    template_name = 'reports/modal.html'
+    fields = '__all__'
+
+class LinkDeInternetModalView(CreateView):
+    model = LinkDeInternet
+    template_name = 'reports/modal.html'
+    fields = '__all__'
+
+class TipoDeProblemaCreateModalView(CreateView):
+    model = TipoDeProblema
+    template_name = 'reports/modal.html'
+    fields = ['descricao']
 
 class EscolaListView(ListView):
     paginate_by = 20
