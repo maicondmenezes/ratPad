@@ -19,6 +19,14 @@
     {{ rat.chamados }}    
 {% endblock chamados %}
 
+{% block editurlHeaderNav %}
+    {{ rat.get_absolute_url_edit }}
+{% endblock editurlHeaderNav %}
+
+{% block editurlFooterNav %}
+    {{ rat.get_absolute_url_edit }}
+{% endblock editurlFooterNav %}
+
 {% block conteudo %}
 <div class="container mx-auto align-items-center mb-2">
     <div class="row mb-1">

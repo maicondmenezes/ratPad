@@ -54,9 +54,26 @@ class RatPadraoCreateView(LoginRequiredMixin, CreateView):
 class RatPadraoUpdateView(LoginRequiredMixin, UpdateView):
     login_url = '/accounts/login'
     model = RatPadrao
-    template_name = 'reports/ratpadrao/edit.html'
-    context_object_name = 'rat'
-    fields = '__all__'
+    template_name = 'reports/ratpadrao/edit.html'        
+    form_class = RatPadraoCreateForm 
+    context_object_name = 'rat'    
+
+    def form_valid(self, form):        
+        obj = form.save(commit=False)                
+        obj.tecnico = self.request.user
+        obj.save()
+
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        if 'edit_del' in self.request.POST:
+            return reverse_lazy('reports:rat_del', kwargs={'pk': self.object.pk})
+        elif 'edit_report' in self.request.POST:
+            return reverse_lazy('reports:rat_detail', kwargs={'pk': self.object.pk})
+        elif 'save_add' in self.request.POST:
+            return reverse_lazy('reports:rat_add')        
+        else:
+            return reverse_lazy('reports:rat_list')
 
 class RatPadraoDetailView(LoginRequiredMixin, DetailView):
     login_url = '/accounts/login'
@@ -91,7 +108,7 @@ class RatPadraoDeleteView(DeleteView):
     model = RatPadrao
     template_name = 'reports/ratpadrao/delete.html'
     context_object_name = 'rat'
-    fields = '__all__'
+    success_url = reverse_lazy('reports:rat_list')
 
 class RatLaboratorioListView(ListView):
     escola = None

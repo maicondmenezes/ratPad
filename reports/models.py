@@ -372,6 +372,13 @@ class RatPadrao(Relatorio):
     
     def get_absolute_url(self):
         return reverse('reports:rat_detail', kwargs={'pk': self.id})
+    
+    def get_absolute_url_edit(self):
+        return reverse('reports:rat_edit', kwargs={'pk': self.id})
+    
+    def get_absolute_url_del(self):
+        return reverse('reports:rat_del', kwargs={'pk': self.id})
+
 
 class ParecerTecnico(Relatorio):
     '''
