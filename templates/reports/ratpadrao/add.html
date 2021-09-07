@@ -63,14 +63,21 @@
                     {% for field in form %}
                     <div class="form-group"> 
                         <div class="input-group mb-2">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="{{ field.id_for_label }}">{{field.html_name}}</label>
-                            </div> 
-                            {{ field }}                               
+                            <label class="input-group-text" for="{{ field.id_for_label }}">
+                                {{field.html_name}}&nbsp;
+                                {{ field }}
+                            </label>                           
                         </div>
                         <p class="text-danger">{{ field.errors }}</p>
                     </div>                        
                     {% endfor %}
+                    <table style="display: none">
+                        {{ view.formset.empty_form }}
+                    </table>
+            
+                    <table>
+                        {{ view.formset }}
+                    </table>
                 </div>
                 <div 
                     class="card-footer d-flex flex-row align-items-center justify-content-between">
@@ -120,6 +127,31 @@
     </div>
     <!-- /.container-fluid -->
 {% endblock page_content %}
+{% block scripts %}
+<script type="text/javascript" src="{% static 'admin/js/vendor/jquery/jquery.js' %}"></script>
+{{ form.media }}
+
+<script>
+    (function($) {
+        $('#add-form').click(function() {
+            var index = $('#id_inline_test_models-TOTAL_FORMS').val()
+            var newTable = $('#id_inline_test_models-__prefix__-DELETE').parents('table').clone()
+            newTable.find(':input').each(function() {
+                for (attr of ['name', 'id'])
+                    $(this).attr(
+                        attr,
+                        $(this).attr(attr).replace('__prefix__', index)
+                    )
+            })
+            newTable.insertBefore($(this))
+            $('#id_inline_test_models-TOTAL_FORMS').val(
+                parseInt($('#id_inline_test_models-TOTAL_FORMS').val()) + 1
+            )
+            newTable.slideDown()
+        })
+    })($)
+</script>
+{% endblock scripts %}
 </body>
 
 </html>

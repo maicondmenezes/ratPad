@@ -5,6 +5,7 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 
+from dal import autocomplete
 from rest_framework import viewsets
 
 from reports.models import *
@@ -17,14 +18,25 @@ from reports.serializers import ComputadorSerializer
 Este módulo define as seleções de dados para vizualização dos usuários.
 Em geral os dados obtidos são enviados via função render(), para um template HTML, junto com o(s) objeto(s) recuperado e a requisição HTTP'''
 
+class EscolaAutocomplete(autocomplete.Select2QuerySetView):
+    def get_queryset(self):
+        if not self.request.user.is_authenticated:
+            return Escola.objects.none()
+        qs = Escola.objects.all()
+
+        if self.q:
+            qs = qs.filter(designacao__istartswith=self.q)
+        
+        return qs
+    
 class RatPadraoCreateView(LoginRequiredMixin, CreateView):
     login_url = '/accounts/login'
     model = RatPadrao
     template_name = 'reports/ratpadrao/add.html'        
     form_class = RatPadraoCreateForm 
 
-    def form_valid(self, form):
-        obj = form.save(commit=False)
+    def form_valid(self, form):        
+        obj = form.save(commit=False)                
         obj.tecnico = self.request.user
         obj.save()
 

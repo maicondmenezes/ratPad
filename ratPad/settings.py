@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     # 3rd party apps
+    'dal',
+    'dal_select2',
     'django_object_actions',
     'grappelli',            
     'rest_framework',

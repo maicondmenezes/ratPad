@@ -6,7 +6,8 @@ from reports.views import report, reportLab, reportParecer, reportEscola, system
 
 app_name = 'reports'
 
-urlpatterns = [    
+urlpatterns = [
+    
     path('rat/',  RatPadraoListView.as_view() , name='rat_list'),
     path('rat/<int:pk>', RatPadraoDetailView.as_view(), name='rat_detail'),
     path('rat/add/',  RatPadraoCreateView.as_view() , name='rat_add'),
@@ -25,7 +26,8 @@ urlpatterns = [
     
     path('escola/', EscolaListView.as_view(), name='escola_list'),
     re_path(r'^escola/([0-9]{2}\.[0-9]{2}\.[0-9]{3})?$', reportEscola, name='report_escola'),
-    path('info/', systemInfo, name='system_info'),
+    path('escola-autocomplete/', EscolaAutocomplete.as_view(), name='escola_autocomplete'),
+    
 
     path('endereco_modal/', EnderecoModalView.as_view(), name='endereco_modal'),
     path('telefone_modal/', TelefoneModalView.as_view(), name='telefone_modal'),

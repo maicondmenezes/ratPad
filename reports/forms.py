@@ -1,4 +1,7 @@
 from django import forms
+from django.forms import widgets
+
+from dal import autocomplete
 
 from reports.models import ParecerTecnico, RatLaboratorio, RatPadrao
 
@@ -12,7 +15,7 @@ class RatLaboratorioCreateForm(forms.ModelForm):
         model = RatLaboratorio
         fields = '__all__'
 
-class RatPadraoCreateForm(forms.ModelForm):    
+class RatPadraoCreateForm(forms.ModelForm):           
     class Meta:
         model = RatPadrao
         fields = [
@@ -25,3 +28,13 @@ class RatPadraoCreateForm(forms.ModelForm):
             'recomendacao',
             'itens_recomendados'
         ]                       
+        widgets = {
+            'escola': autocomplete.ModelSelect2(
+                url='reports:escola_autocomplete',
+                attrs={                    
+                    'data-height':140,
+                    'data-minimum-input-length': 4,                    
+                },
+            ),
+            
+        }
