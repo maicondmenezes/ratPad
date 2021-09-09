@@ -2,105 +2,171 @@
 {% load static %}
 
 {% block escola %}
-    {{ rat.escola }}
+    {{ escola }}
 {% endblock escola %}
 
 {% block title %}
-    RAT Padrão - {{ block.super}}
+    Escola - {{ block.super}}
 {% endblock title %}
-    
+{%block report_title %}
+    Relatório Geral da Escola
+{% endblock report_title %}
 {% block local %}
-    {% for local in rat.locais.all %}
+    {% for local in escola.locais.all %}
         {{ local }}; &nbsp; 
     {% endfor %}
 {% endblock local %}
     
 {% block chamados %}
-    {{ rat.chamados }}    
+    {{ escola.get_atendimentos }} Atendimentos realizados na unidade.
 {% endblock chamados %}
 
+{% block editurlHeaderNav %}
+    {{ escola.get_absolute_url_edit }}
+{% endblock editurlHeaderNav %}
+
+{% block editurlFooterNav %}
+    {{ escola.get_absolute_url_edit }}
+{% endblock editurlFooterNav %}
+
+{% block listurlHeaderNav %}
+    {{ escola.get_absolute_url_list }}
+{% endblock listurlHeaderNav %}
+
+{% block listurlFooterNav %}
+    {{ escola.get_absolute_url_list }}
+{% endblock listurlFooterNav %}
+
 {% block conteudo %}
-<div class="container mx-auto align-items-center mb-2">
-    <div class="row mb-1">
-        <div class="col">
-            <h5 style="font-family: Calibri;" class="font-weight-bold text-center"><u>
-                Tipo de Problema
-            </u></h5>
-        </div>
+<!--Endereço-->
+<div class="table mb-2 text-dark small">            
+    <div class="row bg-light " >
+        <div class="col border"style="height: 30px;">                    
+            <p class="text-center"> Endereço: </p>                                        
+        </div>        
     </div>
-        
-    <div class="row mb-2">
-        <div class="col">
-            <h6 style="font-family: Calibri;" class="font-weight-light text-center">
-                {% for problema in rat.problemas.all %}
-                {{ problema }}; &nbsp; 
-                {% endfor %}
-            </h6>
-        </div>
-    </div>
-
-    <div class="row mb-1">
-        <div class="col">
-            <h5 style="font-family: Calibri;" class="font-weight-bold text-center"><u>
-                Descrição do Problema
-            </u></h5>
-        </div>
-    </div>
-        
-    <div class="row mb-2">
-        <div class="col">
-            <h6 style="font-family: Calibri;" class="font-weight-light text-center">
-                {{ rat.descricao }}
-            </h6>
-        </div>
-    </div>
-
-    <div class="row mb-1">
-        <div class="col">
-            <h5 style="font-family: Calibri;" class="font-weight-bold text-center"><u>
-                Solução do Problema
-            </u></h5>
-        </div>
-    </div>
-        
-    <div class="row mb-2">
-        <div class="col">
-            <h6 style="font-family: Calibri;" class="font-weight-light text-center">
-                {{ rat.solucao }}
-            </h6>
-        </div>
-    </div>
-    
-    <div class="row mb-2">
-        <div class="col">
-            <h6 class="font-weight-bold">
-                Recomendação de Equipamento/Serviço: 
-                {% if rat.recomendacao %} 
-                <i class="fas fa-check"></i>
-                {% else %}
-                <i class="fas fa-times"></i>
-                {% endif %}
-            </h6>
-        </div>
-    </div>
-
-    <div class="row mb-2">
-        <div class="col">
-            <h6 style="font-family: Calibri;" class="font-weight-light text-center">
-                {{ rat.equipamentos }}
-            </h6>
-        </div>
-    </div>
-
+    <div class="row bg-white mb-0">
+        <div class="col border" style="height: 50px;">                    
+            <p> {{escola.endereco }} </p>                                        
+        </div>        
+    </div>   
 </div>
-    
-
+<!--Contatos (email e telefone) -->
+<div class="table mb-2 text-dark small">            
+    <div class="row bg-light">
+        <div class="col border" style="height: 30px;">                    
+            <p class="text-center"> Contato: </p>                                        
+        </div>        
+    </div>
+    <div class="row bg-white mb-0" style="height: 30px;">
+        <div class="col-3 bg-light border">                    
+            <p> Email: </p>                                        
+        </div> 
+        <div class="col border" style="height: 30px;">                    
+            <p> {{escola.email }} </p>                                        
+        </div>        
+    </div> 
+    <div class="row bg-white">
+        <div class="col-3 bg-light border" style="height: 30px;">                    
+            <p> Telefones: </p>                                        
+        </div> 
+        <div class="col border" style="height: 30px;">                    
+            <p>
+                {% for telefone in escola.telefones.all %}
+                    {{ telefone }}; &nbsp; 
+                {% endfor %} 
+            </p>                                        
+        </div>        
+    </div>     
+</div> 
+<!--Links de Internet-->
+<div class="table mb-2 text-dark small">            
+    <table class="table table-bordered table-striped table-sm" width="100%"> 
+        <caption style=" caption-side: top;">Links de Internet</caption>
+        <thead class="thead-light"> 
+            <tr>
+                <th> Fornecedor </th>
+                <th> Velocidade Nominal </th>
+                <th> Identificador </th>
+                <th> Local </th>
+                <th> Wi-Fi ?</th>
+                <th> Cabo ?</th>
+                <th> Ativo ?</th>
+            </tr>
+        </thead>    
+        <tbody>
+        {% for link in escola.linkdeinternet_set.all %}
+            <tr>
+                <th> {{link.fornecedor}} </th>
+                <th> {{link.velocidade}} </th>
+                <th> {{link.identificador}} </th>
+                <th> {{link.local}} </th>
+                <th> 
+                    {% if link.wifi %}
+                    <i class="fas fa-check"></i>
+                    {% else %}
+                    <i class="fas fa-times"></i>
+                    {% endif %}
+                </th>
+                <th> 
+                    {% if link.cabo %}
+                    <i class="fas fa-check"></i>
+                    {% else %}
+                    <i class="fas fa-times"></i>
+                    {% endif %}
+                </th>
+                <th> 
+                    {% if link.funcionando %}
+                    <i class="fas fa-check"></i>
+                    {% else %}
+                    <i class="fas fa-times"></i>
+                    {% endif %}
+                </th>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+<!--Computadores-->
+<div class="table mb-2 text-dark small">            
+    <table class="table table-bordered table-striped table-sm" width="100%"> 
+        <caption style=" caption-side: top;">Computadores</caption>
+        <thead class="thead-light"> 
+            <tr>
+                <th> Nº de Série </th>
+                <th> Nº de Inventário </th>
+                <th> Tipo </th>
+                <th> Marca </th>
+                <th> Modelo</th>
+                <th> Funciona ?</th>                
+            </tr>
+        </thead>    
+        <tbody>
+        {% for computador in escola.computador_set.all %}
+            <tr>
+                <th> {{computador.numero_serie}} </th>
+                <th> {{computador.numero_inventario}} </th>
+                <th> {{computador.tipo}} </th>
+                <th> {{computador.marca}} </th>
+                <th> {{computador.modelo}}</th>
+                <th> 
+                    {% if computador.funcionando %}
+                    <i class="fas fa-check"></i>
+                    {% else %}
+                    <i class="fas fa-times"></i>
+                    {% endif %}
+                </th>                
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
 {% endblock conteudo %}    
 
 {% block tecnico %}
-    {{ block.super }} {{ rat.tecnico.get_full_name }}    
+    {{ block.super }} {{ user.get_full_name }}    
 {% endblock tecnico %}
 
 {% block data %}
-    {{ block.super }} {{ rat.data_criacao }}    
+    {{ block.super }} {{ escola.data_edicao }}    
 {% endblock data %}

@@ -3,7 +3,7 @@ from django.forms import widgets
 
 from dal import autocomplete
 
-from reports.models import ParecerTecnico, RatLaboratorio, RatPadrao
+from reports.models import Escola, ParecerTecnico, RatLaboratorio, RatPadrao
 
 class ParecerTecnicoCreateForm(forms.ModelForm):
     class Meta:
@@ -14,6 +14,27 @@ class RatLaboratorioCreateForm(forms.ModelForm):
     class Meta:
         model = RatLaboratorio
         fields = '__all__'
+
+class EscolaCreateForm(forms.ModelForm):
+    class Meta:
+        model = Escola
+        fields = [
+            'designacao',
+            'nome',
+            'endereco',
+            'telefones',
+            'email',
+            'locais',
+        ]
+        widgets = {
+            'locais': autocomplete.ModelSelect2Multiple(
+                url='reports:local_autocomplete',
+                attrs={                    
+                    'data-height':100,
+                    'data-minimum-input-length': 3,                    
+                },
+            ),
+        }
 
 class RatPadraoCreateForm(forms.ModelForm):           
     class Meta:

@@ -1,9 +1,13 @@
-from django.contrib import admin
 from django.urls import path, include, reverse
-from ratPad import settings
+from django.contrib import admin
 from django.conf.urls.static import static
-from reports.views import ComputadorViewset
+
 from rest_framework import routers
+import debug_toolbar
+
+from reports.views import ComputadorViewset
+from ratPad import settings
+
 
 router = routers.DefaultRouter()
 router.register(r'computador', ComputadorViewset)
@@ -18,3 +22,4 @@ urlpatterns = [
 ]
 if settings.DEBUG:    
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += [path("__debug__/", include(debug_toolbar.urls))]

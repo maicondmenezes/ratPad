@@ -1,12 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}
-    {% if escola %}
-        Relatórios de Atendimento Técnico - {{ escola.nome }} | {{ block.super }}
-    {% else %}
-        Relatórios de Atendimento Técnico | {{ block.super }}
-    {% endif %}
+{% block title %}    
+        Relatórios de Escolas | {{ block.super }}    
 {% endblock title %}
 
 {% block extrastyle %}
@@ -14,64 +10,59 @@
     {{ block.super }}    
 {% endblock extrastyle %}
 
+    
 
 {% block page_content %}
-    <!-- Begin Page Content -->
-    <div class="container-fluid">
-        <!-- DataTales Example -->
-        <div class="card shadow mb-4">
-            <div 
-                class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">Relatórios de Atendimento Técnico</h6>
-                <div class="">
-                    <a href="{% url 'reports:rat_add' %}" class="btn btn-primary btn-circle">
-                        <i class="fas fa-file-medical"></i>
-                    </a>
-                </div>
-                
-            </div>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table table-sm table-bordered table-hover table-striped" id="dataTable" width="100%" cellspacing="0">
-                        <thead class="thead-light">
-                            <tr>
-                                <th>Designação</th>
-                                <th>Escola</th>
-                                <th>Data</th>
-                                <th>Descrição</th>                                     
-                            </tr>
-                        </thead>
-                        <tfoot>
-                            <tr>
-                                <th>Designação</th>
-                                <th>Escola</th>
-                                <th>Data</th>
-                                <th>Descrição</th>
-                            </tr>
-                        </tfoot>
-                        <tbody>
-                            {% for rat in rats %}
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div 
+                            class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">Escolas</h6>
+                            <div class="">
+                                <a 
+                                    href="{% url 'reports:escola_add' %}"
+                                    class="btn btn-primary btn-circle btn-sm"
+                                    data-toggle="tooltip"
+                                    data-placement="bottom"
+                                    title="Novo Relatório"
+                                    >
+                                    <i class="fas fa-file-medical"></i>
+                                </a>
+                            </div>
                             
-                            <tr>                                
-                                <th>
-                                    <a href="{{ rat.get_absolute_url }}">
-                                    {{ rat.escola.designacao }}
-                                    </a>
-                                </th>
-                                <th>{{ rat.escola.nome }}</th>
-                                <th>{{ rat.data_criacao }}</th>
-                                <th>{{ rat.descricao }}</th>
-                            </a>
-                            </tr>                             
-                            {% endfor %}                                      
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Designação</th>
+                                            <th>Escola</th>                                            
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Designação</th>
+                                            <th>Escola</th>                                            
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        {% for escola in escolas %}
+                                        <tr>
+                                            <th><a href="{{ escola.get_absolute_url }}">{{ escola.designacao }}</a></th>
+                                            <th>{{ escola.nome }}</th>                                            
+                                        </tr> 
+                                        {% endfor %}                                      
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
 
-    </div>
-    <!-- /.container-fluid -->
+                </div>
+                <!-- /.container-fluid -->
 {% endblock page_content %}
 
 

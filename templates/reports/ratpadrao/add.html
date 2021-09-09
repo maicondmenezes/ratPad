@@ -1,12 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}
-    {% if escola %}
-        Relatórios de Atendimento Técnico - {{ escola.nome }} | {{ block.super }}
-    {% else %}
-        Relatórios de Atendimento Técnico | {{ block.super }}
-    {% endif %}
+{% block title %}  
+Novo Relatórios de Atendimento Técnico | {{ block.super }}
 {% endblock title %}
 
 {% block page_content %}

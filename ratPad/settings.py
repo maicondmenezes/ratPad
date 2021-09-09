@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'grappelli',            
     'rest_framework',
     'crispy_forms',
+    'debug_toolbar',
     # My apps
     'accounts.apps.AccountsConfig',
     'reports.apps.ReportsConfig', 
@@ -62,6 +63,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'ratPad.urls'

@@ -24,7 +24,13 @@
                 class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                 <h6 class="m-0 font-weight-bold text-primary">Relatórios de Atendimento Técnico</h6>
                 <div class="">
-                    <a href="{% url 'reports:rat_add' %}" class="btn btn-primary btn-circle">
+                    <a 
+                        href="{% url 'reports:rat_add' %}"
+                        class="btn btn-primary btn-circle btn-sm"
+                        data-toggle="tooltip"
+                        data-placement="bottom"
+                        title="Novo Relatório"
+                        >
                         <i class="fas fa-file-medical"></i>
                     </a>
                 </div>

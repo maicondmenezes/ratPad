@@ -27,6 +27,14 @@
     {{ rat.get_absolute_url_edit }}
 {% endblock editurlFooterNav %}
 
+{% block listurlHeaderNav %}
+    {{ rat.get_absolute_url_list }}
+{% endblock listurlHeaderNav %}
+
+{% block listurlFooterNav %}
+    {{ rat.get_absolute_url_list }}
+{% endblock listurlFooterNav %}
+
 {% block conteudo %}
 <div class="container mx-auto align-items-center mb-2">
     <div class="row mb-1">

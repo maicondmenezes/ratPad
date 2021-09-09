@@ -46,11 +46,11 @@
                 </li>   
                 <li class="nav-item no-arrow mx-1" >
                     <a  
-                        href="{% url 'reports:rat_list' %}"
+                        href="{% block listurlHeaderNav %} {% endblock listurlHeaderNav %}"
                         class="btn btn-warning btn-circle btn-sm"
                         data-toggle="tooltip" 
                         data-placement="top" 
-                        title="Litar" >
+                        title="Listar" >
                         <i class="fas fa-list-alt"></i>
                     </a>
                 </li>             
@@ -82,7 +82,7 @@
                 </div>
             </div>
             <!--Report Head -->
-            <div class="table mb-2 text-dark">            
+            <div class="table mb-2 text-dark small">            
                 <div class="row bg-light mb-0">
                     <div class="col-4 border ">                    
                         <p> E/SUBE/CRE </p>                                        
@@ -93,7 +93,7 @@
                 </div>
                 <div class="row bg-light mb-0">
                     <div class="col-4 border ">                    
-                        <p> Local do Atendimento: </p>                                        
+                        <p> Locais de Atendimento: </p>                                        
                     </div>
                     <div class="col bg-white border ">                    
                         <p class="text-center"> {% block local %} {% endblock local %} </p>                                      
@@ -165,7 +165,7 @@
                 </li>   
                 <li class="nav-item no-arrow mx-1" >
                     <a  
-                        href="{% url 'reports:rat_list' %}"
+                        href="{% block listurlFooterNav %} {% endblock listurlFooterNav %}"
                         class="btn btn-warning btn-circle btn-sm"
                         data-toggle="tooltip" 
                         data-placement="top" 

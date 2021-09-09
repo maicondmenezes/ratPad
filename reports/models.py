@@ -1,10 +1,13 @@
-from datetime import timedelta
+
 from django.db import models
 from django.urls import reverse
 from django.utils import timezone
 from django.contrib import admin
-from accounts.models import User
 
+from datetime import timedelta
+from autoslug import AutoSlugField
+
+from accounts.models import User
 from . import choices
 ''' Este módulo define as regras de negócio do sistema.
     
@@ -139,6 +142,9 @@ class TipoDeLaboratorio(models.Model):
         verbose_name = 'Tipo de Laboratório'
         verbose_name_plural = 'Tipos de Laboratório'
 
+def hifenization(value):
+    return value.replace('.','-')
+
 class Escola(models.Model):
     '''
     As escolas da rede atendidas em cada relatório
@@ -173,6 +179,7 @@ class Escola(models.Model):
         data_edicao (data): data da última modificação
     ''' 
     designacao = models.CharField(max_length=10, primary_key=True, unique=True)    
+    slug = AutoSlugField(blank=True, populate_from='designacao', unique=True, always_update=False, slugify=hifenization)
     nome = models.CharField(max_length=200)    
     endereco = models.OneToOneField(Endereco, on_delete=models.CASCADE)    
     telefones = models.ManyToManyField(Telefone, blank=True)
@@ -189,8 +196,22 @@ class Escola(models.Model):
         '''Define o atributo desginação seguido do nome da unidade escolar como representação textual de uma instância do modelo.'''
         return f'({self.designacao}) {self.nome}'
     
+    def get_atendimentos(self):
+        atendimentos = RatPadrao.objects.filter(escola = self).count()
+
+        return atendimentos
+    
+    def get_absolute_url_list(self):
+        return reverse('reports:escola_list')
+
     def get_absolute_url(self):
-        return reverse('reports:report_escola', kwargs={'designacao': self.designacao})
+        return reverse('reports:escola_detail', kwargs={'slug': self.slug})
+    
+    def get_absolute_url_edit(self):
+        return reverse('reports:escola_edit', kwargs={'slug': self.slug})
+    
+    def get_absolute_url_del(self):
+        return reverse('reports:escola_del', kwargs={'slug': self.slug})
 
 class FornecedorDeInternet(models.Model):
     '''
@@ -283,7 +304,7 @@ class LinkDeInternet(models.Model):
 
     def __str__(self):
         '''Define o atributo fornecedor seguido por velocidade, identificador e escola, como  representação textual de uma instância do modelo.'''
-        return f'{self.fornecedor} - {self.velocidade} Mbps - {self.identificador} - {self.escola}'
+        return f'{self.fornecedor} - {self.velocidade} Mbps - {self.identificador}'
 
     class Meta:
         '''Define a representação textual do modelo na forma singular e plural no modúlo administrativo do django'''
@@ -373,12 +394,14 @@ class RatPadrao(Relatorio):
     def get_absolute_url(self):
         return reverse('reports:rat_detail', kwargs={'pk': self.id})
     
+    def get_absolute_url_list(self):
+        return reverse('reports:rat_list')
+    
     def get_absolute_url_edit(self):
         return reverse('reports:rat_edit', kwargs={'pk': self.id})
     
     def get_absolute_url_del(self):
         return reverse('reports:rat_del', kwargs={'pk': self.id})
-
 
 class ParecerTecnico(Relatorio):
     '''

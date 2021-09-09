@@ -2,35 +2,38 @@
 {% load static %}
 
 {% block title %}
-    {% if escola %}
-        Relatórios de Atendimento Técnico - {{ escola.nome }} | {{ block.super }}
-    {% else %}
-        Relatórios de Atendimento Técnico | {{ block.super }}
-    {% endif %}
+    RAT Padrão - {{ block.super}}
 {% endblock title %}
-
+    
 {% block page_content %}
-    <!-- Begin Page Content -->
-    <div class="container-fluid">
-        <!-- DataTales Example -->
-        <div class="card shadow mb-4">
-            <form action="" method="POST">
+<div class="container mx-auto align-items-center mb-2">
+    <div class="card shadow mb-4">
+        <form method="POST">
+            {% csrf_token %}
             <div 
-                class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">Adicionar Relatório de Atendimento Técnico</h6>
-                <input type="submit" value="+" class="btn btn-success btn-circle" />
+                class="card-header d-flex flex-row align-items-center justify-content-between">
+                
+                <h5 class="m-0 font-weight-bold text-secondary">Excluir Relatório de Atendimento Técnico</h5>
+                <a class="btn-danger btn-circle">
+                <i class="fas fa-exclamation-circle"></i>
+                </a>
+                   
             </div>
-            <div class="card-body">                            
-                    {% csrf_token %}
-                    {{form.as_p}}                        
-            </div>
-            </form>
-        </div>
-
+            <div class="card-body justify-content-center align-items-center">
+                <h6 class="m-0 font-weight-light text-dark text-center mb-2">Você tem certeza que deseja excluir o Relatório {{ rat }} ?!</h6>                
+                <div class="container">
+                    <div class="row">
+                        <div class="col align-self-start">                            
+                            <button class=" btn btn-primary" type="submit">Excluir</button>
+                        </div>
+                        <div class="col align-self-center"></div>
+                        <div class="col align-self-end">
+                            <button class=" btn btn-secondary" type="submit" name="del_cancelar">Cancelar</button>                        
+                        </div>
+                    </div>
+                </div>      
+            </div>            
+       </form>
     </div>
-    <!-- /.container-fluid -->
+</div>
 {% endblock page_content %}
-
-</body>
-
-</html>
