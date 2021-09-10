@@ -66,10 +66,10 @@ Nova Escola | {{ block.super }}
                         </ul>
                     </nav>               
                 </div>
-                <div class="card-body">
+                <div class="card-body justify-content-between">
                     {% for field in form %}
                     <div class="form-group"> 
-                        <div class="input-group mb-2">
+                        <div class="input-group input-group-sm mb-2">
                             <label class="input-group-text" for="{{ field.id_for_label }}">
                                 {{field.html_name}}&nbsp;
                                 {{ field }}
@@ -78,6 +78,67 @@ Nova Escola | {{ block.super }}
                         <p class="text-danger">{{ field.errors }}</p>
                     </div>                        
                     {% endfor %}
+                    <!--Link forms-->
+                    <div class="table-responsive mb-2 text-dark small">            
+                        <table class="table table-bordered table-striped table-sm" width="100%"> 
+                            <caption style=" caption-side: top;">Links de Internet</caption>
+                            <thead class="thead-light"> 
+                                <tr>
+                                    <th> Fornecedor </th>
+                                    <th> Velocidade </th>
+                                    <th> IP </th>
+                                    <th> Identificador </th>
+                                    <th> Local </th>
+                                    <th> Wi-Fi ?</th>
+                                    <th> Cabo ?</th>
+                                    <th> Funciona ?</th>
+                                    <th> Excluir ?</th>
+                                </tr>
+                            </thead>    
+                            <tbody>
+                            {% for form in link %}
+                                <tr>
+                                    {% for field in form %}
+                                    <th>{{field}}</th>    
+                                    {% endfor %}                                    
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--Computador Forms-->
+                    <div class="table-responsive mb-2 text-dark small">            
+                        <table class="table table-bordered table-striped table-sm" width="100%"> 
+                            <caption style=" caption-side: top;">Computadores</caption>
+                            <thead class="thead-light"> 
+                                <tr>
+                                    <th> Nº de Série </th>
+                                    <th> Nº de Inventário </th>
+                                    <th> Tipo </th>
+                                    <th> Marca </th>
+                                    <th> Modelo</th>
+                                    <th> Sistema Operacional</th>
+                                    <th> CPU</th>
+                                    <th> RAM</th>
+                                    <th> Hostname</th>
+                                    <th> IP</th>
+                                    <th> MAC</th>
+                                    <th> Local</th>
+                                    <th> Funciona ?</th>                
+                                    <th> Excluir ?</th>
+                                </tr>
+                            </thead>    
+                            <tbody>
+                                {% for form in computador %}
+                                <tr>
+                                    {% for field in form %}
+                                    <th>{{ field }}</th>    
+                                    {% endfor %}                                    
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
                     <table style="display: none">
                         {{ view.formset.empty_form }}
                     </table>

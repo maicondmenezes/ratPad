@@ -294,8 +294,8 @@ class LinkDeInternet(models.Model):
     local = models.ForeignKey(LocalDeAtendimento, on_delete=models.CASCADE, null=True)
     wifi = models.BooleanField(default=True)
     cabo = models.BooleanField(default=True)
-    ativo = models.BooleanField(default=True)
     funcionando = models.BooleanField(default=True)
+    ativo = models.BooleanField(default=True)
     data_criacao = models.DateTimeField(auto_now_add=True, null=True)
     data_edicao  = models.DateTimeField(auto_now=True, null=True)
 
@@ -461,21 +461,21 @@ class Computador(models.Model):
         data_criacao(data): data de inclusão no sistema.
         data_edicao (data): data da última modificação.
     ''' 
-    escola = models.ForeignKey(Escola, on_delete=models.CASCADE, null=True)
-    local = models.ForeignKey(LocalDeAtendimento, on_delete=models.CASCADE, null=True)
+    escola = models.ForeignKey(Escola, on_delete=models.CASCADE, null=True)    
+    numero_serie = models.CharField(max_length=20, unique=True, primary_key=True)
+    numero_inventario = models.CharField(max_length=20, unique=True)
     tipo = models.ForeignKey(TipoDeComputador, on_delete=models.CASCADE)
     marca = models.CharField(max_length=20)
     modelo = models.CharField(max_length=50)
-    numero_serie = models.CharField(max_length=20, unique=True, primary_key=True)
-    numero_inventario = models.CharField(max_length=20, unique=True)
     sistema_operacional = models.CharField(max_length=20)    
     processador = models.CharField(max_length=100)
     ram = models.CharField(max_length=20)
     hostname = models.CharField(max_length=20)
     ip = models.GenericIPAddressField()
     mac_address = models.CharField(max_length=20)
-    ativo = models.BooleanField(default=True)
+    local = models.ForeignKey(LocalDeAtendimento, on_delete=models.CASCADE, null=True)    
     funcionando = models.BooleanField(default=True)
+    ativo = models.BooleanField(default=True)
     data_criacao = models.DateTimeField(auto_now_add=True, null=True)
     data_edicao  = models.DateTimeField(auto_now=True, null=True)
 

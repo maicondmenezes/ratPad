@@ -7,7 +7,7 @@ from dal import autocomplete
 from rest_framework import viewsets
 
 from reports.models import *
-from reports.forms import RatPadraoCreateForm, EscolaCreateForm
+from reports.forms import TelefoneInlineForm, ComputadorInlineForm, LinkDeInternetInlineForm, RatPadraoCreateForm, EscolaCreateForm
 from reports.serializers import ComputadorSerializer
 
 
@@ -33,6 +33,36 @@ class EscolaCreateView(LoginRequiredMixin, CreateView):
     template_name = 'reports/escola/add.html'        
     form_class = EscolaCreateForm 
 
+    def get_context_data(self, **kwargs):    
+        data = super().get_context_data(**kwargs)
+        if self.request.POST:
+            data["telefone"] = TelefoneInlineForm(self.request.POST)
+            data["link"] = LinkDeInternetInlineForm(self.request.POST)
+            data["computador"] = ComputadorInlineForm(self.request.POST)
+        else:
+            data["telefone"] = TelefoneInlineForm()
+            data["link"] = LinkDeInternetInlineForm()
+            data["computador"] = ComputadorInlineForm()
+        return data
+        
+    def form_valid(self, form):
+        context = self.get_context_data()
+        
+        telefone = context["telefone"]
+        link = context["link"]
+        computador = context["computador"]
+        
+        self.object = form.save()
+        
+        if link.is_valid() and computador.is_valid() and telefone.is_valid():
+            telefone.instance = self.object
+            link.instance = self.object
+            computador.instance = self.object
+            telefone.save()
+            link.save()
+            computador.save()
+        return super().form_valid(form)
+    
     def get_success_url(self):
         if 'save_edit' in self.request.POST:
             return reverse_lazy('reports:escola_edit', kwargs={'pk': self.object.designacao})

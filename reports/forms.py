@@ -1,15 +1,43 @@
 from django import forms
-from django.forms import widgets
+from django.db.models import fields
+from django.forms import inlineformset_factory, modelformset_factory
 
 from dal import autocomplete
 
-from reports.models import Escola, ParecerTecnico, RatLaboratorio, RatPadrao
+from reports.models import Computador, Endereco, Escola, ParecerTecnico, RatLaboratorio, RatPadrao, Telefone, FornecedorDeInternet, LinkDeInternet 
+
+TelefoneInlineForm = modelformset_factory(
+    Telefone, 
+    exclude=('ativo', 'data_criacao', 'dara_edicao',),
+    extra=3,
+)
+
+LinkDeInternetInlineForm = inlineformset_factory(
+    Escola, 
+    LinkDeInternet, 
+    fields=(
+        'fornecedor',
+        'velocidade',
+        'ip_circuito',
+        'identificador',
+        'local',
+        'wifi',
+        'cabo',
+        'funcionando',),
+    extra=3,
+)
+
+ComputadorInlineForm = inlineformset_factory(
+    Escola, 
+    Computador, 
+    exclude=('escola', 'ativo', 'data_criacao', 'dara_edicao'),
+    extra=5,
+)
 
 class ParecerTecnicoCreateForm(forms.ModelForm):
     class Meta:
         model = ParecerTecnico
         fields = '__all__'
-
 class RatLaboratorioCreateForm(forms.ModelForm):
     class Meta:
         model = RatLaboratorio
