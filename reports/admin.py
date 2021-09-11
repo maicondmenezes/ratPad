@@ -279,7 +279,7 @@ class RatLaboratorioAdmin(DjangoObjectActions, admin.ModelAdmin):
         obj.save()
     fieldsets = [
         (None, {'fields': ['escola', 'locais', 'chamados']}),
-        ('Laboratório', {'fields': ['tipo', 'fotos', 'links', 'computadores']}),
+        ('Laboratório', {'fields': ['tipo', 'fotos', 'computadores']}),
     ]    
 
     list_display = (
@@ -292,9 +292,9 @@ class RatLaboratorioAdmin(DjangoObjectActions, admin.ModelAdmin):
     search_fields = ['escola', 'tecnico']    
     date_hierarchy = 'data_criacao'
     raw_id_fields = ('escola',)     
-    filter_horizontal = ('computadores','links')   
+    filter_horizontal = ('computadores',)   
     change_actions = ('gerarRelatorio', )
-    
+    'links',
 @admin.register(RatPadrao)
 class RatPadraoAdmin(DjangoObjectActions, admin.ModelAdmin):
     '''
@@ -351,3 +351,4 @@ admin.site.register(LocalDeAtendimento)
 admin.site.register(TipoDeComputador)
 admin.site.register(TipoDeLaboratorio)
 admin.site.register(StatusDeBaixa)
+admin.site.register(LinkDeLaboratorio)

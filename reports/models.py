@@ -42,7 +42,7 @@ class Endereco(models.Model):
 
 class Telefone(models.Model):
     tipo = models.CharField(max_length=20, choices=choices.TIPOS_DE_TELEFONE)
-    ddd = models.CharField(max_length=2)
+    ddd = models.CharField(max_length=3, default="021")
     operadora = models.CharField(max_length=20, choices=choices.OPERADORAS_DE_TELEFONIA)
     numero =  models.CharField(max_length=15)
 
@@ -403,20 +403,6 @@ class RatPadrao(Relatorio):
     def get_absolute_url_del(self):
         return reverse('reports:rat_del', kwargs={'pk': self.id})
 
-class ParecerTecnico(Relatorio):
-    '''
-    O Relatório de Parecer Técnico para baixa e descarte de equipamentos que não puderam ser recuperados em um atendimento, estende o relatório padrão.
-    Cada Status De Baixa está relacionado a uma única instância deste modelo.
-    '''            
-    
-    class Meta:
-        '''Define a representação textual do modelo na forma singular e plural no modúlo administrativo do django'''
-        verbose_name = 'Parecer Técnico'
-        verbose_name_plural = 'Relatórios de Parecer Técnico'
-    
-    def get_absolute_url(self):
-        return reverse('reports:report_parecer', kwargs={'id': self.id})
-
 class Computador(models.Model):
     '''
     Computadores atendidos nas unidades escolares da SME.    
@@ -509,8 +495,7 @@ class RatLaboratorio(Relatorio):
         links (fk): lista de chaves estrangeiras identificando os links de internet  presentes no laboratório.
     ''' 
     tipo = models.ForeignKey(TipoDeLaboratorio, on_delete=models.CASCADE, default='1')
-    fotos = models.ImageField(upload_to='fotosLab', blank=True)    
-    links = models.ManyToManyField(LinkDeInternet)
+    fotos = models.ImageField(upload_to='fotosLab', blank=True)        
     computadores = models.ManyToManyField(Computador)
 
     class Meta:
@@ -519,7 +504,58 @@ class RatLaboratorio(Relatorio):
         verbose_name_plural = 'Relatórios de Laboratório'
 
     def get_absolute_url(self):
-        return reverse('reports:report_lab', kwargs={'id': self.id})
+        return reverse('reports:ratlab_detail', kwargs={'pk': self.id})
+    
+    def get_absolute_url_list(self):
+        return reverse('reports:ratlab_list')
+    
+    def get_absolute_url_edit(self):
+        return reverse('reports:ratlab_edit', kwargs={'pk': self.id})
+    
+    def get_absolute_url_del(self):
+        return reverse('reports:ratlab_del', kwargs={'pk': self.id})
+
+class ParecerTecnico(Relatorio):
+    '''
+    O Relatório de Parecer Técnico para baixa e descarte de equipamentos que não puderam ser recuperados em um atendimento, estende o relatório padrão.
+    Cada Status De Baixa está relacionado a uma única instância deste modelo.
+    '''            
+    
+    class Meta:
+        '''Define a representação textual do modelo na forma singular e plural no modúlo administrativo do django'''
+        verbose_name = 'Parecer Técnico'
+        verbose_name_plural = 'Relatórios de Parecer Técnico'
+    
+    def get_absolute_url(self):
+        return reverse('reports:report_parecer', kwargs={'id': self.id})
+
+class LinkDeLaboratorio(models.Model):
+    '''
+    O Link de internet disponível em um laboratório
+        
+    Args:
+        ratlab (fk): Chave estrangeira identificando o Relatório de Atendimento de Laboratório que o Link está relacionado
+        link (fk): Chave estrangeira que identifica o Link disponível no laboratório
+        wifi (bool): Identifica se existe sinal sem fio disponível para este link
+        cabo (bool): Identifica se existe estrutura de cabeamento disponível para este link
+        funcionando(bool): identifica se o link está em funcionamento ou não
+
+    Attributes:
+        parecer (fk): Chave estrangeira identificando o Parecer Técnico de Baixa que o Status está relacionado
+        computador (fk): Chave estrangeira que identifica o Link disponível no laboratório
+        wifi (bool): Identifica se existe sinal sem fio disponível para este link
+        cabo (bool): Identifica se existe estrutura de cabeamento disponível para este link
+        funcionando(bool): identifica se o link está em funcionamento ou não
+    ''' 
+    ratlab = models.ForeignKey(RatLaboratorio, on_delete=models.CASCADE, null=True)
+    link = models.OneToOneField(LinkDeInternet, on_delete=models.CASCADE)
+    wifi = models.BooleanField(default=True)
+    cabo = models.BooleanField(default=True)
+    funcionando = models.BooleanField(default=True)
+
+    def __str__(self):
+        '''Define o atributo equipamento seguido do motivo e descrição do motivo como representação textual de uma instância do modelo.'''
+        return f'{self.link.fornecedor} - {self.link.velocidade}Mbps'
 
 class StatusDeBaixa(models.Model):
     '''

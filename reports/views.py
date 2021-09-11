@@ -6,8 +6,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from dal import autocomplete
 from rest_framework import viewsets
 
-from reports.models import *
-from reports.forms import TelefoneInlineForm, ComputadorInlineForm, LinkDeInternetInlineForm, RatPadraoCreateForm, EscolaCreateForm
+from reports.models import Escola, RatPadrao, RatLaboratorio, Computador, LocalDeAtendimento
+from reports.forms import ComputadorInlineForm, LinkDeInternetInlineForm, LinkDeLaboratorioInlineForm, RatPadraoCreateForm, EscolaCreateForm, RatLaboratorioCreateForm
 from reports.serializers import ComputadorSerializer
 
 
@@ -35,12 +35,10 @@ class EscolaCreateView(LoginRequiredMixin, CreateView):
 
     def get_context_data(self, **kwargs):    
         data = super().get_context_data(**kwargs)
-        if self.request.POST:
-            data["telefone"] = TelefoneInlineForm(self.request.POST)
+        if self.request.POST:            
             data["link"] = LinkDeInternetInlineForm(self.request.POST)
             data["computador"] = ComputadorInlineForm(self.request.POST)
-        else:
-            data["telefone"] = TelefoneInlineForm()
+        else:            
             data["link"] = LinkDeInternetInlineForm()
             data["computador"] = ComputadorInlineForm()
         return data
@@ -48,17 +46,15 @@ class EscolaCreateView(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         context = self.get_context_data()
         
-        telefone = context["telefone"]
         link = context["link"]
         computador = context["computador"]
         
         self.object = form.save()
         
-        if link.is_valid() and computador.is_valid() and telefone.is_valid():
-            telefone.instance = self.object
+        if link.is_valid() and computador.is_valid():
+        
             link.instance = self.object
             computador.instance = self.object
-            telefone.save()
             link.save()
             computador.save()
         return super().form_valid(form)
@@ -76,7 +72,33 @@ class EscolaUpdateView(LoginRequiredMixin, UpdateView):
     model = Escola
     template_name = 'reports/escola/edit.html'        
     form_class = EscolaCreateForm 
-    context_object_name = 'escola'        
+    context_object_name = 'escola'
+
+    def get_context_data(self, **kwargs):    
+        data = super().get_context_data(**kwargs)
+        if self.request.POST:            
+            data["link"] = LinkDeInternetInlineForm(self.request.POST)
+            data["computador"] = ComputadorInlineForm(self.request.POST)
+        else:            
+            data["link"] = LinkDeInternetInlineForm()
+            data["computador"] = ComputadorInlineForm()
+        return data
+        
+    def form_valid(self, form):
+        context = self.get_context_data()
+        
+        link = context["link"]
+        computador = context["computador"]
+        
+        self.object = form.save()
+        
+        if link.is_valid() and computador.is_valid():
+        
+            link.instance = self.object
+            computador.instance = self.object
+            link.save()
+            computador.save()
+        return super().form_valid(form)       
 
     def get_success_url(self):
         if 'edit_del' in self.request.POST:
@@ -174,6 +196,116 @@ class RatPadraoDeleteView(DeleteView):
     template_name = 'reports/ratpadrao/delete.html'
     context_object_name = 'rat'
     success_url = reverse_lazy('reports:rat_list')
+
+
+class RatLaboratorioCreateView(LoginRequiredMixin, CreateView):
+    login_url = '/accounts/login'
+    model = RatLaboratorio
+    template_name = 'reports/ratlab/add.html'        
+    form_class = RatLaboratorioCreateForm 
+
+    def get_context_data(self, **kwargs):    
+        data = super().get_context_data(**kwargs)
+        if self.request.POST:            
+            data["link"] = LinkDeLaboratorioInlineForm(self.request.POST)            
+        else:            
+            data["link"] = LinkDeLaboratorioInlineForm()            
+        return data
+        
+    def form_valid(self, form):                       
+                
+        context = self.get_context_data()        
+        link = context["link"]     
+        
+        self.object = form.save(commit=False)
+        self.object.tecnico = self.request.user        
+        
+        if link.is_valid():        
+            link.instance = self.object            
+            link.save()            
+          
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        if 'save_edit' in self.request.POST:
+            return reverse_lazy('reports:ratlab_edit', kwargs={'pk': self.object.pk})
+        elif 'save_add' in self.request.POST:
+            return reverse_lazy('reports:ratlab_add')
+        else:
+            return reverse_lazy('reports:ratlab_list')
+
+class RatLaboratorioUpdateView(LoginRequiredMixin, UpdateView):
+    login_url = '/accounts/login'
+    model = RatLaboratorio
+    template_name = 'reports/ratlab/edit.html'        
+    form_class = RatLaboratorioCreateForm 
+    context_object_name = 'ratlab'    
+
+    def get_context_data(self, **kwargs):    
+        data = super().get_context_data(**kwargs)
+        if self.request.POST:            
+            data["link"] = LinkDeLaboratorioInlineForm(self.request.POST)            
+        else:            
+            data["link"] = LinkDeLaboratorioInlineForm()            
+        return data
+        
+    def form_valid(self, form):                       
+                
+        context = self.get_context_data()        
+        link = context["link"]     
+        
+        self.object = form.save(commit=False)
+        self.object.tecnico = self.request.user        
+        
+        if link.is_valid():        
+            link.instance = self.object            
+            link.save()            
+          
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        if 'edit_report' in self.request.POST:
+            return reverse_lazy('reports:ratlab_detail', kwargs={'pk': self.object.pk})
+        elif 'edit_add' in self.request.POST:
+            return reverse_lazy('reports:ratlab_add')        
+        else:
+            return reverse_lazy('reports:ratlab_list')
+
+class RatLaboratorioDetailView(LoginRequiredMixin, DetailView):
+    login_url = '/accounts/login'
+    model = RatLaboratorio
+    template_name = 'reports/ratlab/detail.html'
+    context_object_name = 'ratlab'    
+
+class RatLaboratorioListView(LoginRequiredMixin, ListView):
+    login_url = '/accounts/login'
+    model = RatLaboratorio
+    context_object_name = 'ratlabs'
+    template_name = 'reports/ratlab/list.html'
+    escola = None        
+        
+    def get_queryset(self):                
+        queryset = RatLaboratorio.objects.all()
+
+        escola_designacao = self.kwargs.get('designacao')
+        if escola_designacao:
+            self.escola = get_object_or_404(Escola, designacao=escola_designacao)
+            queryset = queryset.filter(escola=self.escola)
+        
+        return queryset
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['escola'] = self.escola
+        context['escolas']= Escola.ativos.all()
+        return context
+
+class RatLaboratorioDeleteView(DeleteView):
+    model = RatLaboratorio
+    template_name = 'reports/ratpadrao/delete.html'
+    context_object_name = 'rat'
+    success_url = reverse_lazy('reports:rat_list')
+
 
 class LocalDeAtendimentoAutocomplete(autocomplete.Select2QuerySetView):
     def get_queryset(self):

@@ -4,44 +4,7 @@ from django.forms import inlineformset_factory, modelformset_factory
 
 from dal import autocomplete
 
-from reports.models import Computador, Endereco, Escola, ParecerTecnico, RatLaboratorio, RatPadrao, Telefone, FornecedorDeInternet, LinkDeInternet 
-
-TelefoneInlineForm = modelformset_factory(
-    Telefone, 
-    exclude=('ativo', 'data_criacao', 'dara_edicao',),
-    extra=3,
-)
-
-LinkDeInternetInlineForm = inlineformset_factory(
-    Escola, 
-    LinkDeInternet, 
-    fields=(
-        'fornecedor',
-        'velocidade',
-        'ip_circuito',
-        'identificador',
-        'local',
-        'wifi',
-        'cabo',
-        'funcionando',),
-    extra=3,
-)
-
-ComputadorInlineForm = inlineformset_factory(
-    Escola, 
-    Computador, 
-    exclude=('escola', 'ativo', 'data_criacao', 'dara_edicao'),
-    extra=5,
-)
-
-class ParecerTecnicoCreateForm(forms.ModelForm):
-    class Meta:
-        model = ParecerTecnico
-        fields = '__all__'
-class RatLaboratorioCreateForm(forms.ModelForm):
-    class Meta:
-        model = RatLaboratorio
-        fields = '__all__'
+from reports.models import Computador, Escola, ParecerTecnico, RatLaboratorio, RatPadrao, LinkDeInternet , LinkDeLaboratorio
 
 class EscolaCreateForm(forms.ModelForm):
     class Meta:
@@ -84,6 +47,61 @@ class RatPadraoCreateForm(forms.ModelForm):
                     'data-height':140,
                     'data-minimum-input-length': 4,                    
                 },
-            ),
-            
+            ),            
         }
+
+class RatLaboratorioCreateForm(forms.ModelForm):
+    class Meta:
+        model = RatLaboratorio
+        fields = [
+            'escola',
+            'locais',
+            'chamados',
+            'tipo',
+            'fotos',            
+            'computadores',
+        ]                       
+        widgets = {
+            'escola': autocomplete.ModelSelect2(
+                url='reports:escola_autocomplete',
+                attrs={                    
+                    'data-height':140,
+                    'data-minimum-input-length': 4,                    
+                },
+            ),
+            'locais': autocomplete.ModelSelect2Multiple(
+                url='reports:local_autocomplete',
+                attrs={                    
+                    'data-height':100,
+                    'data-minimum-input-length': 3,
+                    'data-maximum-selection-length': 1
+                },
+            ),
+        }
+
+LinkDeLaboratorioInlineForm = inlineformset_factory(
+    RatLaboratorio, 
+    LinkDeLaboratorio, 
+    fields='__all__',
+    extra=3,
+)
+
+LinkDeInternetInlineForm = inlineformset_factory(
+    Escola, 
+    LinkDeInternet, 
+    exclude=('ativo', 'data_criacao', 'dara_edicao',),
+    extra=3,
+)
+
+ComputadorInlineForm = inlineformset_factory(
+    Escola, 
+    Computador, 
+    exclude=('escola', 'ativo', 'data_criacao', 'dara_edicao'),
+    extra=5,
+)
+
+class ParecerTecnicoCreateForm(forms.ModelForm):
+    class Meta:
+        model = ParecerTecnico
+        fields = '__all__'
+        
