@@ -2,17 +2,17 @@
 _Gerenciador de relatórios de atendimentos técnicos da 10ª CRE - RJ_
 
 Updates:
-- _0.1.4.5b_ = front-end aplicado, a partir deste ponto o projeto se divide entre ratPad admin e ratPad para usuários 
+- _0.1.4.5b_ = front-end aplicado, a partir deste ponto o projeto se divide entre _ratPad\_admin_ e _ratPad\_users_ 
 - _0.1.3.6b_ = implementar tecman para planilha de custos de deslocamento e gestão de rotas
 - _0.1.3.5b_ = cadastro automatizado de computadores via app local
 - _0.1.3.4b_ = versão estavél dos 3 relatórios principais (RAT Padrão, PArecer Técnico de Baixas e RAT de Laboratórios); cadastro de não automatizado de computadores; sistema _ainda não possui tratamento de erros_
 
 ## TO DO:
-- [ ] Normalizar informações de endereço e telefones da Escola
-- [ ] Incluir daods de geo localização no endereço das escolas
+- [x] Normalizar informações de endereço e telefones da Escola
+- [ ] Incluir dados de geo localização no endereço das escolas
 - [ ] Consumir API do Google Maps para localização dos endereços e rotas de onibus das escolas
 - [ ] Consultar API's de CIA's de transporte urbano para mensurar tempo de espera de linhas.
-- [ ] Criar uma tela boas vindas do sistema com atalho para os relatórios e para area de gestão do tecnico _(tecman será o novo app)_
+- [x] Criar uma tela boas vindas do sistema com atalho para os relatórios e para area de gestão do tecnico _(tecman será o novo app)_
 - [X] Iniciar a documentação do projeto
     - [ ] Detalhar o propósito do sistema no arquivo readme
     - [ ] Traduzir o documento para o inglês
@@ -20,7 +20,7 @@ Updates:
 - [X] criar TESTES
 - [ ] criar user para os tecnicos e supervisores
 - [ ] exibir os relatórios apenas do usuário criador
-- [ ] criar rodape do sistema com minha informaçṍes
+- [x] criar rodape do sistema com minha informaçṍes
 - [ ] criar botão de import
 - [ ] criar botão de export
 - [X] Criar API rest para envio de infomações dos computadores apenas
