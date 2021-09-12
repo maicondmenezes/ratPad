@@ -7,7 +7,15 @@ from django.urls import reverse
 '''
 Este módulo define os formulários de gestão das entidades do sistema no módulo administrativo do django
 '''
-  
+class LinkDeLaboratorioInLine(admin.TabularInline):
+    '''
+    Formulário em linha para cadastrar um Status de Baixa.
+    Este formulário é referenciado no formulário de PArecer Técnico de Baixa
+    '''
+    model = LinkDeLaboratorio
+    extra = 2
+    raw_id_fields = ('link',)
+
 class BaixaInLine(admin.TabularInline):
     '''
     Formulário em linha para cadastrar um Status de Baixa.
@@ -17,19 +25,7 @@ class BaixaInLine(admin.TabularInline):
     extra = 1
     raw_id_fields = ('computador',)
 
-    def save_model(self, request, obj, change):
-        '''Registra o usuário que criou o relatório no momento de salvá-lo
-        Args:
-            request: requisição http
-            obj: um objeto do tipo RatPadrao
-            change: status de alteração no obj
-        Returns:
-            HttpResponseRedirect: reverse('reports:report_padrao', args=(obj.id,))
-        '''
-        if not change:            
-            obj.ativo = False
-            obj.funcinando = False
-        obj.save()    
+       
 
 class ComputadorInLine(admin.TabularInline):
     '''
@@ -216,7 +212,7 @@ class ParecerTecnicoAdmin(DjangoObjectActions, admin.ModelAdmin):
     gerarRelatorio.label = 'Gerar Relatório'
     gerarRelatorio.short_description = 'Gera um arquivo do parecer técnico para impressão ou download'
 
-    def save_model(self, request, obj, change):
+    def save_model(self, request, obj, obj2, change):
         '''Registra o usuário que criou o relatório no momento de salvá-lo
         Args:
             request: requisição http
@@ -227,7 +223,9 @@ class ParecerTecnicoAdmin(DjangoObjectActions, admin.ModelAdmin):
         '''
         if not change:            
             obj.tecnico = request.user
+            obj2.tecnico = request.user
         obj.save()
+        obj2.save()
     fieldsets = [
         (None, {'fields': ['escola', 'locais', 'chamados']}),        
     ]
@@ -265,7 +263,7 @@ class RatLaboratorioAdmin(DjangoObjectActions, admin.ModelAdmin):
     gerarRelatorio.label = 'Gerar Relatório'
     gerarRelatorio.short_description = 'Gera um arquivo do parecer técnico para impressão ou download'
 
-    def save_model(self, request, obj, change):
+    def save_model(self, request, obj, obj2, change):
         '''Registra o usuário que criou o relatório no momento de salvá-lo
         Args:
             request: requisição http
@@ -276,12 +274,14 @@ class RatLaboratorioAdmin(DjangoObjectActions, admin.ModelAdmin):
         '''
         if not change:            
             obj.tecnico = request.user
+            obj2.tecnico = request.user
         obj.save()
+        obj2.save()
     fieldsets = [
         (None, {'fields': ['escola', 'locais', 'chamados']}),
         ('Laboratório', {'fields': ['tipo', 'fotos', 'computadores']}),
-    ]    
-
+    ] 
+    inlines= [LinkDeLaboratorioInLine]   
     list_display = (
         'escola',        
         'tecnico',
@@ -294,7 +294,8 @@ class RatLaboratorioAdmin(DjangoObjectActions, admin.ModelAdmin):
     raw_id_fields = ('escola',)     
     filter_horizontal = ('computadores',)   
     change_actions = ('gerarRelatorio', )
-    'links',
+
+
 @admin.register(RatPadrao)
 class RatPadraoAdmin(DjangoObjectActions, admin.ModelAdmin):
     '''

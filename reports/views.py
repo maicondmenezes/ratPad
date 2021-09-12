@@ -1,12 +1,12 @@
 from django.urls import reverse_lazy
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, render
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 from dal import autocomplete
 from rest_framework import viewsets
 
-from reports.models import Escola, RatPadrao, RatLaboratorio, Computador, LocalDeAtendimento
+from reports.models import Escola, LinkDeInternet, RatPadrao, RatLaboratorio, Computador, LocalDeAtendimento
 from reports.forms import ComputadorInlineForm, LinkDeInternetInlineForm, LinkDeLaboratorioInlineForm, RatPadraoCreateForm, EscolaCreateForm, RatLaboratorioCreateForm
 from reports.serializers import ComputadorSerializer
 
@@ -178,9 +178,9 @@ class RatPadraoListView(LoginRequiredMixin, ListView):
     def get_queryset(self):                
         queryset = RatPadrao.objects.all()
 
-        escola_designacao = self.kwargs.get('designacao')
-        if escola_designacao:
-            self.escola = get_object_or_404(Escola, designacao=escola_designacao)
+        escola_slug = self.kwargs.get('slug')
+        if escola_slug:
+            self.escola = get_object_or_404(Escola, slug=escola_slug)
             queryset = queryset.filter(escola=self.escola)
         
         return queryset
@@ -197,7 +197,6 @@ class RatPadraoDeleteView(DeleteView):
     context_object_name = 'rat'
     success_url = reverse_lazy('reports:rat_list')
 
-
 class RatLaboratorioCreateView(LoginRequiredMixin, CreateView):
     login_url = '/accounts/login'
     model = RatLaboratorio
@@ -205,17 +204,17 @@ class RatLaboratorioCreateView(LoginRequiredMixin, CreateView):
     form_class = RatLaboratorioCreateForm 
 
     def get_context_data(self, **kwargs):    
-        data = super().get_context_data(**kwargs)
+        data = super().get_context_data(**kwargs)        
         if self.request.POST:            
-            data["link"] = LinkDeLaboratorioInlineForm(self.request.POST)            
+            data["link_forms"] = LinkDeLaboratorioInlineForm(self.request.POST)            
         else:            
-            data["link"] = LinkDeLaboratorioInlineForm()            
+            data["link_forms"] = LinkDeLaboratorioInlineForm()            
         return data
         
     def form_valid(self, form):                       
                 
         context = self.get_context_data()        
-        link = context["link"]     
+        link = context["link_forms"]     
         
         self.object = form.save(commit=False)
         self.object.tecnico = self.request.user        
@@ -244,15 +243,15 @@ class RatLaboratorioUpdateView(LoginRequiredMixin, UpdateView):
     def get_context_data(self, **kwargs):    
         data = super().get_context_data(**kwargs)
         if self.request.POST:            
-            data["link"] = LinkDeLaboratorioInlineForm(self.request.POST)            
+            data["link_forms"] = LinkDeLaboratorioInlineForm(self.request.POST)            
         else:            
-            data["link"] = LinkDeLaboratorioInlineForm()            
+            data["link_forms"] = LinkDeLaboratorioInlineForm()            
         return data
         
     def form_valid(self, form):                       
                 
         context = self.get_context_data()        
-        link = context["link"]     
+        link = context["link_forms"]     
         
         self.object = form.save(commit=False)
         self.object.tecnico = self.request.user        
@@ -287,9 +286,9 @@ class RatLaboratorioListView(LoginRequiredMixin, ListView):
     def get_queryset(self):                
         queryset = RatLaboratorio.objects.all()
 
-        escola_designacao = self.kwargs.get('designacao')
-        if escola_designacao:
-            self.escola = get_object_or_404(Escola, designacao=escola_designacao)
+        escola_slug = self.kwargs.get('slug')
+        if escola_slug:
+            self.escola = get_object_or_404(Escola, slug=escola_slug)
             queryset = queryset.filter(escola=self.escola)
         
         return queryset
@@ -306,6 +305,11 @@ class RatLaboratorioDeleteView(DeleteView):
     context_object_name = 'rat'
     success_url = reverse_lazy('reports:rat_list')
 
+def load_assets(request):
+    escola_id = request.GET.get('escola')
+    computadores = Computador.objects.filter(escola=escola_id).order_by('tipo')
+    links = LinkDeInternet.objects.filter(escola=escola_id).order_by('fornecedor')
+    return render(request, 'reports/ratlab/ativos_por_escola.html', {'computadores': computadores, 'links': links})
 
 class LocalDeAtendimentoAutocomplete(autocomplete.Select2QuerySetView):
     def get_queryset(self):

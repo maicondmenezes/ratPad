@@ -14,19 +14,23 @@
     <div class="container-fluid">
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
-            <form method="POST">
+            <form 
+            id="ratlabForm" 
+            method="POST"                         
+            data-assets-url="{% url 'reports:ajax_load_assets' %}" 
+            novalidate>
                 {% csrf_token %}
                 <div 
                     class="card-header d-flex flex-row align-items-center justify-content-between">
                     
-                    <h6 class="m-0 font-weight-bold text-primary">Editar Relatório de Atendimento Técnico</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Editar Relatório de Atendimento de Laboratório</h6>
                     <p class="text-error">{{ form.non_field_errors }}</p>                 
                     <nav class="navbar navbar-expand mb-0">
                     
                         <ul class="navbar-nav "> 
                             <li class="nav-item no-arrow mx-1" >
                                 <a
-                                    href="{{ rat.get_absolute_url_del }}"
+                                    href="{{ ratlab.get_absolute_url_del }}"
                                     name="edit_delete"
                                     class="btn btn-danger btn-circle btn-sm"
                                     data-toggle="tooltip" 
@@ -49,7 +53,7 @@
                             <li class="nav-item no-arrow mx-1" >
                                 <button     
                                     type="submit"
-                                    name="save_add"
+                                    name="edit_add"
                                     class="btn btn-success btn-circle btn-sm"
                                     data-toggle="tooltip" 
                                     data-placement="top" 
@@ -82,6 +86,30 @@
                         <p class="text-danger">{{ field.errors }}</p>
                     </div>                        
                     {% endfor %}
+                    <!--Link De Laboratorio forms-->
+                    <div class="table-responsive mb-2 text-dark small">            
+                        <table class="table table-bordered table-striped table-sm" width="100%"> 
+                            <caption style=" caption-side: top;">Links de Internet Disponíveis</caption>
+                            <thead class="thead-light"> 
+                                <tr>
+                                    <th> Link </th>
+                                    <th> Wi-Fi ?</th>
+                                    <th> Cabo ?</th>
+                                    <th> Funciona ?</th>                                    
+                                </tr>
+                            </thead>    
+                            <tbody>                            
+                            {% for form in link_forms %}
+                                <tr>                                    
+                                    <th>{{form.link}}</th>                                        
+                                    <th>{{form.wifi}}</th>
+                                    <th>{{form.cabo}}</th>
+                                    <th>{{form.funcionando}}</th>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
                     <table style="display: none">
                         {{ view.formset.empty_form }}
                     </table>
@@ -93,14 +121,14 @@
                 <div 
                     class="card-footer d-flex flex-row align-items-center justify-content-between">
                     
-                    <h6 class="m-0 font-weight-bold text-primary">Editar Relatório de Atendimento Técnico</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Editar Relatório de Atendimento de Laboratório</h6>
                     <p class="text-error">{{ form.non_field_errors }}</p>                 
                     <nav class="navbar navbar-expand mb-0">
                     
                         <ul class="navbar-nav "> 
                             <li class="nav-item no-arrow mx-1" >
                                 <a  
-                                    href="{{ rat.get_absolute_url_del }}"
+                                    href="{{ ratlab.get_absolute_url_del }}"
                                     name="edit_del"
                                     class="btn btn-danger btn-circle btn-sm"
                                     data-toggle="tooltip" 
@@ -173,6 +201,31 @@
         })
     })($)
 </script>
+
+<!--Script para selecionar computadores e links por escola-->
+<script>
+    $("#id_escola").change(function () {      
+      var urlLink = $("#ratlabForm").attr("data-assets-url");
+      var escolaDesignacao = $(this).val();
+
+      $.ajax({                       
+        url: urlLink,          
+        data: {
+          'escola': escolaDesignacao 
+        },
+        success: function (data) {            
+            var link = $(data).filter("#linkChoices").html();
+            var computador = $(data).filter("#computadorChoices").html();
+            
+            $("#id_computadores").html(computador);
+            $("#id_linkdelaboratorio_set-0-link").html(link);
+            $("#id_linkdelaboratorio_set-1-link").html(link);
+            $("#id_linkdelaboratorio_set-2-link").html(link);
+        }
+      });
+
+    });
+  </script>
 {% endblock scripts %}
 </body>
 

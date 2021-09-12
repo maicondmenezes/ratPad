@@ -1,0 +1,11 @@
+<div id="linkChoices">
+    <option value="">---------</option>
+    {% for link in links %}
+    <option value="{{ link.pk }}">{{ link }}</option>
+    {% endfor %}
+</div>
+<div id="computadorChoices">
+    {% for computador in computadores %}
+    <option value="{{ computador.pk }}">{{ computador }}</option>
+    {% endfor %}
+</div>

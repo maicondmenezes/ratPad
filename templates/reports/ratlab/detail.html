@@ -2,113 +2,155 @@
 {% load static %}
 
 {% block escola %}
-    {{ rat.escola }}
+    {{ ratlab.escola }}
 {% endblock escola %}
 
 {% block title %}
-    RAT Padrão - {{ block.super}}
+    Relatório de Atendimento de Laboratório - {{ block.super}}
 {% endblock title %}
-    
+
+{% block report_header %}
+    Relatório de Atendimento de Laboratório
+{% endblock report_header %}    
+
+{% block report_title %}
+    Relatório de Atendimento de Laboratório
+{% endblock report_title %}
+
 {% block local %}
-    {% for local in rat.locais.all %}
+    {% for local in ratlab.locais.all %}
         {{ local }}; &nbsp; 
     {% endfor %}
 {% endblock local %}
     
 {% block chamados %}
-    {{ rat.chamados }}    
+    {{ ratlab.chamados }}
 {% endblock chamados %}
 
 {% block editurlHeaderNav %}
-    {{ rat.get_absolute_url_edit }}
+    {{ ratlab.get_absolute_url_edit }}
 {% endblock editurlHeaderNav %}
 
 {% block editurlFooterNav %}
-    {{ rat.get_absolute_url_edit }}
+    {{ ratlab.get_absolute_url_edit }}
 {% endblock editurlFooterNav %}
 
+{% block listurlHeaderNav %} 
+    {{ ratlab.get_absolute_url_list }}
+{% endblock listurlHeaderNav %}
+
+{% block listurlFooterNav %} 
+    {{ ratlab.get_absolute_url_list }}
+{% endblock listurlFooterNav %}
+
 {% block conteudo %}
-<div class="container mx-auto align-items-center mb-2">
-    <div class="row mb-1">
-        <div class="col">
-            <h5 style="font-family: Calibri;" class="font-weight-bold text-center"><u>
-                Tipo de Problema
-            </u></h5>
-        </div>
+<!--Endereço-->
+<div class="table mb-2 text-dark small">            
+    <div class="row bg-light " >
+        <div class="col border"style="height: 30px;">                    
+            <p class="text-center"> Tipo de Laboratório: </p>                                        
+        </div>        
     </div>
-        
-    <div class="row mb-2">
-        <div class="col">
-            <h6 style="font-family: Calibri;" class="font-weight-light text-center">
-                {% for problema in rat.problemas.all %}
-                {{ problema }}; &nbsp; 
-                {% endfor %}
-            </h6>
-        </div>
-    </div>
-
-    <div class="row mb-1">
-        <div class="col">
-            <h5 style="font-family: Calibri;" class="font-weight-bold text-center"><u>
-                Descrição do Problema
-            </u></h5>
-        </div>
-    </div>
-        
-    <div class="row mb-2">
-        <div class="col">
-            <h6 style="font-family: Calibri;" class="font-weight-light text-center">
-                {{ rat.descricao }}
-            </h6>
-        </div>
-    </div>
-
-    <div class="row mb-1">
-        <div class="col">
-            <h5 style="font-family: Calibri;" class="font-weight-bold text-center"><u>
-                Solução do Problema
-            </u></h5>
-        </div>
-    </div>
-        
-    <div class="row mb-2">
-        <div class="col">
-            <h6 style="font-family: Calibri;" class="font-weight-light text-center">
-                {{ rat.solucao }}
-            </h6>
-        </div>
-    </div>
-    
-    <div class="row mb-2">
-        <div class="col">
-            <h6 class="font-weight-bold">
-                Recomendação de Equipamento/Serviço: 
-                {% if rat.recomendacao %} 
-                <i class="fas fa-check"></i>
-                {% else %}
-                <i class="fas fa-times"></i>
-                {% endif %}
-            </h6>
-        </div>
-    </div>
-
-    <div class="row mb-2">
-        <div class="col">
-            <h6 style="font-family: Calibri;" class="font-weight-light text-center">
-                {{ rat.equipamentos }}
-            </h6>
-        </div>
-    </div>
-
+    <div class="row bg-white mb-0">
+        <div class="col border text-center" style="height: 50px;">                    
+            <p> 
+                {{ ratlab.tipo }} </p>                                        
+                
+        </div>        
+    </div>   
 </div>
-    
-
+<!--Links de Internet-->
+<div class="table mb-2 text-dark small">            
+    <table class="table table-bordered table-striped table-sm" width="100%"> 
+        <caption style=" caption-side: top;">Links de Internet</caption>
+        <thead class="thead-light"> 
+            <tr>
+                <th> Fornecedor </th>
+                <th> Velocidade </th>
+                <th> Identificador </th>                
+                <th> Wi-Fi ?</th>
+                <th> Cabo ?</th>
+                <th> Funciona ?</th>
+            </tr>
+        </thead>    
+        <tbody>
+        {% for link in ratlab.linkdelaboratorio_set.all %}
+            <tr>
+                <th> {{link.link.fornecedor}} </th>
+                <th> {{link.link.velocidade}} </th>
+                <th> {{link.link.identificador}} </th>                
+                <th> 
+                    {% if link.wifi %}
+                    <i class="fas fa-check"></i>
+                    {% else %}
+                    <i class="fas fa-times"></i>
+                    {% endif %}
+                </th>
+                <th> 
+                    {% if link.cabo %}
+                    <i class="fas fa-check"></i>
+                    {% else %}
+                    <i class="fas fa-times"></i>
+                    {% endif %}
+                </th>
+                <th> 
+                    {% if link.funcionando %}
+                    <i class="fas fa-check"></i>
+                    {% else %}
+                    <i class="fas fa-times"></i>
+                    {% endif %}
+                </th>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+<!--Computadores-->
+<div class="table mb-2 text-dark small">            
+    <table class="table table-bordered table-striped table-sm" width="100%"> 
+        <caption style=" caption-side: top;">Computadores</caption>
+        <thead class="thead-light"> 
+            <tr>
+                <th> Nº de Série </th>
+                <th> Nº de Inventário </th>
+                <th> Tipo </th>
+                <th> Marca </th>
+                <th> Modelo</th>
+                <th> Sistema Operacional</th>
+                <th> CPU</th>
+                <th> RAM</th>
+                <th> Funciona ?</th>                
+            </tr>
+        </thead>    
+        <tbody>
+        {% for computador in ratlab.computadores.all %}
+            <tr>
+                <th> {{computador.numero_serie}} </th>
+                <th> {{computador.numero_inventario}} </th>
+                <th> {{computador.tipo}} </th>
+                <th> {{computador.marca}} </th>
+                <th> {{computador.modelo}}</th>
+                <th> {{computador.sistema_operacional}}</th>
+                <th> {{computador.processador}}</th>
+                <th> {{computador.ram}}</th>
+                <th> 
+                    {% if computador.funcionando %}
+                    <i class="fas fa-check"></i>
+                    {% else %}
+                    <i class="fas fa-times"></i>
+                    {% endif %}
+                </th>                
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
 {% endblock conteudo %}    
 
 {% block tecnico %}
-    {{ block.super }} {{ rat.tecnico.get_full_name }}    
+    {{ block.super }} {{ ratlab.tecnico.get_full_name }}    
 {% endblock tecnico %}
 
 {% block data %}
-    {{ block.super }} {{ rat.data_criacao }}    
+    {{ block.super }} {{ ratlab.data_criacao }}    
 {% endblock data %}

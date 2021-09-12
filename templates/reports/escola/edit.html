@@ -82,6 +82,90 @@
                         <p class="text-danger">{{ field.errors }}</p>
                     </div>                        
                     {% endfor %}
+                    <!--Link forms-->
+                    <div class="table-responsive mb-2 text-dark small">            
+                        <table class="table table-bordered table-striped table-sm" width="100%"> 
+                            <caption style=" caption-side: top;">Links de Internet</caption>
+                            <thead class="thead-light"> 
+                                <tr>
+                                    <th> Fornecedor </th>
+                                    <th> Velocidade </th>
+                                    <th> IP </th>
+                                    <th> Identificador </th>
+                                    <th> Local </th>
+                                    <th> Wi-Fi ?</th>
+                                    <th> Cabo ?</th>
+                                    <th> Funciona ?</th>
+                                    <th> Excluir ?</th>
+                                </tr>
+                            </thead>    
+                            <tbody>
+                            {% for form in link %}
+                                <tr>
+                                    <th>{{form.fornecedor}}</th>    
+                                    <th>{{form.velocidade}}</th>    
+                                    <th>{{form.ip}}</th>    
+                                    <th>{{form.identificador}}</th>    
+                                    <th>{{form.local}}</th>    
+                                    <th>{{form.wifi}}</th>    
+                                    <th>{{form.cabo}}</th>    
+                                    <th>{{form.funcionando}}</th>    
+                                    <th>{{form.DELETE}}</th>    
+                                </tr>
+                                <tr>
+                                    <p class="text-danger">{{ form.non_field_errors }}</p>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--Computador Forms-->
+                    <div class="table-responsive mb-2 text-dark small">            
+                        <table class="table table-bordered table-striped table-sm" width="100%"> 
+                            <caption style=" caption-side: top;">Computadores</caption>
+                            <thead class="thead-light"> 
+                                <tr>
+                                    <th> Nº de Série </th>
+                                    <th> Nº de Inventário </th>
+                                    <th> Tipo </th>
+                                    <th> Marca </th>
+                                    <th> Modelo</th>
+                                    <th> Sistema Operacional</th>
+                                    <th> CPU</th>
+                                    <th> RAM</th>
+                                    <th> Hostname</th>
+                                    <th> IP</th>
+                                    <th> MAC</th>
+                                    <th> Local</th>
+                                    <th> Funciona ?</th>                
+                                    <th> Excluir ?</th>
+                                </tr>
+                            </thead>    
+                            <tbody>
+                                {% for form in computador %}
+                                <tr>
+                                    <th>{{ form.numero_serie }}</th>                                    
+                                    <th>{{ form.numero_inventario }}</th>
+                                    <th>{{ form.tipo }}</th>
+                                    <th>{{ form.marca }}</th>
+                                    <th>{{ form.modelo }}</th>
+                                    <th>{{ form.sistema_operacional }}</th>
+                                    <th>{{ form.processador }}</th>
+                                    <th>{{ form.ram }}</th>
+                                    <th>{{ form.hostname }}</th>
+                                    <th>{{ form.ip }}</th>
+                                    <th>{{ form.mac_address }}</th>
+                                    <th>{{ form.local }}</th>
+                                    <th>{{ form.funcionando }}</th>
+                                    <th>{{ form.DELETE }}</th>
+                                </tr>
+                                <tr>
+                                    <p class="text-danger">{{ form.non_field_errors }}</p>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
                     <table style="display: none">
                         {{ view.formset.empty_form }}
                     </table>

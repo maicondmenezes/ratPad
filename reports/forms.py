@@ -50,7 +50,7 @@ class RatPadraoCreateForm(forms.ModelForm):
             ),            
         }
 
-class RatLaboratorioCreateForm(forms.ModelForm):
+class RatLaboratorioCreateForm(forms.ModelForm):   
     class Meta:
         model = RatLaboratorio
         fields = [
@@ -78,18 +78,53 @@ class RatLaboratorioCreateForm(forms.ModelForm):
                 },
             ),
         }
+    
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['computadores'].queryset = Computador.objects.none()
+
+        if 'escola' in self.data:
+            try:
+                escola_id = str(self.data.get('escola'))
+                self.fields['computadores'].queryset = Computador.objects.filter(escola=escola_id).order_by('tipo')
+            except (ValueError, TypeError):
+                pass  
+        elif self.instance.pk:
+            self.fields['computadores'].queryset = self.instance.escola.computador_set.order_by('tipo')
+
+class LinkDeLaboratorioForm(forms.ModelForm):
+    class Meta:
+        model = LinkDeLaboratorio
+        fields='__all__'
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['link'].queryset = LinkDeInternet.objects.none()
+
+        if 'link' in self.data:
+            try:
+                link_id =int(self.data.get('link'))
+                link = LinkDeInternet.objects.get(id=link_id)                
+                self.fields['link'].queryset = LinkDeInternet.objects.filter(escola=link.escola).order_by('fornecedor')
+            except (ValueError, TypeError):
+                pass  
+        elif self.instance.pk:
+            self.fields['link'].queryset = self.instance.escola.linkdeinternet_set.all()
 
 LinkDeLaboratorioInlineForm = inlineformset_factory(
     RatLaboratorio, 
     LinkDeLaboratorio, 
+    form=LinkDeLaboratorioForm,
     fields='__all__',
     extra=3,
 )
 
+
+
 LinkDeInternetInlineForm = inlineformset_factory(
     Escola, 
     LinkDeInternet, 
-    exclude=('ativo', 'data_criacao', 'dara_edicao',),
+    fields='__all__',
     extra=3,
 )
 

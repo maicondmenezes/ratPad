@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}    
-Nova Escola | {{ block.super }}    
+Adicionar Escola | {{ block.super }}    
 {% endblock title %}
 
 {% block page_content %} 
@@ -98,9 +98,18 @@ Nova Escola | {{ block.super }}
                             <tbody>
                             {% for form in link %}
                                 <tr>
-                                    {% for field in form %}
-                                    <th>{{field}}</th>    
-                                    {% endfor %}                                    
+                                    <th>{{form.fornecedor}}</th>    
+                                    <th>{{form.velocidade}}</th>    
+                                    <th>{{form.ip}}</th>    
+                                    <th>{{form.identificador}}</th>    
+                                    <th>{{form.local}}</th>    
+                                    <th>{{form.wifi}}</th>    
+                                    <th>{{form.cabo}}</th>    
+                                    <th>{{form.funcionando}}</th>    
+                                    <th>{{form.DELETE}}</th>    
+                                </tr>
+                                <tr>
+                                    <p class="text-danger">{{ form.non_field_errors }}</p>
                                 </tr>
                             {% endfor %}
                             </tbody>
@@ -131,9 +140,23 @@ Nova Escola | {{ block.super }}
                             <tbody>
                                 {% for form in computador %}
                                 <tr>
-                                    {% for field in form %}
-                                    <th>{{ field }}</th>    
-                                    {% endfor %}                                    
+                                    <th>{{ form.numero_serie }}</th>                                    
+                                    <th>{{ form.numero_inventario }}</th>
+                                    <th>{{ form.tipo }}</th>
+                                    <th>{{ form.marca }}</th>
+                                    <th>{{ form.modelo }}</th>
+                                    <th>{{ form.sistema_operacional }}</th>
+                                    <th>{{ form.processador }}</th>
+                                    <th>{{ form.ram }}</th>
+                                    <th>{{ form.hostname }}</th>
+                                    <th>{{ form.ip }}</th>
+                                    <th>{{ form.mac_address }}</th>
+                                    <th>{{ form.local }}</th>
+                                    <th>{{ form.funcionando }}</th>
+                                    <th>{{ form.DELETE }}</th>
+                                </tr>
+                                <tr>
+                                    <p class="text-danger">{{ form.non_field_errors }}</p>
                                 </tr>
                             {% endfor %}
                             </tbody>
@@ -152,8 +175,7 @@ Nova Escola | {{ block.super }}
                     
                     <h6 class="m-0 font-weight-bold text-primary">Adicionar Escola</h6>
                     <p class="text-error">{{ form.non_field_errors }}</p>                 
-                    <nav class="navbar navbar-expand mb-0">
-                    
+                    <nav class="navbar navbar-expand mb-0">                    
                         <ul class="navbar-nav ">                             
                             <li class="nav-item no-arrow mx-1" >
                                 <button 

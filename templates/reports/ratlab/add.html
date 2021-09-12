@@ -1,12 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}
-    {% if escola %}
-        Relatórios de Atendimento Técnico - {{ escola.nome }} | {{ block.super }}
-    {% else %}
-        Relatórios de Atendimento Técnico | {{ block.super }}
-    {% endif %}
+{% block title %}    
+    Relatório de Atendimento de Laboratório | {{ block.super }}    
 {% endblock title %}
 
 {% block page_content %}
@@ -14,12 +10,16 @@
     <div class="container-fluid">
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
-            <form method="POST">
+            <form 
+            id="ratlabForm" 
+            method="POST"                         
+            data-assets-url="{% url 'reports:ajax_load_assets' %}" 
+            novalidate>
                 {% csrf_token %}
                 <div 
                     class="card-header d-flex flex-row align-items-center justify-content-between">
                     
-                    <h6 class="m-0 font-weight-bold text-primary">Adicionar Relatório de Atendimento Técnico</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Adicionar Relatório de Atendimento de Laboratório</h6>
                     <p class="text-error">{{ form.non_field_errors }}</p>                 
                     <nav class="navbar navbar-expand mb-0">
                     
@@ -82,6 +82,30 @@
                         <p class="text-danger">{{ field.errors }}</p>
                     </div>                        
                     {% endfor %}
+                    <!--Link De Laboratorio forms-->
+                    <div class="table-responsive mb-2 text-dark small">            
+                        <table class="table table-bordered table-striped table-sm" width="100%"> 
+                            <caption style=" caption-side: top;">Links de Internet Disponíveis</caption>
+                            <thead class="thead-light"> 
+                                <tr>
+                                    <th> Link </th>
+                                    <th> Wi-Fi ?</th>
+                                    <th> Cabo ?</th>
+                                    <th> Funciona ?</th>                                    
+                                </tr>
+                            </thead>    
+                            <tbody>
+                            {% for form in link_forms %}
+                                <tr>                                    
+                                    <th>{{form.link}}</th>                                        
+                                    <th>{{form.wifi}}</th>
+                                    <th>{{form.cabo}}</th>
+                                    <th>{{form.funcionando}}</th>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>                    
                     <table style="display: none">
                         {{ view.formset.empty_form }}
                     </table>
@@ -173,6 +197,31 @@
         })
     })($)
 </script>
+
+<!--Script para selecionar computadores e links por escola-->
+<script>
+    $("#id_escola").change(function () {      
+      var urlLink = $("#ratlabForm").attr("data-assets-url");
+      var escolaDesignacao = $(this).val();
+
+      $.ajax({                       
+        url: urlLink,          
+        data: {
+          'escola': escolaDesignacao 
+        },
+        success: function (data) {            
+            var link = $(data).filter("#linkChoices").html();
+            var computador = $(data).filter("#computadorChoices").html();
+            
+            $("#id_computadores").html(computador);
+            $("#id_linkdelaboratorio_set-0-link").html(link);
+            $("#id_linkdelaboratorio_set-1-link").html(link);
+            $("#id_linkdelaboratorio_set-2-link").html(link);
+        }
+      });
+
+    });
+  </script>
 {% endblock scripts %}
 </body>
 

@@ -3,9 +3,9 @@
 
 {% block title %}
     {% if escola %}
-        Relatórios de Atendimento Técnico - {{ escola.nome }} | {{ block.super }}
+        Relatórios de Atendimento de Laboratótio - {{ escola.nome }} | {{ block.super }}
     {% else %}
-        Relatórios de Atendimento Técnico | {{ block.super }}
+        Relatórios de Atendimento de Laboratótio | {{ block.super }}
     {% endif %}
 {% endblock title %}
 
@@ -21,52 +21,74 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div 
-                class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">Relatórios de Atendimento Técnico</h6>
-                <div class="">
-                    <a 
-                        href="{% url 'reports:rat_add' %}"
-                        class="btn btn-primary btn-circle btn-sm"
-                        data-toggle="tooltip"
-                        data-placement="bottom"
-                        title="Novo Relatório"
-                        >
-                        <i class="fas fa-file-medical"></i>
-                    </a>
-                </div>
-                
+                class="card-header py-1 d-flex flex-row align-items-center justify-content-end">
+                <h6 class="m-0 font-weight-bold text-primary">
+                    {% if escola %}
+                        Relatórios de Atendimento de Laboratótio
+                        <p class = "text-center text-secondary"><sup>{{ escola }}</sup></p> 
+                    {% else %}
+                        Relatórios de Atendimento de Laboratótio 
+                    {% endif %}
+                </h6> 
+                <nav class="mx-auto navbar navbar-expand topbar" style="height: 2em;">
+                    <ul class="navbar-nav align-items-center">      
+                        <div class="topbar-divider d-none d-sm-block"></div> 
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-center text-secondary" id="navbarDropdown"
+                                role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                Escolas
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right animated--grow-in"
+                                aria-labelledby="navbarDropdown">
+                                {% for escola in escolas %}
+                                <a class="dropdown-item" href="{% url 'reports:ratlab_list_por_escola' escola.slug %}">{{ escola }}</a>
+                                {% endfor %}
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{% url 'reports:ratlab_list' %}">Todas</a>
+                            </div>
+                        </li>  
+
+                        <div class="topbar-divider d-none d-sm-block"></div> 
+
+                        <li class="nav-item no-arrow" >
+                            <a 
+                                href="{% url 'reports:ratlab_add' %}"
+                                class="btn btn-primary btn-circle btn-sm"
+                                data-toggle="tooltip"
+                                data-placement="bottom"
+                                title="Novo Relatório">
+                                <i class="fas fa-file-medical"></i>
+                            </a>
+                        </li>
+                    </ul>                                
+                </nav>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
                     <table class="table table-sm table-bordered table-hover table-striped" id="dataTable" width="100%" cellspacing="0">
                         <thead class="thead-light">
                             <tr>
-                                <th>Designação</th>
                                 <th>Escola</th>
-                                <th>Data</th>
-                                <th>Descrição</th>                                     
+                                <th>Data</th>                               
                             </tr>
                         </thead>
                         <tfoot>
-                            <tr>
-                                <th>Designação</th>
+                            <tr>                                
                                 <th>Escola</th>
-                                <th>Data</th>
-                                <th>Descrição</th>
+                                <th>Data</th>                                
                             </tr>
                         </tfoot>
                         <tbody>
-                            {% for rat in rats %}
+                            {% for ratlab in ratlabs %}
                             
                             <tr>                                
                                 <th>
-                                    <a href="{{ rat.get_absolute_url }}">
-                                    {{ rat.escola.designacao }}
+                                    <a href="{{ ratlab.get_absolute_url }}">
+                                        {{ ratlab.escola }}
                                     </a>
                                 </th>
-                                <th>{{ rat.escola.nome }}</th>
-                                <th>{{ rat.data_criacao }}</th>
-                                <th>{{ rat.descricao }}</th>
+                                <th>{{ ratlab.data_criacao }}</th>                                
                             </a>
                             </tr>                             
                             {% endfor %}                                      
@@ -75,7 +97,6 @@
                 </div>
             </div>
         </div>
-
     </div>
     <!-- /.container-fluid -->
 {% endblock page_content %}

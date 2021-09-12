@@ -8,9 +8,11 @@
 {% block title %}
     Escola - {{ block.super}}
 {% endblock title %}
+
 {%block report_title %}
     Relatório Geral da Escola
 {% endblock report_title %}
+
 {% block local %}
     {% for local in escola.locais.all %}
         {{ local }}; &nbsp; 
