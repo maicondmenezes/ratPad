@@ -4,7 +4,7 @@ from django.forms import inlineformset_factory, modelformset_factory
 
 from dal import autocomplete
 
-from reports.models import Computador, Escola, ParecerTecnico, RatLaboratorio, RatPadrao, LinkDeInternet , LinkDeLaboratorio
+from reports.models import Computador, Escola, ParecerTecnico, RatLaboratorio, RatPadrao, LinkDeInternet , LinkDeLaboratorio, StatusDeBaixa
 
 class EscolaCreateForm(forms.ModelForm):
     class Meta:
@@ -76,7 +76,7 @@ class RatLaboratorioCreateForm(forms.ModelForm):
                     'data-minimum-input-length': 3,
                     'data-maximum-selection-length': 1
                 },
-            ),
+            ),            
         }
     
     def __init__(self, *args, **kwargs):
@@ -111,6 +111,36 @@ class LinkDeLaboratorioForm(forms.ModelForm):
         elif self.instance.pk:
             self.fields['link'].queryset = self.instance.escola.linkdeinternet_set.all()
 
+class StatusDeBaixaForm(forms.ModelForm):
+    class Meta:
+        model = StatusDeBaixa
+        fields=['computador', 'motivo', 'descricao']
+
+    widgets = {
+            'computador': autocomplete.ModelSelect2(
+                url='reports:computador_autocomplete',
+                attrs={                    
+                    'data-height':140,
+                    'data-minimum-input-length': 4,                    
+                },
+            ),            
+        }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['computador'].queryset = Computador.objects.none()
+
+        if 'computador' in self.data:
+            try:
+                computador_id =int(self.data.get('computador'))
+                computador = Computador.objects.get(id=computador_id)                
+                self.fields['computador'].queryset = Computador.objects.filter(escola=computador.escola.designacao).order_by('tipo')
+            except (ValueError, TypeError):
+                pass  
+        elif self.instance.pk:
+            self.fields['computador'].queryset = self.instance.escola.computador_set.all()
+
+
 LinkDeLaboratorioInlineForm = inlineformset_factory(
     RatLaboratorio, 
     LinkDeLaboratorio, 
@@ -119,7 +149,13 @@ LinkDeLaboratorioInlineForm = inlineformset_factory(
     extra=3,
 )
 
-
+StatusDeBaixaInlineForm = inlineformset_factory(
+    ParecerTecnico, 
+    StatusDeBaixa, 
+    form=StatusDeBaixaForm,
+    fields='__all__',
+    extra=6,
+)
 
 LinkDeInternetInlineForm = inlineformset_factory(
     Escola, 
@@ -138,5 +174,25 @@ ComputadorInlineForm = inlineformset_factory(
 class ParecerTecnicoCreateForm(forms.ModelForm):
     class Meta:
         model = ParecerTecnico
-        fields = '__all__'
-        
+        fields = [
+            'escola',
+            'locais',
+            'chamados',                            
+        ]                       
+        widgets = {
+            'escola': autocomplete.ModelSelect2(
+                url='reports:escola_autocomplete',
+                attrs={                    
+                    'data-height':140,
+                    'data-minimum-input-length': 4,                    
+                },
+            ),
+            'locais': autocomplete.ModelSelect2Multiple(
+                url='reports:local_autocomplete',
+                attrs={                    
+                    'data-height':100,
+                    'data-minimum-input-length': 3,
+                    'data-maximum-selection-length': 1
+                },
+            ),
+        }

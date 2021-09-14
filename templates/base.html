@@ -26,8 +26,8 @@
     -->
     <link rel="stylesheet" href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" type="text/css">
     
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
-
+    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    -->
     <!-- Custom styles for this template    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-sb-admin-2/4.1.4/css/sb-admin-2.css" integrity="sha512-gOfBez3ehpchNxj4TfBZfX1MDLKLRif67tFJNLQSpF13lXM1t9ffMNCbZfZNBfcN2/SaWvOf+7CvIHtQ0Nci2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     -->
@@ -83,7 +83,7 @@
                         <h6 class="collapse-header">Relatórios Técnicos :</h6>
                         <a class="collapse-item" href="{% url 'reports:rat_list' %}">Relatório Padrão</a>
                         <a class="collapse-item" href="{% url 'reports:ratlab_list' %}">Laboratório</a>
-                        <a class="collapse-item" href="{% url 'reports:rat_list' %}">Parecer Técnico</a>
+                        <a class="collapse-item" href="{% url 'reports:parecer_list' %}">Parecer Técnico</a>
                         <a class="collapse-item" href="{% url 'reports:escola_list' %}">Escola</a>
                     </div>
                 </div>

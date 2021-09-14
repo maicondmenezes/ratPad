@@ -527,7 +527,16 @@ class ParecerTecnico(Relatorio):
         verbose_name_plural = 'Relatórios de Parecer Técnico'
     
     def get_absolute_url(self):
-        return reverse('reports:report_parecer', kwargs={'id': self.id})
+        return reverse('reports:parecer_detail', kwargs={'pk': self.id})
+    
+    def get_absolute_url_list(self):
+        return reverse('reports:parecer_list')
+    
+    def get_absolute_url_edit(self):
+        return reverse('reports:parecer_edit', kwargs={'pk': self.id})
+    
+    def get_absolute_url_del(self):
+        return reverse('reports:parecer_del', kwargs={'pk': self.id})
 
 class LinkDeLaboratorio(models.Model):
     '''

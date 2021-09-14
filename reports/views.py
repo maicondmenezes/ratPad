@@ -6,8 +6,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from dal import autocomplete
 from rest_framework import viewsets
 
-from reports.models import Escola, LinkDeInternet, RatPadrao, RatLaboratorio, Computador, LocalDeAtendimento
-from reports.forms import ComputadorInlineForm, LinkDeInternetInlineForm, LinkDeLaboratorioInlineForm, RatPadraoCreateForm, EscolaCreateForm, RatLaboratorioCreateForm
+from reports.models import ParecerTecnico, Escola, LinkDeInternet, RatPadrao, RatLaboratorio, Computador, LocalDeAtendimento
+from reports.forms import StatusDeBaixaInlineForm, ComputadorInlineForm, LinkDeInternetInlineForm, LinkDeLaboratorioInlineForm, RatPadraoCreateForm, EscolaCreateForm, RatLaboratorioCreateForm, ParecerTecnicoCreateForm
 from reports.serializers import ComputadorSerializer
 
 
@@ -301,15 +301,129 @@ class RatLaboratorioListView(LoginRequiredMixin, ListView):
 
 class RatLaboratorioDeleteView(DeleteView):
     model = RatLaboratorio
-    template_name = 'reports/ratpadrao/delete.html'
+    template_name = 'reports/ratlab/delete.html'
     context_object_name = 'rat'
-    success_url = reverse_lazy('reports:rat_list')
+    success_url = reverse_lazy('reports:ratlab_list')
+
+class ParecerTecnicoCreateView(LoginRequiredMixin, CreateView):
+    login_url = '/accounts/login'
+    model = ParecerTecnico
+    template_name = 'reports/parecer/add.html'        
+    form_class = ParecerTecnicoCreateForm 
+
+    def get_context_data(self, **kwargs):    
+        data = super().get_context_data(**kwargs)        
+        if self.request.POST:            
+            data["status_forms"] = StatusDeBaixaInlineForm(self.request.POST)            
+        else:            
+            data["status_forms"] = StatusDeBaixaInlineForm()            
+        return data
+        
+    def form_valid(self, form):                       
+                
+        context = self.get_context_data()        
+        link = context["status_forms"]     
+        
+        self.object = form.save(commit=False)
+        self.object.tecnico = self.request.user        
+        
+        if link.is_valid():        
+            link.instance = self.object            
+            link.save()            
+          
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        if 'save_edit' in self.request.POST:
+            return reverse_lazy('reports:parecer_edit', kwargs={'pk': self.object.pk})
+        elif 'save_add' in self.request.POST:
+            return reverse_lazy('reports:parecer_add')
+        else:
+            return reverse_lazy('reports:parecer_list')
+
+class ParecerTecnicoUpdateView(LoginRequiredMixin, UpdateView):
+    login_url = '/accounts/login'
+    model = ParecerTecnico
+    template_name = 'reports/parecer/edit.html'        
+    form_class = ParecerTecnicoCreateForm 
+    context_object_name = 'parecer'    
+
+    def get_context_data(self, **kwargs):    
+        data = super().get_context_data(**kwargs)
+        if self.request.POST:            
+            data["status_forms"] = StatusDeBaixaInlineForm(self.request.POST)            
+        else:            
+            data["status_forms"] = StatusDeBaixaInlineForm()            
+        return data
+        
+    def form_valid(self, form):                       
+                
+        context = self.get_context_data()        
+        link = context["status_forms"]     
+        
+        self.object = form.save(commit=False)
+        self.object.tecnico = self.request.user        
+        
+        if link.is_valid():        
+            link.instance = self.object            
+            link.save()            
+          
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        if 'edit_report' in self.request.POST:
+            return reverse_lazy('reports:parecer_detail', kwargs={'pk': self.object.pk})
+        elif 'edit_add' in self.request.POST:
+            return reverse_lazy('reports:parecer_add')        
+        else:
+            return reverse_lazy('reports:parecer_list')
+
+class ParecerTecnicoDetailView(LoginRequiredMixin, DetailView):
+    login_url = '/accounts/login'
+    model = ParecerTecnico
+    template_name = 'reports/parecer/detail.html'
+    context_object_name = 'parecer'    
+
+class ParecerTecnicoListView(LoginRequiredMixin, ListView):
+    login_url = '/accounts/login'
+    model = ParecerTecnico
+    context_object_name = 'pareceres'
+    template_name = 'reports/parecer/list.html'
+    escola = None        
+        
+    def get_queryset(self):                
+        queryset = ParecerTecnico.objects.all()
+
+        escola_slug = self.kwargs.get('slug')
+        if escola_slug:
+            self.escola = get_object_or_404(Escola, slug=escola_slug)
+            queryset = queryset.filter(escola=self.escola)
+        
+        return queryset
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['escola'] = self.escola
+        context['escolas']= Escola.ativos.all()
+        return context
+
+class ParecerTecnicoDeleteView(DeleteView):
+    model = ParecerTecnico
+    template_name = 'reports/parecer/delete.html'
+    context_object_name = 'parecer'
+    success_url = reverse_lazy('reports:parecer_list')
+
 
 def load_assets(request):
     escola_id = request.GET.get('escola')
     computadores = Computador.objects.filter(escola=escola_id).order_by('tipo')
     links = LinkDeInternet.objects.filter(escola=escola_id).order_by('fornecedor')
     return render(request, 'reports/ratlab/ativos_por_escola.html', {'computadores': computadores, 'links': links})
+
+def load_computers(request):
+    escola_id = request.GET.get('escola')
+    computadores = Computador.objects.filter(escola=escola_id).order_by('tipo')
+    return render(request, 'reports/parecer/computadores_por_escola.html', {'computadores': computadores})
 
 class LocalDeAtendimentoAutocomplete(autocomplete.Select2QuerySetView):
     def get_queryset(self):
@@ -330,6 +444,17 @@ class EscolaAutocomplete(autocomplete.Select2QuerySetView):
 
         if self.q:
             qs = qs.filter(designacao__istartswith=self.q)
+        
+        return qs
+
+class ComputadorAutocomplete(autocomplete.Select2QuerySetView):
+    def get_queryset(self):
+        if not self.request.user.is_authenticated:
+            return Computador.objects.none()
+        qs = Computador.objects.all()
+
+        if self.q:
+            qs = qs.filter(numero_serie__istartswith=self.q)
         
         return qs
 
