@@ -3,193 +3,172 @@
 
 {% block extrahead %}
 {{ block.super }}
-{% block extrastyle %}
-    {{ block.super }}    
-    <link rel="stylesheet" type="text/css" href="{% static 'rat/styles/reports.css' %}"/>    
-    <link rel="stylesheet" type="text/css" href="{% static 'rat/styles/print_report.css' %}"  media="print"/>  
-{% endblock %}
 {{ media }}
+{% block extrastyle %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'rat/styles/print_report.css' %} " media="print">
+{% endblock extrastyle %}
 {% endblock extrahead %}
 
 {% block title %}
-    Relatórios | {{ block.super }}  
+Relatórios | {{ block.super }}
 {% endblock title %}
 
 {% block page_content %}
 <div class="card shadow mb-4">
-    <div 
-        class="card-header d-flex flex-row align-items-center justify-content-between">
-        <h6 class="m-0 font-weight-bold text-primary">{% block report_header %}Relatório de Atendimento Técnico{% endblock report_header %}</h6>
-        <nav class="navbar navbar-expand mb-0">        
-            <ul class="navbar-nav ">       
-                <li class="nav-item no-arrow mx-1" >
-                    <a 
-                        href="{% block editurlHeaderNav %} {% endblock editurlHeaderNav %}"
-                        class="btn btn-info btn-circle btn-sm"
-                        data-toggle="tooltip" 
-                        data-placement="top" 
-                        title="Editar" >
+    <div class="card-header d-flex flex-row align-items-center justify-content-between">
+        <h6 class="m-0 font-weight-bold text-primary">
+            {% block report_header %}
+            Relatório de Atendimento Técnico
+            {% endblock report_header %}
+        </h6>
+        <nav class="navbar navbar-expand mb-0">
+            <ul class="navbar-nav ">
+                <li class="nav-item no-arrow mx-1">
+                    <a href="{% block editurlHeaderNav %} {% endblock editurlHeaderNav %}"
+                        class="btn btn-info btn-circle btn-sm" data-toggle="tooltip" data-placement="top"
+                        title="Editar">
                         <i class="fas fa-pencil-alt"></i>
                     </a>
-                </li>          
-                <li class="nav-item no-arrow mx-1" >                                
-                    <button 
-                        type="submit"
-                        name="detail_print"
-                        onClick="window.print()"
-                        class="btn btn-primary btn-circle btn-sm"
-                        data-toggle="tooltip" 
-                        data-placement="top" 
-                        title="Imprimir" >
+                </li>
+                <li class="nav-item no-arrow mx-1">
+                    <button type="submit" name="detail_print" onClick="window.print()"
+                        class="btn btn-primary btn-circle btn-sm" data-toggle="tooltip" data-placement="top"
+                        title="Imprimir">
                         <i class="fas fa-print"></i>
                     </button>
-                </li>   
-                <li class="nav-item no-arrow mx-1" >
-                    <a  
-                        href="{% block listurlHeaderNav %} {% endblock listurlHeaderNav %}"
-                        class="btn btn-warning btn-circle btn-sm"
-                        data-toggle="tooltip" 
-                        data-placement="top" 
-                        title="Listar" >
+                </li>
+                <li class="nav-item no-arrow mx-1">
+                    <a href="{% block listurlHeaderNav %} {% endblock listurlHeaderNav %}"
+                        class="btn btn-warning btn-circle btn-sm" data-toggle="tooltip" data-placement="top"
+                        title="Listar">
                         <i class="fas fa-list-alt"></i>
                     </a>
-                </li>             
+                </li>
             </ul>
-        </nav>   
+        </nav>
     </div>
-    <div class="card-body">   
-        <div class="container mx-auto border text-dark">                
+    <div id="printable" class="card-body">
+
+        <div id="printable-header" class="container mb-2">
             <div class="row align-items-center mb-2">
                 <div class="col">
-                    <img style="width: 127.87px; height: 127.87px;" class="smeLogo" src= "{% static 'rat/images/smeLogo.png' %}" title="">
+                    <img style="width: 127.87px; height: 127.87px;" class="smeLogo"
+                        src="{% static 'rat/images/smeLogo.png' %}" title="">
                 </div>
-                <div style="font-family: Arial; font-size: small;" class="col-9 p-0">                    
-                        <p class="font-weight-bold  mb-0">PREFEITURA DA CIDADE DO RIO DE JANEIRO</p>
-                        <p class="font-weight-bold mb-0">E/10ª COORDENADORIA REGIONAL DE EDUCAÇÃO</p>
-                        <p class="font-weight-bold font-italic mb-0">Acessoria de Informática e Tecnologia</p>                                             
-                        <p class="font-weight-normal mb-0">Av. Padre Guilherme Decaminada, 71, Santa Cruz - Rio de Janeiro</p>
-                        <p class="font-weight-normal mb-0">RJ - CEP.: 23575-000</p>
-                        <p class="font-weight-normal mb-0">Telefones: (21) 3157-0660 / 3158-1939</p>
-                        <p class="font-weight-normal mb-0">Correio Eletrônico: aitcre10@rioeduca.net</p>                    
+                <div style="font-family: Arial; font-size: small;" class="col-9 p-0">
+                    <p class="font-weight-bold  mb-0">PREFEITURA DA CIDADE DO RIO DE JANEIRO</p>
+                    <p class="font-weight-bold mb-0">E/10ª COORDENADORIA REGIONAL DE EDUCAÇÃO</p>
+                    <p class="font-weight-bold font-italic mb-0">Acessoria de Informática e Tecnologia</p>
+                    <p class="font-weight-normal mb-0">Av. Padre Guilherme Decaminada, 71, Santa Cruz - Rio de
+                        Janeiro
+                    </p>
+                    <p class="font-weight-normal mb-0">RJ - CEP.: 23575-000</p>
+                    <p class="font-weight-normal mb-0">Telefones: (21) 3157-0660 / 3158-1939</p>
+                    <p class="font-weight-normal mb-0">Correio Eletrônico: aitcre10@rioeduca.net</p>
                 </div>
             </div>
             <!--Report Title-->
             <div class="row mb-2">
                 <div class="col">
                     <h4 style="font-family: Calibri;" class="font-weight-bold text-center"><u>
-                        {%block report_title %}Relatório de Atendimento Técnico{% endblock report_title %}
-                    </u></h4>
+                            {%block report_title %}Relatório de Atendimento Técnico{% endblock report_title %}
+                        </u></h4>
                 </div>
             </div>
             <!--Report Head -->
-            <div class="table mb-2 text-dark small">            
+            <div class="table mb-2 text-dark small">
                 <div class="row bg-light mb-0">
-                    <div class="col-4 border ">                    
-                        <p> E/SUBE/CRE </p>                                        
+                    <div class="col-4 border ">
+                        <p> E/SUBE/CRE </p>
                     </div>
-                    <div class="col bg-white border">                    
-                        <p class="text-center"> {% block escola %} {% endblock escola %} <p>                                      
-                    </div>
-                </div>
-                <div class="row bg-light mb-0">
-                    <div class="col-4 border ">                    
-                        <p> Locais de Atendimento: </p>                                        
-                    </div>
-                    <div class="col bg-white border ">                    
-                        <p class="text-center"> {% block local %} {% endblock local %} </p>                                      
+                    <div class="col bg-white border">
+                        <p class="text-center"> {% block escola %} {% endblock escola %}
+                        <p>
                     </div>
                 </div>
                 <div class="row bg-light mb-0">
-                    <div class="col-4 border ">                    
-                        <p> Chamado(s): </p>                                        
+                    <div class="col-4 border ">
+                        <p> Locais de Atendimento: </p>
                     </div>
-                    <div class="col bg-white border">                    
-                        <p class="text-center"> {% block chamados %} {% endblock chamados %} </p>                                      
-                    </div>
-                </div>
-            </div>
-            
-            <!--Report Content-->
-            {% block conteudo %} {% endblock conteudo %}             
-            
-            <!--Report Footer-->     
-            <div class="container mb-2">
-                <div class="row justify-content-end">
-                    <div class="col text-right"><p>
-                        {% block data %} Rio de Janeiro, {% endblock data %}
-                    </p></div>
-                </div>
-
-                <div class="row justify-content-start mb-3">
-                    <div class="col">
-                        {% block tecnico %}<b>Técnico</b> : {% endblock tecnico %}
+                    <div class="col bg-white border ">
+                        <p class="text-center"> {% block local %} {% endblock local %} </p>
                     </div>
                 </div>
-                
-                <div class="row justify-content-center">
-                    <div class="col">
-                        <hr>
-                        <p class="text-center">Responsável pela Unidade Escolar</p>
+                <div class="row bg-light mb-0">
+                    <div class="col-4 border ">
+                        <p> Chamado(s): </p>
                     </div>
-                </div>                
+                    <div class="col bg-white border">
+                        <p class="text-center"> {% block chamados %} {% endblock chamados %} </p>
+                    </div>
+                </div>
             </div>
         </div>
+        <!--Report Content-->
+        <div id="printable-body" class="container mb-2">
+            {% block conteudo %} {% endblock conteudo %}
+        </div>
+        <!--Report Footer-->
+        <div id="printable-footer" class="container mb-2">
+            <div class="row justify-content-end">
+                <div class="col text-right mr-4">
+                    <p>
+                        {% block data %} Rio de Janeiro, {% endblock data %}
+                    </p>
+                </div>
+            </div>
+
+            <div class="row justify-content-start mb-3">
+                <div class="col">
+                    {% block tecnico %}<b>Técnico</b> : {% endblock tecnico %}
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col">
+                    <hr>
+                    <p class="text-center">Responsável pela Unidade Escolar</p>
+                </div>
+            </div>
+        </div>
+
+
     </div>
-    <div 
-        class="card-footer d-flex flex-row align-items-center justify-content-between">
-        
-        <h6 class="m-0 font-weight-bold text-primary">Relatório de Atendimento Técnico</h6>        
-        <nav class="navbar navbar-expand mb-0">        
-            <ul class="navbar-nav ">       
-                <li class="nav-item no-arrow mx-1" >
-                    <a 
-                        href="{% block editurlFooterNav %} {% endblock editurlFooterNav %}"
-                        class="btn btn-info btn-circle btn-sm"
-                        data-toggle="tooltip" 
-                        data-placement="top" 
-                        title="Editar" >
+    <div class="card-footer d-flex flex-row align-items-center justify-content-between">
+
+        <h6 class="m-0 font-weight-bold text-primary">Relatório de Atendimento Técnico</h6>
+        <nav class="navbar navbar-expand mb-0">
+            <ul class="navbar-nav ">
+                <li class="nav-item no-arrow mx-1">
+                    <a href="{% block editurlFooterNav %} {% endblock editurlFooterNav %}"
+                        class="btn btn-info btn-circle btn-sm" data-toggle="tooltip" data-placement="top"
+                        title="Editar">
                         <i class="fas fa-pencil-alt"></i>
                     </a>
-                </li>          
-                <li class="nav-item no-arrow mx-1" >                                
-                    <button 
-                        type="submit"
-                        name="detail_print"
-                        onClick="window.print()"
-                        class="btn btn-primary btn-circle btn-sm"
-                        data-toggle="tooltip" 
-                        data-placement="top" 
-                        title="Imprimir Relatório" >
+                </li>
+                <li class="nav-item no-arrow mx-1">
+                    <button type="submit" name="detail_print" onClick="window.print()"
+                        class="btn btn-primary btn-circle btn-sm" data-toggle="tooltip" data-placement="top"
+                        title="Imprimir Relatório">
                         <i class="fas fa-print"></i>
                     </button>
-                </li>   
-                <li class="nav-item no-arrow mx-1" >
-                    <a  
-                        href="{% block listurlFooterNav %} {% endblock listurlFooterNav %}"
-                        class="btn btn-warning btn-circle btn-sm"
-                        data-toggle="tooltip" 
-                        data-placement="top" 
-                        title="Listar" >
+                </li>
+                <li class="nav-item no-arrow mx-1">
+                    <a href="{% block listurlFooterNav %} {% endblock listurlFooterNav %}"
+                        class="btn btn-warning btn-circle btn-sm" data-toggle="tooltip" data-placement="top"
+                        title="Listar">
                         <i class="fas fa-list-alt"></i>
                     </a>
-                </li> 
+                </li>
             </ul>
-        </nav>               
+        </nav>
     </div>
 
-            
-<!-- /.container-fluid -->
-{% endblock page_content %}
 
-{% block scripts %}
-{{ block.super }}
-<script type = "text/javascript">
-    function printReport(){
-        var prtContent = document.getElementById("report_doc");
-        var WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
-        WinPrint.document.write(prtContent.innerHTML);
-        WinPrint.document.close();
-        WinPrint.focus();
-    }    
-</script>
-{% endblock scripts %}
+    <!-- /.container-fluid -->
+    {% endblock page_content %}
+
+    {% block scripts %}
+    {{ block.super }}
+    {% endblock scripts %}

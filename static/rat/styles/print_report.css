@@ -1,0 +1,36 @@
+@page {    
+    size: A4 portrait !important;    
+}
+header, .scroll-to-top, .card-header, .card-footer, footer, aside, nav, form, iframe, .menu, .hero, .adslot, .sidebar {
+    display: none !important;    
+    
+}
+
+.card{
+    margin-top: 0.7cm !important;    
+    box-shadow: none !important;
+    border: 4px solid #e3e6f0 !important;
+}
+
+#printable {   
+         
+    color: #000;
+    display: unset !important;        
+    box-shadow: none !important;
+    border: none !important;
+    
+}
+#printable-header {
+    display: unset !important;   
+    padding-right: 0.5cm !important;
+}
+#printable-body {
+    display: unset !important;       
+    height: 18cm !important;
+    text-align: center !important;
+}
+
+#printable-footer {
+    display: unset !important;   
+    padding-right: 0.5cm !important;
+}

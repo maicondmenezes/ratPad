@@ -2,54 +2,54 @@
 {% load static %}
 
 {% block escola %}
-    {{ rat.escola }}
+{{ rat.escola }}
 {% endblock escola %}
 
 {% block title %}
-    RAT Padrão - {{ block.super}}
+RAT Padrão - {{ block.super}}
 {% endblock title %}
-    
+
 {% block local %}
-    {% for local in rat.locais.all %}
-        {{ local }}; &nbsp; 
-    {% endfor %}
+{% for local in rat.locais.all %}
+{{ local }}; &nbsp;
+{% endfor %}
 {% endblock local %}
-    
+
 {% block chamados %}
-    {{ rat.chamados }}    
+{{ rat.chamados }}
 {% endblock chamados %}
 
 {% block editurlHeaderNav %}
-    {{ rat.get_absolute_url_edit }}
+{{ rat.get_absolute_url_edit }}
 {% endblock editurlHeaderNav %}
 
 {% block editurlFooterNav %}
-    {{ rat.get_absolute_url_edit }}
+{{ rat.get_absolute_url_edit }}
 {% endblock editurlFooterNav %}
 
 {% block listurlHeaderNav %}
-    {{ rat.get_absolute_url_list }}
+{{ rat.get_absolute_url_list }}
 {% endblock listurlHeaderNav %}
 
 {% block listurlFooterNav %}
-    {{ rat.get_absolute_url_list }}
+{{ rat.get_absolute_url_list }}
 {% endblock listurlFooterNav %}
 
 {% block conteudo %}
-<div class="container mx-auto align-items-center mb-2">
+<div class="align-items-center mb-2">
     <div class="row mb-1">
         <div class="col">
             <h5 style="font-family: Calibri;" class="font-weight-bold text-center"><u>
-                Tipo de Problema
-            </u></h5>
+                    Tipo de Problema
+                </u></h5>
         </div>
     </div>
-        
+
     <div class="row mb-2">
         <div class="col">
             <h6 style="font-family: Calibri;" class="font-weight-light text-center">
                 {% for problema in rat.problemas.all %}
-                {{ problema }}; &nbsp; 
+                {{ problema }}; &nbsp;
                 {% endfor %}
             </h6>
         </div>
@@ -58,11 +58,11 @@
     <div class="row mb-1">
         <div class="col">
             <h5 style="font-family: Calibri;" class="font-weight-bold text-center"><u>
-                Descrição do Problema
-            </u></h5>
+                    Descrição do Problema
+                </u></h5>
         </div>
     </div>
-        
+
     <div class="row mb-2">
         <div class="col">
             <h6 style="font-family: Calibri;" class="font-weight-light text-center">
@@ -71,27 +71,27 @@
         </div>
     </div>
 
-    <div class="row mb-1">
-        <div class="col">
-            <h5 style="font-family: Calibri;" class="font-weight-bold text-center"><u>
-                Solução do Problema
-            </u></h5>
-        </div>
-    </div>
-        
     <div class="row mb-2">
         <div class="col">
-            <h6 style="font-family: Calibri;" class="font-weight-light text-center">
+            <h5 style="font-family: Calibri;" class="font-weight-bold text-center"><u>
+                    Solução do Problema
+                </u></h5>
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <div class="col">
+            <h6 style="font-family: Calibri; height: 10cm;" class="font-weight-light text-center">
                 {{ rat.solucao }}
             </h6>
         </div>
     </div>
-    
+
     <div class="row mb-2">
         <div class="col">
-            <h6 class="font-weight-bold">
-                Recomendação de Equipamento/Serviço: 
-                {% if rat.recomendacao %} 
+            <h6 class="text-left font-weight-bold">
+                Recomendação de Equipamento/Serviço:
+                {% if rat.recomendacao %}
                 <i class="fas fa-check"></i>
                 {% else %}
                 <i class="fas fa-times"></i>
@@ -102,21 +102,21 @@
 
     <div class="row mb-2">
         <div class="col">
-            <h6 style="font-family: Calibri;" class="font-weight-light text-center">
+            <h6 style="font-family: Calibri; height: 3cm;" class="font-weight-light text-center">
                 {{ rat.equipamentos }}
             </h6>
         </div>
     </div>
 
 </div>
-    
 
-{% endblock conteudo %}    
+
+{% endblock conteudo %}
 
 {% block tecnico %}
-    {{ block.super }} {{ rat.tecnico.get_full_name }}    
+{{ block.super }} {{ rat.tecnico.get_full_name }}
 {% endblock tecnico %}
 
 {% block data %}
-    {{ block.super }} {{ rat.data_criacao }}    
+{{ block.super }} {{ rat.data_criacao }}
 {% endblock data %}

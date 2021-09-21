@@ -5,14 +5,16 @@
 
 <head>
     {% block extrahead %}
-    
-    {% block meta %}    
+
+    {% block meta %}
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="Content-Language" content="pt-br"/>
+    <meta http-equiv="Content-Language" content="pt-br" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="keywords" content="SME-RJ, Secretaria de Educação do Rio de Janeiro, Relatório de Atendimento Técnico, 10ª CRE" />
-    <meta name="description" content="Este é um documento padrão de relatórios técnicos de atendimento de suporte em informática nas unidades escolares da 10ª Coordenadoria Regional de Educação da Secretaria Municipal de Educação do Estado do Rio de Janeiro" />    
+    <meta name="keywords"
+        content="SME-RJ, Secretaria de Educação do Rio de Janeiro, Relatório de Atendimento Técnico, 10ª CRE" />
+    <meta name="description"
+        content="Este é um documento padrão de relatórios técnicos de atendimento de suporte em informática nas unidades escolares da 10ª Coordenadoria Regional de Educação da Secretaria Municipal de Educação do Estado do Rio de Janeiro" />
     <meta name="author" content="Maicon de Menezes Oliveira">
     {% endblock meta %}
 
@@ -24,17 +26,19 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     -->
-    <link rel="stylesheet" href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" type="text/css">
-    
+
+
     <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     -->
     <!-- Custom styles for this template    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-sb-admin-2/4.1.4/css/sb-admin-2.css" integrity="sha512-gOfBez3ehpchNxj4TfBZfX1MDLKLRif67tFJNLQSpF13lXM1t9ffMNCbZfZNBfcN2/SaWvOf+7CvIHtQ0Nci2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     -->
     {% block extrastyle %}
-    <link rel="stylesheet" href="{% static 'css/sb-admin-2.min.css' %}" >
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/fontawesome-free/css/all.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/sb-admin-2.min.css' %}">
+    <link rel="stylesheet" type="text/css" media="print" href="{% static 'rat/styles/print_report.css' %}">
     {% endblock extrastyle %}
-{% endblock extrahead %}
+    {% endblock extrahead %}
 </head>
 
 <body id="page-top">
@@ -44,7 +48,6 @@
 
         <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{% url 'pages:home' %}">
                 <div class="sidebar-brand-icon">
@@ -87,7 +90,7 @@
                         <a class="collapse-item" href="{% url 'reports:escola_list' %}">Escola</a>
                     </div>
                 </div>
-            </li>            
+            </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
@@ -101,7 +104,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Utilitários e Manuais</h6>
                         <a class="collapse-item" href="{% url 'pages:home' %}">ratPad Asset Manager</a>
-                        <a class="collapse-item" href="drive.google.com">Drive do Helpdesk</a>                        
+                        <a class="collapse-item" href="drive.google.com">Drive do Helpdesk</a>
                         <a class="collapse-item" href="{% url 'pages:home' %}">ratPad WIKI</a>
                     </div>
                 </div>
@@ -118,7 +121,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Gestão de Atendimentos</h6>
                         <a class="collapse-item" href="{% url 'pages:home' %}">Rotas</a>
-                        <a class="collapse-item" href="{% url 'pages:home' %}">Custos de Deslocamento</a>                        
+                        <a class="collapse-item" href="{% url 'pages:home' %}">Custos de Deslocamento</a>
                     </div>
                 </div>
             </li>
@@ -171,7 +174,10 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-bell fa-fw"></i>
                                 <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter"> {% block counter_notifications %} {% endblock counter_notifications %} </span>
+                                <span class="badge badge-danger badge-counter">
+                                    {% block counter_notifications %}
+                                    {% endblock counter_notifications %}
+                                </span>
                             </a>
                             <!-- Dropdown - Alerts -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -190,7 +196,10 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-envelope fa-fw"></i>
                                 <!-- Counter - Messages -->
-                                <span class="badge badge-danger badge-counter">{% block counter_messages %} {% endblock counter_messages %}</span>
+                                <span class="badge badge-danger badge-counter">
+                                    {% block counter_messages %}
+                                    {% endblock counter_messages %}
+                                </span>
                             </a>
                             <!-- Dropdown - Messages -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -209,7 +218,10 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{% block user_fullname %} {% endblock user_fullname %}</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+                                    {% block user_fullname %}
+                                    {% endblock user_fullname %}
+                                </span>
                                 {% block user_photo %} <img class="img-profile rounded-circle"
                                     src="{% static 'img/undraw_profile.svg' %}"> {% endblock user_photo %}
                             </a>
@@ -244,7 +256,7 @@
 
                     {% block page_content %}
                     {% endblock page_content %}
-                    
+
 
                 </div>
                 <!-- /.container-fluid -->
@@ -256,7 +268,8 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>develop by &copy; <a href="http://www.github.com/maicondmenezes">maicondmenezes</a> 2021</span>
+                        <span>develop by &copy; <a href="http://www.github.com/maicondmenezes">maicondmenezes</a>
+                            2021</span>
                     </div>
                 </div>
             </footer>
@@ -301,7 +314,7 @@
     -->
     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
     <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-        
+
     <!-- Core plugin JavaScript
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     -->
@@ -310,8 +323,8 @@
     <!-- Custom scripts for all pages
     <script src="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-sb-admin-2/4.1.4/js/sb-admin-2.min.js" integrity="sha512-+QnjQxxaOpoJ+AAeNgvVatHiUWEDbvHja9l46BHhmzvP0blLTXC4LsvwDVeNhGgqqGQYBQLFhdKFyjzPX6HGmw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     -->
-    <script src="{% static 'js/sb-admin-2.min.js' %}"></script>    
-    
+    <script src="{% static 'js/sb-admin-2.min.js' %}"></script>
+
     {% endblock scripts %}
 
 </body>

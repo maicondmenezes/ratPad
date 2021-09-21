@@ -1,31 +1,25 @@
 {% extends 'reports/reports_base.html' %}
 {% load static %}
 
+{% block extrastyle %}
+    <link rel="stylesheet" type="text/css" href="{% static 'rat/styles/parecer.css' %}"/>
+{% endblock extrastyle %}
+
 {% block escola %}
     {{ parecer.escola }}
 {% endblock escola %}
 
 {% block title %}
-    Relatório de Atendimento de Laboratório - {{ block.super}}
+   Parecer Técnico de Baixa - {{ block.super}}
 {% endblock title %}
 
 {% block report_header %}
-    Relatório de Atendimento de Laboratório
+   Parecer Técnico de Baixa
 {% endblock report_header %}    
 
 {% block report_title %}
-    Relatório de Atendimento de Laboratório
+    Parecer Técnico de Baixa
 {% endblock report_title %}
-
-{% block local %}
-    {% for local in parecer.locais.all %}
-        {{ local }}; &nbsp; 
-    {% endfor %}
-{% endblock local %}
-    
-{% block chamados %}
-    {{ parecer.chamados }}
-{% endblock chamados %}
 
 {% block editurlHeaderNav %}
     {{ parecer.get_absolute_url_edit }}
@@ -45,9 +39,71 @@
 
 {% block conteudo %}
 <!--Endereço-->
-<div class="table mb-2 text-dark small">            
-    {{ parecer }}
-</div>
+<tbody>
+    <tr class="c30">
+        <td class="c31" colspan="1" rowspan="3">
+            <p class="c17">
+                <span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 171.00px; height: 85.00px;">
+                    <img alt="" src="{% static 'rat/images/netcenterLogo.png' %}" style="width: 171.00px; height: 85.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
+                </span>
+            </p>
+        </td>
+        <td class="c6" colspan="1" rowspan="3">
+            <p class="c16 c20">
+                <span class="c8"></span>
+            </p>
+            <p class="c5">
+                <span class="c39">Endereço:&nbsp;</span>
+                <span class="c11 c29">R. Sete de Setembro, 99 - Centro, Rio de Janeiro - RJ, 20050-005</span>
+            </p>
+            <p class="c16 c20">
+                <span class="c8"></span>
+            </p>
+            <p class="c5">
+                <span class="c39">Telefone:&nbsp;</span>
+                <span class="c29 c11">(21) 4501-4000</span>
+            </p>
+            <p class="c16">
+                <span class="c0"></span>
+            </p>
+        </td>
+        <td class="c25" colspan="1" rowspan="1">
+            <p class="c17">
+                <span class="c0">CRE</span>
+            </p>
+        </td>
+        <td class="c21" colspan="1" rowspan="1">
+            <p class="c19">
+                <span class="c23">10ª</span>
+            </p>
+        </td>
+    </tr>
+    <tr class="c30">
+        <td class="c25" colspan="1" rowspan="1">
+            <p class="c17">
+                <span class="c0">Designação</span>
+            </p>
+        </td>
+        <td class="c21" colspan="1" rowspan="1">
+            <p class="c19">
+                <span class="c0">{{ rat_parecer.escola.designacao }}</span>
+            </p>
+        </td>
+    </tr>
+    <tr class="c30">
+        <td class="c25" colspan="1" rowspan="1">
+            <p class="c17">
+                <span class="c0">Data</span>
+            </p>
+        </td>
+        <td class="c21" colspan="1" rowspan="1">
+            <p class="c19">
+                <span class="c0">{{ rat_parecer.data_criacao }}</span>
+            </p>
+        </td>
+    </tr>
+</tbody>
+</table>
 {% endblock conteudo %}    
 
 {% block tecnico %}
