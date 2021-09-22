@@ -17,10 +17,11 @@ Relatórios | {{ block.super }}
 {% block page_content %}
 <div class="card shadow mb-4">
     <div class="card-header d-flex flex-row align-items-center justify-content-between">
+        {% block report_card_header %}
         <h6 class="m-0 font-weight-bold text-primary">
-            {% block report_header %}
+            {% block report_header_title %}
             Relatório de Atendimento Técnico
-            {% endblock report_header %}
+            {% endblock report_header_title %}
         </h6>
         <nav class="navbar navbar-expand mb-0">
             <ul class="navbar-nav ">
@@ -47,9 +48,10 @@ Relatórios | {{ block.super }}
                 </li>
             </ul>
         </nav>
+        {% endblock report_card_header %}
     </div>
-    <div id="printable" class="card-body">
-
+    <div id="printable" class="card-body ">
+        {% block report_card_body %}
         <div id="printable-header" class="container mb-2">
             <div class="row align-items-center mb-2">
                 <div class="col">
@@ -132,11 +134,10 @@ Relatórios | {{ block.super }}
                 </div>
             </div>
         </div>
-
-
+        {% endblock report_card_body %}
     </div>
     <div class="card-footer d-flex flex-row align-items-center justify-content-between">
-
+        {% block report_card_footer %}
         <h6 class="m-0 font-weight-bold text-primary">Relatório de Atendimento Técnico</h6>
         <nav class="navbar navbar-expand mb-0">
             <ul class="navbar-nav ">
@@ -163,6 +164,7 @@ Relatórios | {{ block.super }}
                 </li>
             </ul>
         </nav>
+        {% endblock report_card_footer %}
     </div>
 
 

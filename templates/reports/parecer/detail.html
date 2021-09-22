@@ -2,114 +2,167 @@
 {% load static %}
 
 {% block extrastyle %}
-    <link rel="stylesheet" type="text/css" href="{% static 'rat/styles/parecer.css' %}"/>
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'rat/styles/print_parecer.css' %} " media="print">
 {% endblock extrastyle %}
 
 {% block escola %}
-    {{ parecer.escola }}
+{{ parecer.escola }}
 {% endblock escola %}
 
 {% block title %}
-   Parecer Técnico de Baixa - {{ block.super}}
+Parecer Técnico de Baixa - {{ block.super}}
 {% endblock title %}
 
-{% block report_header %}
-   Parecer Técnico de Baixa
-{% endblock report_header %}    
+{% block report_header_title %}
+Parecer Técnico de Baixa
+{% endblock report_header_title %}
 
-{% block report_title %}
-    Parecer Técnico de Baixa
-{% endblock report_title %}
+{% block local %}
+{% for local in parecer.locais.all %}
+{{ local }}; &nbsp;
+{% endfor %}
+{% endblock local %}
+
+{% block chamados %}
+{{ parecer.chamados }}
+{% endblock chamados %}
 
 {% block editurlHeaderNav %}
-    {{ parecer.get_absolute_url_edit }}
+{{ parecer.get_absolute_url_edit }}
 {% endblock editurlHeaderNav %}
 
 {% block editurlFooterNav %}
-    {{ parecer.get_absolute_url_edit }}
+{{ parecer.get_absolute_url_edit }}
 {% endblock editurlFooterNav %}
 
-{% block listurlHeaderNav %} 
-    {{ parecer.get_absolute_url_list }}
+{% block listurlHeaderNav %}
+{{ parecer.get_absolute_url_list }}
 {% endblock listurlHeaderNav %}
 
-{% block listurlFooterNav %} 
-    {{ parecer.get_absolute_url_list }}
+{% block listurlFooterNav %}
+{{ parecer.get_absolute_url_list }}
 {% endblock listurlFooterNav %}
 
 {% block conteudo %}
-<!--Endereço-->
-<tbody>
-    <tr class="c30">
-        <td class="c31" colspan="1" rowspan="3">
-            <p class="c17">
-                <span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 171.00px; height: 85.00px;">
-                    <img alt="" src="{% static 'rat/images/netcenterLogo.png' %}" style="width: 171.00px; height: 85.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
-                </span>
+{% block report_card_body %}
+<div id="printable-header" class="container mx-auto mb-2">
+    <div class="d-flex text-dark border bd-highlight mb-2">
+        <div class="p-0 flex-fill bd-highlight align-self-center">
+            <img style="width: 168px; height: 83.4px;" src="{% static 'rat/images/netcenterLogo.png' %}" title="">
+        </div>
+        <div class="p-0 border flex-fill bd-highlight" style="font-family: Arial; font-size: small;">
+            <p class="ml-2 h6 align-self-center mb-2 mt-3">
+                <b>Endereço:</b> R. Sete de Setembro, 99 - Centro, Rio de Janeiro - RJ, 20050-005
             </p>
-        </td>
-        <td class="c6" colspan="1" rowspan="3">
-            <p class="c16 c20">
-                <span class="c8"></span>
+            <p class="ml-2 h6 align-self-center mb-0">
+                <b>Telefone:</b>(21) 4501-4000
             </p>
-            <p class="c5">
-                <span class="c39">Endereço:&nbsp;</span>
-                <span class="c11 c29">R. Sete de Setembro, 99 - Centro, Rio de Janeiro - RJ, 20050-005</span>
-            </p>
-            <p class="c16 c20">
-                <span class="c8"></span>
-            </p>
-            <p class="c5">
-                <span class="c39">Telefone:&nbsp;</span>
-                <span class="c29 c11">(21) 4501-4000</span>
-            </p>
-            <p class="c16">
-                <span class="c0"></span>
-            </p>
-        </td>
-        <td class="c25" colspan="1" rowspan="1">
-            <p class="c17">
-                <span class="c0">CRE</span>
-            </p>
-        </td>
-        <td class="c21" colspan="1" rowspan="1">
-            <p class="c19">
-                <span class="c23">10ª</span>
-            </p>
-        </td>
-    </tr>
-    <tr class="c30">
-        <td class="c25" colspan="1" rowspan="1">
-            <p class="c17">
-                <span class="c0">Designação</span>
-            </p>
-        </td>
-        <td class="c21" colspan="1" rowspan="1">
-            <p class="c19">
-                <span class="c0">{{ rat_parecer.escola.designacao }}</span>
-            </p>
-        </td>
-    </tr>
-    <tr class="c30">
-        <td class="c25" colspan="1" rowspan="1">
-            <p class="c17">
-                <span class="c0">Data</span>
-            </p>
-        </td>
-        <td class="c21" colspan="1" rowspan="1">
-            <p class="c19">
-                <span class="c0">{{ rat_parecer.data_criacao }}</span>
-            </p>
-        </td>
-    </tr>
-</tbody>
-</table>
-{% endblock conteudo %}    
+        </div>
+        <div class="p-0 border text-dark flex-fill bd-highlight">
+            <p class="ml-2 mr-1 mb-0"> <b>CRE:</b> 10ª </p>
+            <p class="ml-2 mr-1 mb-0"> <b>Designacao:</b> {{ parecer.escola.designacao }} </p>
+            <p class="ml-2 mr-1 mb-0"> <b>Data:</b> {{parecer.data_criacao | date:"d / m / Y" }} </p>
+        </div>
+    </div>
+    <!--Report Title-->
+    <div class="row mb-2">
+        <div class="col">
+            <h4 style="font-family: Arial;" class="font-weight-bold text-dark text-center"><u>
+                    {%block report_title %}Parecer Técnico{% endblock report_title %}
+                </u></h4>
+        </div>
+    </div>
+    <div class="text-dark">
+        <p>
+            Declaro para os fins de baixa de equipamentos pelos motivos indicados, que os mesmos abaixo listados
+            apresentam os problemas/defeitos relatados neste documento.
+        </p>
+
+        <h5 style="font-family: Arial;" class="font-weight-bold text-center">
+            Motivos
+        </h5>
+    </div>
+    <table class="text-dark">
+        <tbody>
+            <tr>
+                <td class="pr-3">
+                    <li class="li-bullet-0">
+                        Alienação (venda, doação, permuta)
+                    </li>
+                    <li class="li-bullet-0">
+                        Desuso
+                    </li>
+                    <li class="li-bullet-0">
+                        Obsolescência
+                    </li>
+                    <li class="li-bullet-0">
+                        Imprestabilidade
+                    </li>
+                </td>
+                <td>
+                    <li class="li-bullet-0">
+                        Consumo (transferência para unidade requisitante)
+                    </li>
+                    <li class="li-bullet-0">
+                        Extravio
+                    </li>
+                    <li class="li-bullet-0">
+                        Dano
+                    </li>
+                    <li class="li-bullet-0">
+                        Transferência (dentro da mesma unidade)
+                    </li>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!--Computadores-->
+<div style="height: 15cm;" class="table mb-2 text-dark small">
+    <table class="table table-bordered table-striped table-sm" width="100%">
+        <caption class="text-center text-dark" style=" caption-side: top;">
+            <h5><b>Lista de Equiapementos</b></h5>
+        </caption>
+        <thead class="thead-light">
+            <tr>
+                <th> Equipamento </th>
+                <th> Marca </th>
+                <th> Modelo</th>
+                <th> Nº de Série</th>
+                <th> Nº de Inventário </th>
+                <th> Motivo </th>
+                <th> Problema / OBS.</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for baixa in parecer.statusdebaixa_set.all %}
+            <tr>
+                <th> {{baixa.computador.tipo}} </th>
+                <th> {{baixa.computador.marca}} </th>
+                <th> {{baixa.computador.modelo}} </th>
+                <th> {{baixa.computador.numero_serie}} </th>
+                <th> {{baixa.computador.numero_inventario}} </th>
+                <th> {{baixa.motivo}}</th>
+                <th> {{baixa.descricao}}</th>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<div class="d-flex text-dark bd-highlight mb-2">
+    <div class="p-3 flex-fill bd-highlight" style="font-family: Arial; font-size: small;">
+        <hr>
+        <p class="text-center">Nome e CPF do técnico responsável</p>
+    </div>
+    <div class="p-3 flex-fill bd-highlight" style="font-family: Arial; font-size: small;">
+        <hr>
+        <p class="text-center"> Assinatura do Diretor responsável </p>
+    </div>
+</div>
+{% endblock report_card_body%}
+{% endblock conteudo %}
 
 {% block tecnico %}
-    {{ block.super }} {{ parecer.tecnico.get_full_name }}    
+{{ block.super }} {{ ratlab.tecnico.get_full_name }}
 {% endblock tecnico %}
-
-{% block data %}
-    {{ block.super }} {{ parecer.data_criacao }}    
-{% endblock data %}
